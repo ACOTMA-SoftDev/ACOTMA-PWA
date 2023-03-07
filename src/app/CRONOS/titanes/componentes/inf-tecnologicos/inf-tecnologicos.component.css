@@ -82,6 +82,14 @@ Etiquetar los datos
 		td:nth-of-type(6):before { content: "FALLA"; }
 	}
 
+	thead tr th { 
+        position: sticky;
+        top: 0;
+        text-align: center;
+        z-index: 10;
+        font-weight: bold; /* Fuente en negrita o bold */
+        background-color: white;
+    }
 
 	/* tabla estatica
 
@@ -109,16 +117,16 @@ Etiquetar los datos
 	}*/
 
 	.btn-flotante {
-		font-size: 16px; /* Cambiar el tamaño de la tipografia */
+		font-size: 15px; /* Cambiar el tamaño de la tipografia */
 		text-transform: uppercase; /* Texto en mayusculas */
 		font-weight: bold; /* Fuente en negrita o bold */
 		color: black; /* Color del texto */
-		border-radius: 20px; /* Borde del boton */
+		border-radius: 15px; /* Borde del boton */
 		letter-spacing: 2px; /* Espacio entre letras */
-		background-color: white; /* Color de fondo */
-		padding: 18px 30px; /* Relleno del boton */
+		background-color: transparent; /* Color de fondo */
+		padding: 18px 25px; /* Relleno del boton */
 		position: fixed;
-		bottom: 40px;
+		bottom: 15px;
 		right: 40px;
 		transition: all 300ms ease 0ms;
 		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -138,5 +146,7 @@ Etiquetar los datos
 			right: 20px;
 		}
 	}
+
+	
 	
 	
