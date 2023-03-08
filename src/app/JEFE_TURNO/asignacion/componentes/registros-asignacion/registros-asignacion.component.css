@@ -1,0 +1,79 @@
+
+/*
+	Ancho máximo antes de que esta tabla EN PARTICULAR se vuelva desagradable. Esta consulta surtirá efecto para cualquier pantalla de menos de 760 px y también para iPad específicamente.
+	*/
+	@media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px)  {
+
+		/* Forzar la mesa para que ya no sea como mesas*/
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Ocultar encabezados de tabla (pero no mostrar: ninguno; para accesibilidad)*/
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* 
+             Comportarse como una "fila" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			/* Ahora como un encabezado de tabla*/
+			position: absolute;
+			/* Los valores superior/izquierdo imitan el relleno */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		 
+Etiquetar los datos
+    También puede usar un atributo y contenido data-* para esto. De esa manera "infla" el HTML, de esta manera significa que necesita mantener HTML y CSS sincronizados. Lea Verou tiene una forma inteligente de manejar la sombra de texto.
+		*/
+		td:nth-of-type(1):before { content: "USUARIO"; }
+		td:nth-of-type(2):before { content: "NOMBRE"; }
+		td:nth-of-type(3):before { content: "APELLIDO PATERNO"; }
+		td:nth-of-type(4):before { content: "APELLIDO MATERNO"; }
+		td:nth-of-type(5):before { content: "RADIO"; }
+		td:nth-of-type(6):before { content: ""; }
+	}
+
+	thead tr th { 
+        position: sticky;
+        top: 0;
+        text-align: center;
+        z-index: 10;
+        font-weight: bold; /* Fuente en negrita o bold */
+        background-color: white;
+    }
+
+    button{
+        margin: 5px;
+        text-align: center;
+    }
+
+    i{
+        font-size: 25px;
+    }

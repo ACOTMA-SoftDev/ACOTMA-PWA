@@ -1,0 +1,19 @@
+
+/* Archivos de estilos para el header*/
+.text1{
+    color: white;
+    font-size: 40px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15vh;
+}
+
+
+.text2{
+    color: #707070;
+    font-size: 20px;
+    width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
