@@ -26,6 +26,8 @@ import { RegistrosAsignacionComponent } from './JEFE_TURNO/asignacion/componente
 import { CrearUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/crear-usuario/crear-usuario.component';
 import { NavBarCrearUsuariosComponent } from './JEFE_TURNO/usuarios/componentes/nav-bar-crear-usuarios/nav-bar-crear-usuarios.component';
 import { RegistrosUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/registros-usuario/registros-usuario.component';
+import { HomeComponent } from './OPERADORA/Home.Component';
+import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
 
 @NgModule({
   declarations: [
@@ -52,12 +54,14 @@ import { RegistrosUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/reg
     CrearUsuarioComponent,
     NavBarCrearUsuariosComponent,
     RegistrosUsuarioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CronosRouting, /** INYECTAR */
-    JefeTurnoRouting
+    JefeTurnoRouting,
+    OperadoraRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
