@@ -26,8 +26,9 @@ import { RegistrosAsignacionComponent } from './JEFE_TURNO/asignacion/componente
 import { CrearUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/crear-usuario/crear-usuario.component';
 import { NavBarCrearUsuariosComponent } from './JEFE_TURNO/usuarios/componentes/nav-bar-crear-usuarios/nav-bar-crear-usuarios.component';
 import { RegistrosUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/registros-usuario/registros-usuario.component';
-import { HomeComponent } from './OPERADORA/Home.Component';
+import { HomeComponent } from './OPERADORA/Home/Home.Component';
 import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
+import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
     CrearUsuarioComponent,
     NavBarCrearUsuariosComponent,
     RegistrosUsuarioComponent,
-    HomeComponent
+    HomeComponent,
+    ServiciosIniciadosComponent
   ],
   imports: [
     BrowserModule,

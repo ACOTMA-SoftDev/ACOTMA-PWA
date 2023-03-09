@@ -1,9 +1,12 @@
 import { RouterModule,Routes } from "@angular/router";
-import { HomeComponent } from "../OPERADORA/Home.Component";
+import { HomeComponent } from "../OPERADORA/Home/Home.Component";
 import { NgModule } from "@angular/core";
+import { ServiciosIniciadosComponent } from "../OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component";
 
 const appOperadoraRouting:Routes=[
-  {path:'Home', component:HomeComponent}
+  {path:'Operadora/Home', component:HomeComponent},
+  {path: 'Operadora/ServiciosIniciados',component:ServiciosIniciadosComponent}
+
 
 ];
 @NgModule({
