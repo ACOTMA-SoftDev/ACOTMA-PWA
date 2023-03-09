@@ -13,7 +13,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <button class="btn btn-outline-success" aria-current="page" href="#"><i class="bi bi-person-add"></i> Agregar Verificadores</button>
+                <button class="btn btn-outline-success" aria-current="page" href="#"><i class="bi bi-person-fill-gear"></i> Administrar Verificadores</button>
               </li>
               <br>
               <li class="nav-item">
@@ -38,57 +38,6 @@
     <br>
     <br>
     <br>
-<form id="file-upload-form" class="uploader">
-  <input id="file-upload" type="file" (change)="fileUpload($event)" name="fileUpload" accept=".xls,.xlsx" />
-
-  <label for="file-upload" id="file-drag">
-
-    <div id="start">
-      <i class="fa fa-download" aria-hidden="true"></i>
-      <div>Selecciona un archivo o suelta aqui</div>
-      <div id="notimage" class="hidden"></div>
-      <span id="file-upload-btn" class="btn btn-primary">Selecciona un documento</span>
-    </div>
-    <div id="response" class="hidden">
-      <div id="messages"></div>
-      <progress class="progress" id="file-progress" value="0">
-        <span>0</span>%
-      </progress>
-    </div>
-  </label>
-</form>
-<div class="container">
-<div class="ex1">
-    <table class="table table-">
-      <thead>
-        <tr>
-          <th>Tipo Unidad</th>
-          <th>Ruta</th>
-          <th>Economico</th>
-          <th>No Tarjeton</th>
-          <th>Nombre</th>
-          <th>Corrida</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of ExcelData">
-          <td>{{data.tipoUnidad}}</td>
-          <td>{{data.ruta}}</td>
-          <td>{{data.economico}}</td>
-          <td>{{data.tarjeton}}</td>
-          <td>{{data.nomChofer}}</td>
-          <td>{{data.fkCorrida}}</td>
-
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p align="right">
-  <button  class="btn btn-success">Subir Asignaicon</button>
-</p>
-</div>
-=======
-<!-- Upload  -->
 <form id="file-upload-form" class="uploader">
   <input id="file-upload" type="file" (change)="fileUpload($event)" name="fileUpload" accept=".xls,.xlsx" />
 
