@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./registros-usuario.component.css']
 })
 export class RegistrosUsuarioComponent {
+  
 
 }
