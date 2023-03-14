@@ -29,6 +29,8 @@ import { RegistrosUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/reg
 import { HomeComponent } from './OPERADORA/Home/Home.Component';
 import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
 import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
+import { loginComponent } from './LOGIN/login.Component';
+import { LoginRouting } from './ROUTING/app.Login.Routing';
 
 @NgModule({
   declarations: [
@@ -56,14 +58,16 @@ import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Ser
     NavBarCrearUsuariosComponent,
     RegistrosUsuarioComponent,
     HomeComponent,
-    ServiciosIniciadosComponent
+    ServiciosIniciadosComponent,
+    loginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CronosRouting, /** INYECTAR */
     JefeTurnoRouting,
-    OperadoraRouting
+    OperadoraRouting,
+    LoginRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
