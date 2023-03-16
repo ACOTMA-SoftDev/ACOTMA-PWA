@@ -1,0 +1,98 @@
+<header style="background-color: #9C223C;">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid pading1">
+        <a class="navbar-brand text1" href="#">SITMAH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <span class="navbar-text text1">
+            INFORME DE PERCANCES
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header><nav class="navbar navbar-light bg-light">
+    <i class="bi bi-arrow-left"></i>
+  </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <p class="fw-normal">
+                            <legend class="text-center header fw-bold">Informe de percances</legend>
+                        </p>
+                        <p class="text-decoration-underline">Fecha default</p>
+
+                        <input class="form-control" list="datalistOptions"  placeholder="ECO">
+                        <datalist id="datalistOptions">
+                            <option value="001">
+                            <option value="033">
+                            <option value="152">
+                            <option value="090">           
+                        </datalist>
+                        <p class="text-decoration-underline">Tipo de unidad default</p>
+
+                        <input class="form-control" list="datalistOptions"  placeholder="ID_tarjeton">
+                        <datalist id="datalistOptions">
+                            <option value="001">
+                            <option value="033">
+                            <option value="152">
+                            <option value="090">           
+                        </datalist>
+
+                        <p class="text-decoration-underline">Conductor default</p>
+
+                        <input class="form-control" list="datalistOptions"  placeholder="Servicio/Ruta">
+                        <datalist id="datalistOptions">
+                            <option value="001">
+                            <option value="033">
+                            <option value="152">
+                            <option value="090">           
+                        </datalist>
+
+                        <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                          </div>
+
+                          <p class="text-decoration-underline">DATOS DEL VEHICULO PARTICULAR</p>
+
+                          <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Modelo</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Color</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Placas</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                          </div>
+
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Relato de los hechos</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                         
+                          <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Fotos del Percance</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                          </div>
+                          
+                          <div class="modal-footer">
+                            <button type="buttons" class="btng">Guardar</button>
+                          </div>
+                          

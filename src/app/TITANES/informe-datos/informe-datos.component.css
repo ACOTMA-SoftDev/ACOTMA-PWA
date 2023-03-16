@@ -1,0 +1,10 @@
+.btnw{
+        color: rgb(255, 255, 255);
+        background-color: #9C223C;
+        align-items: end center;
+        border-radius: 20px; /* Borde del boton */
+        height: 90px;
+        width: 150px;
+        right: 20px;
+        letter-spacing: 2px; /* Espacio entre letras */
+}

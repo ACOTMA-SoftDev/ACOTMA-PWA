@@ -1,0 +1,6 @@
+.btng{
+    color: rgb(255, 255, 255);
+    background-color: #9C223C;
+    align-items: end center;
+    border-radius: 20px; /* Borde del boton */
+}

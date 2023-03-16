@@ -1,0 +1,136 @@
+<header style="background-color: #9C223C;">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid pading1">
+        <a class="navbar-brand text1" href="#">SITMAH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <span class="navbar-text text1">
+            INSPECCION DE LIMPIEZA
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header><nav class="navbar navbar-light bg-light">
+    <i class="bi bi-arrow-left"></i>
+  </nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <p class="fw-normal">
+                            <legend class="text-center header fw-bold">Inspección de limpieza</legend>
+                        </p>
+                        <p class="text-decoration-underline">Dia default</p>
+
+                        <input class="form-control" list="datalistOptions"  placeholder="Nombre de la estacion">
+                        <datalist id="datalistOptions">
+                            <option value="1. Terminal Téllez">
+                            <option value="2. Gabriel Mancera">
+                            <option value="3. Matilde">
+                            <option value="4. Efrén Rebolledo">
+                            <option value="5. Tercera Edad">
+                            <option value="6. San Antonio">
+                            <option value="7. Ejercito Mexicano">
+                            <option value="8. Felipe Ángeles">
+                            <option value="9. Centro de Justicia Oriente">
+                            <option value="9. Centro de Justicia Poniente">
+                            <option value="10. Vicente Segura">
+                            <option value="11. Juan C. Doria">
+                            <option value="12. Hospitales">
+                            <option value="13. SEPH">
+                            <option value="14. Tecnológico"> 
+                            <option value="15. Bicentenario Oriente">
+                            <option value="15. Bicentenario Poniente">
+                            <option value="16. Centro Minero">
+                            <option value="17. Zona Plateada"> 
+                            <option value="18. Tecnológico de Monterrey">
+                            <option value="19p. Estadio Hidalgo">
+                            <option value="19o. Central de Autobuses">
+                            <option value="20. Cuna de Futbol">
+                            <option value="21. Santa Julia">
+                            <option value="22. Prepa 1">
+                            <option value="23o. Revolución">
+                            <option value="23p. Bioparque"> 
+                            <option value="24o. Manuel Dublán">
+                            <option value="24p. Parque del Maestro">
+                            <option value="25o. Presidente Alemán">
+                            <option value="25p. Plaza Juárez"> 
+                            <option value="26. Niños Heroes Oriente">
+                            <option value="26. Niños Heroes Poniente">
+                            <option value="27. Centro Histórico">            
+                        </datalist>
+
+                        <div class="form-group tex">
+                            <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
+                            <div class="checkbox">
+                                <label><input type="checkbox">  Limpieza de piso</label>
+                                <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                                
+                              </div>
+                        </div>
+                        
+                        <div class="checkbox">
+                            <label><input type="checkbox">  Limpieza de vidrio</label>
+                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                          </div>
+
+                          <div class=>
+                            <label><input type="checkbox">  Limpieza de área de servicio</label>
+                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                          </div>
+
+                          <div class="checkbox">
+                            <label><input type="checkbox">  Limpieza de estructura</label>
+                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                          </div>
+
+                          <div class="checkbox">
+                            <label><input type="checkbox">  Limpieza de torniquete en espacios de venta y recarga de tarjetas</label>
+                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                          </div>
+
+                          <div class="checkbox">
+                            <label><input type="checkbox">  Limpieza de sanitarios</label>
+                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                          </div>
+                          
+                        <div class="form-group">
+                            <div class="col-md-12 text-center position-absolute bottom-0 start-50 translate-middle-x">
+                                <button type="submit" class="rounded-pill btn-limpieza">Guardar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comentarios</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label"></label>
+            <textarea class="form-control" required="required" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="buttons" class="btng">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>

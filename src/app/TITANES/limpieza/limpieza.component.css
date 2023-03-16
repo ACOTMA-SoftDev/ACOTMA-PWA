@@ -1,0 +1,37 @@
+.header {
+    color: #000000;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #000000;
+}
+
+.btn-limpieza{
+    color: rgb(255, 255, 255);
+    background-color: #9C223C;
+    font-size: 20px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+}
+.btn {
+	font-size: 20px; /* Cambiar el tamaño de la tipografia */
+	border-radius: 20px; /* Borde del boton */
+	background-color: transparent; /* Color de fondo */
+	padding: 15px 15px; /* Relleno del boton */
+    height: 10px;
+    width: 10px;
+	right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+
+}
+
+.btng{
+    color: rgb(255, 255, 255);
+    background-color: #9C223C;
+}
