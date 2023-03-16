@@ -16,6 +16,8 @@ import { IncidenciasTecComponent } from './TITANES/componentes/incidencias-tec/i
 import { NavBarTITANESComponent } from './TITANES/nav-bar-titanes/nav-bar-titanes.component';
 import { InformeDatosComponent } from './TITANES/informe-datos/informe-datos.component';
 import { InformePercancesComponent } from './TITANES/informe-percances/informe-percances.component';
+import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
+import { LoginRouting } from './ROUTING/app.Login.Routing';
 
 
 
@@ -39,7 +41,9 @@ import { InformePercancesComponent } from './TITANES/informe-percances/informe-p
     BrowserModule,
     AppRoutingModule,
     CronosRouting, /** INYECTAR */
-    TitanesRouting
+    TitanesRouting,
+    OperadoraRouting,
+    LoginRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
