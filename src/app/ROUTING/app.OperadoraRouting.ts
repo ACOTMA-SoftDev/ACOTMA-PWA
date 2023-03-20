@@ -4,7 +4,6 @@ import { NgModule } from "@angular/core";
 import { ServiciosIniciadosComponent } from "../OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component";
 import { HorarioComponent } from "../OPERADORA/HorarioServicio/Horario.Servicio.Component";
 import{FormsModule} from '@angular/forms'
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { EditarServicioComponent } from "../OPERADORA/EditarServicio/Editar.Servicio.Component";
 const appOperadoraRouting:Routes=[
   {path:'Operadora/Home', component:HomeComponent},
@@ -16,9 +15,6 @@ const appOperadoraRouting:Routes=[
 @NgModule({
   imports:[RouterModule.forRoot(appOperadoraRouting),
     FormsModule,
-    NgbModule
-  
-  
   ],
   exports: [RouterModule],
   bootstrap:[OperadoraRouting]
