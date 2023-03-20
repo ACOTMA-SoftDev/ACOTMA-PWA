@@ -18,6 +18,8 @@ import { InformeDatosComponent } from './TITANES/informe-datos/informe-datos.com
 import { InformePercancesComponent } from './TITANES/informe-percances/informe-percances.component';
 import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
 import { LoginRouting } from './ROUTING/app.Login.Routing';
+import { HorarioComponent } from './OPERADORA/HorarioServicio/Horario.Servicio.Component';
+import { EditarServicioComponent } from './OPERADORA/EditarServicio/Editar.Servicio.Component';
 
 
 
@@ -36,6 +38,8 @@ import { LoginRouting } from './ROUTING/app.Login.Routing';
     NavBarTITANESComponent,
     InformeDatosComponent,
     InformePercancesComponent,
+    HorarioComponent,
+    EditarServicioComponent
   ],
   imports: [
     BrowserModule,
