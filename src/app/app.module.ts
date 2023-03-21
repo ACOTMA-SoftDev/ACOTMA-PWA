@@ -25,6 +25,7 @@ import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
     InformeDatosComponent,
     InformePercancesComponent,
     HorarioComponent,
-    EditarServicioComponent
+    EditarServicioComponent,
   ],
   imports: [
     BrowserModule,
