@@ -24,13 +24,13 @@ p {
   font-size: 18px;
   color: $dark-text;
 }
-// Upload 
+// Upload
 //
 .uploader {
   display: block;
   clear: both;
   margin: 0 auto;
-  width: 100%;
+  width: 85%;
   max-width: 300%;
 
   label {
@@ -39,9 +39,9 @@ p {
     width: 100%;
     padding: 2rem 1.5rem;
     text-align: center;
-    background: #fff;
+    background: #060606;
     border-radius: 7px;
-    border: 3px solid #eee;
+    border: 3px solid #060606;
     transition: all .2s ease;
     user-select: none;
 
@@ -173,4 +173,8 @@ div.ex1 {
   height: 300px;
   width: 100%;
   overflow-y: auto;
+
+ top: 0;
+ bottom: 0;
+ position: sticky;
 }

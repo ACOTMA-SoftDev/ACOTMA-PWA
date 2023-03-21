@@ -1,10 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import * as XLSX from 'xlsx'
+import { Router } from "@angular/router";
 @Component({
   templateUrl:'Home.Component.html',
   styleUrls:['Home.Component.scss']
 })
 export class HomeComponent implements OnInit{
+  constructor (private router: Router){
+
+  }
   ExcelData:any;
   fileUpload(event:any){
   const selectedFile=event.target.files[0];
@@ -18,5 +22,9 @@ export class HomeComponent implements OnInit{
   }
 }
   ngOnInit(): void {
+  }
+  icongif='assets/iNegro.gif'
+  goServiciosIniciados(){
+    this.router.navigate(['Operadora/ServiciosIniciados'])
   }
 }
