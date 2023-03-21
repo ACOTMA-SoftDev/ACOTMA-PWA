@@ -1,0 +1,78 @@
+<div style="background-color: #fff; height:100vh; width:auto;">
+  <nav class="navbar navbar-dark  fixed-top" style="background-color: #9c223c;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="" style="width: 90px;" alt="logo">
+      </a>
+      <a class="navbar-brand" href="#">Verificacion del Dia</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <button class="btn btn-outline-danger" aria-current="page" href="#"><i class="bi bi-box-arrow-left"></i>
+                Cerrrar Sesion</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <form action="" method="post">
+      <div class="row">
+        <div class="form-group ">
+          <label for="exampleFormControlInput1">Estado</label>
+          <select class="form-control">
+            <option>-  - Seleccione Uno -  -</option>
+            <option>Entrada</option>
+            <option>Salida</option>
+          </select>
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">No.Unidad</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduce Numero de Unidad">
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Tipo Unidad</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduce tipo de unidad">
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">No.Tarjeton</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduce Numero de Tarjeton" >
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Ruta</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Introduce Ruta">
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Observaciones</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"
+            placeholder="Introduce tus observaciones"></textarea>
+        </div>
+      </div>
+      <br>
+
+      <div align="center">
+        <button type="submit" class="btn btn-primary text-center col-12">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
