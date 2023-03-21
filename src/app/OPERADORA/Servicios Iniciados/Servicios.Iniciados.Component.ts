@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core'
 })
 export class ServiciosIniciadosComponent implements OnInit{
 
-
+  icongif='assets/iNegro.gif'
   ngOnInit(): void {
   }
 
