@@ -18,12 +18,23 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <button class="btn btn-outline-danger" aria-current="page" href="#"><i
-                                    class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
-                        </li>
-                    </ul>
-                </div>
+                      <li class="nav-item">
+                        <button class="btn btn-outline-success" aria-current="page" (click)="goApertura()"><i class="bi bi-person-fill-gear"></i> Apertura de Servicios</button>
+                      </li>
+                      <br>
+                      <li class="nav-item">
+                        <button class="btn btn-outline-success" aria-current="page" (click)="goHorarioServicio()"><i class="bi bi-clock"></i> Horarios de Servicio</button>
+                      </li>
+                      <br>
+                      <li class="nav-item">
+                        <button class="btn btn-outline-success" aria-current="page" (click)="goServiciosIniciados()"><i class="bi bi-play-fill"></i> Servicio Iniciado</button>
+                      </li>
+                      <br>
+                      <li class="nav-item">
+                        <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
+                      </li>
+                      </ul>
+                  </div>
             </div>
         </div>
     </nav>

@@ -23,8 +23,14 @@ export class HomeComponent implements OnInit{
 }
   ngOnInit(): void {
   }
-  icongif='assets/iNegro.gif'
+  icongif='assets/iconBlackAcotma.gif'
   goServiciosIniciados(){
     this.router.navigate(['Operadora/ServiciosIniciados'])
+  }
+  goHorarioServicio(){
+    this.router.navigate(['Operadora/HorarioServicio'])
+  }
+  goCerrar(){
+    this.router.navigate(['login'])
   }
 }

@@ -21,7 +21,7 @@ import { LoginRouting } from './ROUTING/app.Login.Routing';
 import { HorarioComponent } from './OPERADORA/HorarioServicio/Horario.Servicio.Component';
 import { EditarServicioComponent } from './OPERADORA/EditarServicio/Editar.Servicio.Component';
 import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
-
+import { EditarHoraComponent } from './OPERADORA/EditarHorarioServicio/Editar.Hora.Component';
 
 
 
@@ -42,6 +42,7 @@ import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
     InformePercancesComponent,
     HorarioComponent,
     EditarServicioComponent,
+    EditarHoraComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router'
 @Component({
     
-templateUrl:'Editar.Servicio.Component.html',
-styleUrls:['Editar.Servicio.Component.scss']
+templateUrl:'Editar.Hora.Component.html',
+styleUrls:['Editar.Hora.Component.scss']
 })
-export class EditarServicioComponent implements OnInit{
+export class EditarHoraComponent implements OnInit{
     constructor(private router:Router){
 
     }

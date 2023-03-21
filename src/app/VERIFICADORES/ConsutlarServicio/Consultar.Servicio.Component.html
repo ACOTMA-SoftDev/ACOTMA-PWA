@@ -19,7 +19,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <button class="btn btn-outline-danger" aria-current="page" href="#"><i class="bi bi-box-arrow-left"></i>
+              <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i class="bi bi-box-arrow-left"></i>
                 Cerrrar Sesion</button>
             </li>
           </ul>
@@ -45,8 +45,6 @@
             <th scope="col">Economico</th>
             <th scope="col">Accion</th>
             <th scope="col">Salida</th>
-
-
           </tr>
         </thead>
         <tbody>
@@ -55,8 +53,8 @@
             <td>Mark</td>
             <td>Otto</td>
             <td>
-              <button type="button" class="btn btn-outline-success"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger"><i
+              <button type="button" class="btn btn-outline-success " (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
+              <button type="button" class="btn btn-outline-danger" (click)="goReportar()"><i
                   class="bi bi-file-earmark-excel-fill"></i></button>
             </td>
 
@@ -66,8 +64,8 @@
             <td>Jacob</td>
             <td>Thornton</td>
             <td>
-              <button type="button" class="btn btn-outline-success"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger"><i
+              <button type="button" class="btn btn-outline-success" (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
+              <button type="button" class="btn btn-outline-danger" (click)="goReportar()"><i
                   class="bi bi-file-earmark-excel-fill"></i></button>
             </td>
           </tr>
@@ -76,8 +74,8 @@
             <td>Larry</td>
             <td>the Bird</td>
             <td>
-              <button type="button" class="btn btn-outline-success"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger"><i
+              <button type="button" class="btn btn-outline-success" (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
+              <button type="button" class="btn btn-outline-danger" (click)="goValidar()"><i
                   class="bi bi-file-earmark-excel-fill"></i></button>
             </td>
 

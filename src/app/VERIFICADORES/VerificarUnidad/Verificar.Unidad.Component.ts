@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
 
@@ -8,10 +9,20 @@ import { Component, OnInit } from "@angular/core";
 })
 
 export class VerificarUnidadesComponent implements OnInit{
-  unidad="102"
+  constructor(private router:Router){
 
+  }
+  unidad="102"
+  icongif='assets/iconBlackAcotma.gif'
+  
   ngOnInit(): void {
 
+  }
+  goLiberarUnidad(){
+    this.router.navigate(['Verificadores/ConsultaServicio'])
+  }
+  goCerrar(){
+    this.router.navigate(['login'])
   }
 
 }
