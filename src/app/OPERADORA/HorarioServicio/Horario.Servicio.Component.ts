@@ -6,7 +6,7 @@ templateUrl:'Horario.Servicio.Component.html',
 styleUrls:['Horario.Servicio.Component.scss']
 })
 export class HorarioComponent implements OnInit{
-    icongif='assets/ACOTMABlack.gif'
+    icongif='assets/iconBlackAcotma.gif'
     ngOnInit(): void {
 
     }

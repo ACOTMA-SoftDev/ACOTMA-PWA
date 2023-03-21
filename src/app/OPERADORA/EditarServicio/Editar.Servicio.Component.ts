@@ -6,7 +6,7 @@ templateUrl:'Editar.Servicio.Component.html',
 styleUrls:['Editar.Servicio.Component.scss']
 })
 export class EditarServicioComponent implements OnInit{
-    icongif='assets/ACOTMABlack.gif'
+    icongif='assets/iconBlackAcotma.gif'
     ngOnInit(): void {
 
     }
