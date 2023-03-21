@@ -30,8 +30,8 @@
                         </a>
                             <legend class="text-center header">Inspección de limpieza</legend>
                         </p>
-                        <p class="text-decoration-underline">Dia default</p>
-                        <input class="form-control" list="datalistOptions"  placeholder="Nombre de la estacion">
+                        <p class="text-decoration-underline fs-5 mb-3">Dia default</p>
+                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion">
                         <datalist id="datalistOptions">
                             <option value="1. Terminal Téllez">
                             <option value="2. Gabriel Mancera">
@@ -69,42 +69,48 @@
                             <option value="27. Centro Histórico">            
                         </datalist>
 
-                        <div class="form-group tex">
+                        <div class="form-check fs-5 mb-3">
                             <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
                             <div class="checkbox">
-                                <label><input type="checkbox">  Limpieza de piso</label>
-                                <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
-                                
+                                <label><input type="checkbox">  Limpieza de piso
+                              </label>
                               </div>
                         </div>
-                        
+
+                        <div class="form-check tex fs-5 mb mb-3">
                         <div class="checkbox">
                             <label><input type="checkbox">  Limpieza de vidrio</label>
-                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
                           </div>
+                        </div>
 
+                        <div class="form-check tex fs-5 mb-3">
                           <div class=>
                             <label><input type="checkbox">  Limpieza de área de servicio</label>
-                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
                           </div>
+                        </div>
 
+                        <div class="form-check tex fs-5 mb-3">
                           <div class="checkbox">
                             <label><input type="checkbox">  Limpieza de estructura</label>
-                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
                           </div>
+                        </div>
 
+                          <div class="form-check tex fs-5 mb-3">
                           <div class="checkbox">
-                            <label><input type="checkbox">  Limpieza de torniquete en espacios de venta y recarga de tarjetas</label>
-                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                            <label><input type="checkbox">  Limpieza de torniquete en espacios de VRT</label>
                           </div>
+                        </div>
 
+                          <div class="form-check tex fs-5 mb-5">
                           <div class="checkbox">
                             <label><input type="checkbox">  Limpieza de sanitarios</label>
-                            <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
                           </div>
-                          
-                        <div class="form-group">
-                            <div class="col-md-12 text-center position-absolute bottom-0 start-50 translate-middle-x">
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+
+                        <div class="form-group position-relative">
+                            <div class="col-md-12 text-center position-absolute top-100 start-50 translate-middle">
                                 <button type="submit" class="rounded-pill btn-limpieza">Guardar</button>
                             </div>
                         </div>
