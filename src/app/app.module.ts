@@ -20,6 +20,7 @@ import { OperadoraRouting } from './ROUTING/app.OperadoraRouting';
 import { LoginRouting } from './ROUTING/app.Login.Routing';
 import { HorarioComponent } from './OPERADORA/HorarioServicio/Horario.Servicio.Component';
 import { EditarServicioComponent } from './OPERADORA/EditarServicio/Editar.Servicio.Component';
+import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
 
 
 
@@ -47,7 +48,8 @@ import { EditarServicioComponent } from './OPERADORA/EditarServicio/Editar.Servi
     CronosRouting, /** INYECTAR */
     TitanesRouting,
     OperadoraRouting,
-    LoginRouting
+    LoginRouting,
+    VerificadoresRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
