@@ -1,77 +1,77 @@
+
 <app-header></app-header>
 <app-nav-bar-limpieza></app-nav-bar-limpieza>
+
+
 <div class="container">
   <nav class="navbar navbar-light">
-    <div class="container-fluid" >
-      <a class="navbar-brand">INFORMES DE LIMPIEZA DEL
-        <select class="form-select" aria-label="Default select example" style="border: none; box-shadow: none;">
-          <option selected>DIA</option>
-          <option value="1">LUNES</option>
-          <option value="2">MARTES</option>
-          <option value="3">MIERCOLES</option>
-          <option value="3">JUEVES</option>
-          <option value="3">VIERNES</option>
-          <option value="3">SABADO</option>
-          <option value="3">DOMINGO</option>
-        </select>
-    </a>
+    <div class="container-fluid">
+      <a class="navbar-brand">INFORME DEL DIA</a>
+
+<div class="row">
+  <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
+    <input type="text"
+           placeholder="Daterangepicker"
+           class="form-control"
+           bsDaterangepicker>
+  </div>
+</div>
+
       <div class=" d-flex">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Here" ng-model="estToday">
-      </div>
+          <div class="input-group">
+            <div class="input-group-text bg-white">
+              <i class="bi bi-search"></i>
+            </div>
+            <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Escriba la Estacion">
+          </div>
+
+        </div>
         <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
           <i class="bi bi-download"></i>
         </button>
       </div>
     </div>
-    <div class="container">
-      <span>NOMBRE TITAN</span>
-    </div>
+  </nav>
+</div>
+
+<hr>
 
     <div class="container justify-content-center" >
       <hr>
       <table role="table" class="table table-bordered table-fixed">
           <thead role="rowgroup">
             <tr role="row">
-              <th role="columnheader">FECHA</th>
-              <th role="columnheader">AREA DE LIMPIEZA</th>
+              <th role="columnheader">Estacion</th>
+              <th role="columnheader">Fecha</th>
               <th role="columnheader">Limpieza de piso</th>
-              <th role="columnheader">Limpieza de vidrio</th>
-              <th  role="columnheader">Limpieza de area de servicio</th>
-              <th  role="columnheader">Limpieza de estructura</th>
-              <th  role="columnheader">Limpieza de torniquete en 
+              <th role="columnheader">impieza de vidrio</th>
+              <th role="columnheader">Limpieza de area de servicio</th>
+              <th role="columnheader">Limpieza de estructura</th>
+              <th role="columnheader">Limpieza de torniquete en 
                 espacios de venta y recarga
                 de tarjeta</th>
-                <th role="cell">Limpieza de sanitarios</th>
-              <th role="columnheader">Observaciones</th>
+              <th role="columnheader">Limpieza de sanitarios</th>
+              <th role="columnheader">Observciones</th>
+              <th role="columnheader">¿Quien superviso?</th>
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let estacion of estaciones">
-              <td role="cell">{{estacion.Fecha_Estacion}}</td>
-              <td role="cell">{{estacion.Estacion}}</td>
-              <td role="cell">{{estacion.LimpiezaPiso}}</td>
+            <tr role="row" *ngFor="let ejemplo of ejemplos | filter : term; let i = index">
+              <td role="cell">{{ejemplo.Estacion}}</td>
+              <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
+              <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
+              <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
+              <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>
+              <td role="cell">{{ejemplo.LimpiezaAreaEstructura}}</td>
+              <td role="cell">{{ejemplo.LimpiezaTorniquetes}}</td>
+              <td role="cell">{{ejemplo.LimpiezaSanitarios}}</td>
+              <td role="cell">{{ejemplo.Observaciones}}</td>
+              <td role="cell">{{ejemplo.Usuario}}</td>
             </tr>
           </tbody>
         </table>
     </div>
 
-    <div class="container">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
   
+

@@ -3,15 +3,27 @@
 <div class="container">
   <nav class="navbar navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand">INFORMES DE LIMPIEZA SEMANAL
-        <select class="form-select" aria-label="Default select example" style="border: none; box-shadow: none;">
-          <option selected>SEMANA</option>
-          <option value="1">one</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-    </a>
+      <a class="navbar-brand">INFORME POR FECHA</a>
+
+<div class="row">
+  <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
+    <input type="text"
+           placeholder="Daterangepicker"
+           class="form-control"
+           bsDaterangepicker>
+  </div>
+</div>
+
       <div class=" d-flex">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-text bg-white">
+              <i class="bi bi-search"></i>
+            </div>
+            <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Escriba la Fecha">
+          </div>
+
+        </div>
         <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
           <i class="bi bi-download"></i>
         </button>
@@ -21,109 +33,36 @@
 </div>
     <div class="container justify-content-center">
       <hr>
-      <table role="table" class="table table-bordered table-fixed">
+      <table role="table" class="table table-striped table-fixed">
           <thead role="rowgroup">
             <tr role="row">
-              <th role="columnheader">AREA DE LIMPIEZA</th>
-              <th role="columnheader">LUNES</th>
-              <th role="columnheader">MARTES</th>
-              <th role="columnheader">MIERCOLES</th>
-              <th role="columnheader">JUEVES</th>
-              <th role="columnheader">VIERNES</th>
-              <th role="columnheader">SABADO</th>
-              <th role="columnheader">DOMINGO</th>
-              <th role="columnheader">OBSERVACIONES</th>
+              <th role="columnheader">Estacion</th>
+              <th role="columnheader">Fecha</th>
+              <th role="columnheader">Limpieza de piso</th>
+              <th role="columnheader">impieza de vidrio</th>
+              <th role="columnheader">Limpieza de area de servicio</th>
+              <th role="columnheader">Limpieza de estructura</th>
+              <th role="columnheader">Limpieza de torniquete en 
+                espacios de venta y recarga
+                de tarjeta</th>
+              <th role="columnheader">Limpieza de sanitarios</th>
+              <th role="columnheader">Observciones</th>
+              <th role="columnheader">¿Quien superviso?</th>
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row">
-              <td role="cell">Limpieza de piso</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de vidrio</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de area de servicio</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de estructura</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de torniquete en 
-                espacios de venta y recarga
-                de tarjeta.</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de sanitarios</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell">SI</td>
-              <td role="cell" class="text-center"><a href=""><i class="bi bi-eye"></i></a></td>
+            <tr role="row" *ngFor="let estacion of semanales | filter : term; orderby:'Fecha_Limpieza'; let i = index">
+              <td role="cell">{{estacion.Estacion}}</td>
+              <td role="cell">{{estacion.Fecha_Limpieza }}</td>
+              <td role="cell">{{estacion.LimpiezaPiso}}</td>
+              <td role="cell">{{estacion.LimpiezaVidrio}}</td>
+              <td role="cell">{{estacion.LimpiezaAreaServicios}}</td>
+              <td role="cell">{{estacion.LimpiezaAreaEstructura}}</td>
+              <td role="cell">{{estacion.LimpiezaTorniquetes}}</td>
+              <td role="cell">{{estacion.LimpiezaSanitarios}}</td>
+              <td role="cell">{{estacion.Observaciones}}</td>
+              <td role="cell">{{estacion.Usuario}}</td>
             </tr>
           </tbody>
         </table>
     </div>
-
-    <div class="container">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-  

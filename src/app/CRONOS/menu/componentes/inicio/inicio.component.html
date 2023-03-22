@@ -1,92 +1,128 @@
 <header style="background-color: #9C223C;">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid pading1">
-        <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          </ul>
-          <span class="navbar-text text1">
-            INICIO
-          </span>
-        </div>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid pading1">
+      <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        </ul>
+        <span class="navbar-text text1">
+          INICIO
+        </span>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
 <body>
-  
+
 <nav class="navbar">
-    <div class="container">
-        <li class="item-5 deeper parent" style="list-style-type: none;"><!-- de esta forma le quitamos el puntito de li-->
-        <button class="btn btn-outline-light text2" type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#menuLateral">
-        <i class="bi bi-list-ul"></i>
-        </button>
+  <div class="container">
+      <li class="item-5 deeper parent" style="list-style-type: none;"><!-- de esta forma le quitamos el puntito de li-->
+      <button class="btn btn-outline-light text2" type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#menuLateral">
+      <i class="bi bi-list-ul"></i>
+      </button>
+      </li>
+      <li class="item-5 deeper parent" style="list-style-type: none;">
+          <a href="#" class="nav-link link-dark">
+            <button type="button" class="btn btn-outline-light text2">
+              <i class="bi bi-house-door"></i>
+            </button>
+          </a>
         </li>
         <li class="item-5 deeper parent" style="list-style-type: none;">
-            <a href="#" class="nav-link link-dark">
-              <button type="button" class="btn btn-outline-light text2">
-                <i class="bi bi-house-door"></i>
-              </button>
-            </a>
-          </li>
-          <li class="item-5 deeper parent" style="list-style-type: none;">
-            <a href="#" class="nav-link link-dark">
-              <button type="button" class="btn btn-outline-light text2">
-                <i class="bi bi-geo-alt-fill"></i>
-              </button>
-            </a>
-          </li>
+          <a href="#" class="nav-link link-dark">
+            <button type="button" class="btn btn-outline-light text2">
+              <i class="bi bi-geo-alt-fill"></i>
+            </button>
+          </a>
+        </li>
 
-        <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
-            <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                  <span class="fs-4">MENU</span>
-                </a>
+      <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
+          <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <span class="fs-4">MENU</span>
+              </a>
+              <hr>
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="item-5 deeper parent" style="list-style-type: none;">
+                  <a href="#" class="nav-link link-dark">
+                    <button type="button" class="btn btn-outline-light text2"><i class="bi bi-folder2-open"></i>
+                      DESPACHO</button>
+                  </a>
+                </li>
                 <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
+                <li class="item-5 deeper parent" style="list-style-type: none;">
+                  <a href="titanes" class="nav-link link-dark">
+                    <button type="button" class="btn btn-outline-light text2">
+                      <i class="bi bi-file-earmark-person"></i>
+                      TITANES
+                    </button>
+                  </a>
+                </li>
+              </ul>
+              <hr>
+              <ul>
+                <div class="dropdown">
                   <li class="item-5 deeper parent" style="list-style-type: none;">
                     <a href="#" class="nav-link link-dark">
-                      <button type="button" class="btn btn-outline-light text2"><i class="bi bi-folder2-open"></i>
-                        DESPACHO</button>
-                    </a>
-                  </li>
-                  <hr>
-                  <li class="item-5 deeper parent" style="list-style-type: none;">
-                    <a href="titanes" class="nav-link link-dark">
                       <button type="button" class="btn btn-outline-light text2">
-                        <i class="bi bi-file-earmark-person"></i>
-                        TITANES
+                        <i class="bi bi-box-arrow-right"></i>
+                        SALIR
                       </button>
                     </a>
                   </li>
-                </ul>
-                <hr>
-                <ul>
-                  <div class="dropdown">
-                    <li class="item-5 deeper parent" style="list-style-type: none;">
-                      <a href="#" class="nav-link link-dark">
-                        <button type="button" class="btn btn-outline-light text2">
-                          <i class="bi bi-box-arrow-right"></i>
-                          SALIR
-                        </button>
-                      </a>
-                    </li>
-                  </div>
-                </ul>
-              </div>
-        </section>
-    </div>
-  </nav>
-    <div class="container">
-        <div>
-            <a href="#" class="btn-flotante">
-                <i class="bi bi-chat-left-text"></i>
-            </a>
+                </div>
+              </ul>
+            </div>
+      </section>
+  </div>
+</nav>
+<div class="container" style="background-color: black; text-align: center;">
+  <app-stacks></app-stacks>
+
+</div>
+  <div class="container">
+      <div>
+        <button type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+          <i class="bi bi-chat-left-text"></i>
+       </button>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">NUEVO MENSAJE</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form (submit)="enviarMensaje()">
+                <div class="mb-3">
+                  <label for="Titulo-name" class="col-form-label" required="required">Titulo:</label>
+                  <input type="text" class="form-control" id="titulo" name="Titulo_Pub" [(ngModel)]="Titulo_Pub">
+                </div>
+                <div class="mb-3">
+                  <label for="Mensaje-text" class="col-form-label">Mensaje:</label>
+                  <textarea class="form-control" id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>
+              
+                </div>
+
+                <div class="mb-3">
+                  <label for="Mensaje-text" class="col-form-label">imagen</label>
+                </div>
+              
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">PUBLICAR</button>
+            </div>
+          </form>
         </div>
-    </div>
+          </div>
+        </div>
+      </div>
+  </div>
 </body>

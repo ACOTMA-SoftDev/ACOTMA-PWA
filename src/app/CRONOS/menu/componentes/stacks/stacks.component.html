@@ -1,0 +1,12 @@
+<div>
+    <div class="card" *ngFor="let publicacion of publicaciones">
+        <div class="card-header">
+          {{publicacion.Fecha_Pub}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{publicacion.Titulo_Pub}}</h5>
+          <p class="card-text">{{publicacion.Descripcion_Pub}}</p>
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+</div>

@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditarHoraComponent } from './OPERADORA/EditarHorarioServicio/Editar.Hora.Component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.component';
 
 
 
@@ -83,6 +84,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HorarioComponent,
     EditarServicioComponent,
     EditarHoraComponent,
+    StacksComponent,
   ],
   imports: [
     BrowserModule,
