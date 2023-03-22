@@ -5,7 +5,7 @@
         <img src="{{icongif}}"
                     style="width: 90px;" alt="logo">
       </a>
-      <a class="navbar-brand" href="#">Consultar Servicios</a>
+      <a class="navbar-brand" href="#">Servicios Iniciados</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -17,19 +17,15 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <button class="btn btn-outline-success" aria-current="page" href="#"><i class="bi bi-person-fill-gear"></i> Administrar Verificadores</button>
+              <button class="btn btn-outline-success" aria-current="page" (click)="goApertura()"><i class="bi bi-person-fill-gear"></i> Apertura de Servicios</button>
             </li>
             <br>
             <li class="nav-item">
-              <button class="btn btn-outline-success" aria-current="page" href="#"><i class="bi bi-clock"></i> Horarios de Servicio</button>
+              <button class="btn btn-outline-success" aria-current="page" (click)="goHorarioServicio()"><i class="bi bi-clock"></i> Horarios de Servicio</button>
             </li>
             <br>
             <li class="nav-item">
-              <button class="btn btn-outline-success" aria-current="page" href="#"><i class="bi bi-play-fill"></i> Servicio Iniciado</button>
-            </li>
-            <br>
-            <li class="nav-item">
-              <button class="btn btn-outline-danger" aria-current="page" href="#"><i class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
+              <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
             </li>
             </ul>
         </div>
@@ -67,7 +63,7 @@
                       <td>Otto</td>
                       <td>Otto</td>
                       <td>
-                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i class="bi bi-pencil-square"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -78,7 +74,7 @@
                       <td>Thornton</td>
                       <td>
 
-                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></button>
+                        <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i class="bi bi-pencil-square"></i></button>
                         </td>
                     </tr>
                     <tr>
@@ -88,7 +84,7 @@
                       <td>the Bird</td>
                       <td>the Bird</td>
                       <td>
-                      <button type="button" class="btn btn-outline-warning"><i class="bi bi-pencil-square"></i></button>
+                      <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i class="bi bi-pencil-square"></i></button>
                       </td>
                     </tr>
                   </tbody>

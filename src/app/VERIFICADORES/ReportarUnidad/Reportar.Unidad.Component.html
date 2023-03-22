@@ -1,8 +1,8 @@
-<div style="background-color: #9c223c; height:100vh; width:auto;">
+<div style="background-color: #9c223c; height:110vh; width:auto;">
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="" style="width: 90px;" alt="logo">
+        <img src="{{icongif}}" style="width: 90px;" alt="logo">
       </a>
       <a class="navbar-brand" href="#">Reportar Unidad</a>
 
@@ -19,7 +19,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <button class="btn btn-outline-danger" aria-current="page" href="#"><i class="bi bi-box-arrow-left"></i>
+              <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i class="bi bi-box-arrow-left"></i>
                 Cerrrar Sesion</button>
             </li>
           </ul>
@@ -27,6 +27,8 @@
       </div>
     </div>
   </nav>
+  <br>
+  <br>
   <br>
   <br>
   <br>
@@ -67,8 +69,11 @@
       <br>
 
       <div align="center">
-        <button type="submit" class="btn text-center col-12 colorwhite backgroundButton">Reportar</button>
+        <button type="submit" class="btn text-center col-12 colorwhite backgroundButton" (click)=" goValidarReporte()">Guardar</button>
       </div>
     </form>
+    <div class="text-center">
+      <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 600px;">
+    </div>
   </div>
 </div>

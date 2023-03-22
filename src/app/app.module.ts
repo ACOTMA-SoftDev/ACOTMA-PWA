@@ -39,8 +39,13 @@ import { HorarioComponent } from './OPERADORA/HorarioServicio/Horario.Servicio.C
 import { EditarServicioComponent } from './OPERADORA/EditarServicio/Editar.Servicio.Component';
 import { VerificadoresRouting } from './ROUTING/app.VerificadoresRouting';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditarHoraComponent } from './OPERADORA/EditarHorarioServicio/Editar.Hora.Component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -75,6 +80,9 @@ import { HttpClientModule } from '@angular/common/http';
     CrearUsuarioComponent,
     NavBarCrearUsuariosComponent,
     RegistrosUsuarioComponent,
+    HorarioComponent,
+    EditarServicioComponent,
+    EditarHoraComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +97,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
+    TooltipModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

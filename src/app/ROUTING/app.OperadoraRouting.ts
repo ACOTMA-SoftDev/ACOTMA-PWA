@@ -5,11 +5,13 @@ import { ServiciosIniciadosComponent } from "../OPERADORA/Servicios Iniciados/Se
 import { HorarioComponent } from "../OPERADORA/HorarioServicio/Horario.Servicio.Component";
 import{FormsModule} from '@angular/forms'
 import { EditarServicioComponent } from "../OPERADORA/EditarServicio/Editar.Servicio.Component";
+import {EditarHoraComponent} from "../OPERADORA/EditarHorarioServicio/Editar.Hora.Component";
 const appOperadoraRouting:Routes=[
   {path:'Operadora/Home', component:HomeComponent},
   {path: 'Operadora/ServiciosIniciados',component:ServiciosIniciadosComponent},
   {path: 'Operadora/HorarioServicio',component:HorarioComponent},
-  {path: 'Operadora/EditarServicio',component:EditarServicioComponent}
+  {path: 'Operadora/EditarServicio',component:EditarServicioComponent},
+  {path: 'Operadora/EditarHoraServicio',component:EditarHoraComponent}
 
 ];
 @NgModule({
