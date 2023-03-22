@@ -1,3 +1,5 @@
+<app-header></app-header>
+<app-nav-bar-limpieza></app-nav-bar-limpieza>
 <div class="container">
   <nav class="navbar navbar-light">
     <div class="container-fluid" >
@@ -14,13 +16,9 @@
         </select>
     </a>
       <div class=" d-flex">
-        <select class="form-select" aria-label="Default select example" style="border: none; box-shadow: none;">
-          <option selected>ESTACIONES</option>
-          <option value="1">One</option>
-          <option value="2">tecnologico de monterrey</option>
-          <option value="3">Three</option>
-        </select>
-        
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search Here" ng-model="estToday">
+      </div>
         <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
           <i class="bi bi-download"></i>
         </button>
@@ -35,47 +33,24 @@
       <table role="table" class="table table-bordered table-fixed">
           <thead role="rowgroup">
             <tr role="row">
+              <th role="columnheader">FECHA</th>
               <th role="columnheader">AREA DE LIMPIEZA</th>
-              <th role="columnheader">SI/NO</th>
-              <th role="columnheader">OBSERVACIONES</th>
+              <th role="columnheader">Limpieza de piso</th>
+              <th role="columnheader">Limpieza de vidrio</th>
+              <th  role="columnheader">Limpieza de area de servicio</th>
+              <th  role="columnheader">Limpieza de estructura</th>
+              <th  role="columnheader">Limpieza de torniquete en 
+                espacios de venta y recarga
+                de tarjeta</th>
+                <th role="cell">Limpieza de sanitarios</th>
+              <th role="columnheader">Observaciones</th>
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row">
-              <td role="cell">Limpieza de piso</td>
-              <td role="cell">SI</td>
-              <td role="cell">El gato doméstico​​, llamado más comúnmente gato, y de 
-                forma coloquial minino, ​ michino, ​ michi, ​ micho,
-                 ​ mizo, ​ miz, ​ morroño​ o morrongo, ​ y algunos nombres más, 
-                 es un mamífero carnívoro de la familia Felidae. Es una subespecie
-                  domesticada, por la convivencia con el ser humano, del gato montés.</td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de vidrio</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de area de servicio</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de estructura</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de torniquete en 
-                espacios de venta y recarga
-                de tarjeta.</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
-            </tr>
-            <tr role="row">
-              <td role="cell">Limpieza de sanitarios</td>
-              <td role="cell">SI</td>
-              <td role="cell">NO</td>
+            <tr role="row" *ngFor="let estacion of estaciones">
+              <td role="cell">{{estacion.Fecha_Estacion}}</td>
+              <td role="cell">{{estacion.Estacion}}</td>
+              <td role="cell">{{estacion.LimpiezaPiso}}</td>
             </tr>
           </tbody>
         </table>
