@@ -1,8 +1,9 @@
 .btng{
     color: rgb(255, 255, 255);
     background-color: #9C223C;
-    align-items: end center;
-    border-radius: 20px; /* Borde del boton */
+    font-size: 20px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase;
+    align-items: self-end; /* Texto en mayusculas */
 }
 .pading1{
     background-color: #9C223C;
@@ -37,5 +38,13 @@
 
 .btn-regresar{
    background-color: transparent;
-   border: tra;
+   border: transparent;
 }
+
+.form-control{
+    border: 2px solid #000000;
+}
+
+body{
+    background-color:#f5f5f5fa;
+  }

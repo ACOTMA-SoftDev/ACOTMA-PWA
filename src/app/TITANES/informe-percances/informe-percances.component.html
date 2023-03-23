@@ -9,14 +9,19 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
           <span class="navbar-text text1">
-            INFORME DE PERCANCES
+            PERCANCES
           </span>
         </div>
       </div>
     </nav>
-  </header><nav class="navbar navbar-light bg-light">
-    <i class="bi bi-arrow-left"></i>
-  </nav>
+  </header>
+<!--boton de regresar-->
+    <a href="titanes-menu">
+      <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 30px;"></i>
+      </button>
+    </a>
+  <body>
+<!--titulo-->
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -24,75 +29,108 @@
                 <form class="form-horizontal" method="post">
                     <fieldset>
                         <p class="fw-normal">
-                            <legend class="text-center header fw-bold">Informe de percances</legend>
+                            <legend class="text-center header fw-bold">Percances</legend>
                         </p>
-                        <p class="text-decoration-underline">Fecha default</p>
 
-                        <input class="form-control" list="datalistOptions"  placeholder="ECO">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
-                        <p class="text-decoration-underline">Tipo de unidad default</p>
+                        <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">       <!--FECHA-->                 
 
-                        <input class="form-control" list="datalistOptions"  placeholder="ID_tarjeton">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
+                        <hr style="border: 2px solid transparent;">
 
-                        <p class="text-decoration-underline">Conductor default</p>
+                        <div class="row">
+                          <div class="col">
+                            <label for="validationDefault03" class="form-label">Vehiculo (ECO)</label>
+                        <input class="form-control" list="datalistOptions"  placeholder="">
+              
+                          </div>
+                          <div class="col">
+                            <label for="validationDefault03" class="form-label">Tipo de unidad</label>
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                          </div>
+                        </div>
+                        <hr style="border: 2px solid transparent;">
 
-                        <input class="form-control" list="datalistOptions"  placeholder="Servicio/Ruta">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
+                        <div class="row">
+                          <div class="col">
+                            <label for="validationDefault03" class="form-label">ID_tarjeton</label>
+                            <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                          </div>
+                          <div class="col">
+                            <label for="validationDefault03" class="form-label">Conductor</label>
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                          </div>
+                        </div>
 
-                        <div class="col-md-6">
+                        <hr style="border: 2px solid transparent;">
+
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="validationDefault03" class="form-label">Servicio/ruta</label>
+                            <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                          </div>
+                          <div class="col">
                             <label for="validationDefault03" class="form-label">Ubicación</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                          </div>
+                        </div>
+
+                          <hr style="border: 2px solid transparent;">
+
+                          <p class="text-decoration-underline fw-bold text-center" >DATOS DEL VEHICULO PARTICULAR</p>
+
+                          <div class="row">
+                            <div class="col">
+                              <label for="validationDefault03" class="form-label">Marca</label>
+                              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                            </div>
+                            <div class="col">
+                              <label for="validationDefault03" class="form-label">Modelo</label>
+                              <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                            </div>
                           </div>
 
-                          <p class="text-decoration-underline">DATOS DEL VEHICULO PARTICULAR</p>
+                          <hr style="border: 1px solid transparent;">
 
-                          <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Marca</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                          <div class="row">
+                            <div class="col">
+                              <label for="validationDefault03" class="form-label">Color</label>
+                              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                            </div>
+                            <div class="col">
+                              <label for="validationDefault03" class="form-label">Placas</label>
+                              <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                            </div>
                           </div>
 
-                          <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Modelo</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
-                          </div>
-
-                          <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Color</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
-                          </div>
-
-                          <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Placas</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
-                          </div>
+                          <hr style="border: 2px solid transparent;">
 
                           <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Relato de los hechos</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                           </div>
-                         
+
+                          <hr style="border: 2px solid transparent;">
+
+                          <p class="text-decoration-underline fw-bold text-center" >FOTOS DEL PERCANCE</p>
+
                           <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Fotos del Percance</label>
+                            <label for="formFileMultiple" class="form-label">Fotos del ECO</label>
                             <input class="form-control" type="file" id="formFileMultiple" multiple>
                           </div>
-                          
+                          <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Fotos del carro particular</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                          </div>
+                                
+                          <div class="mb-3">
+                            <label for="formFileMultiple" class="form-label">Fotos del tarjetón</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                          </div>
+                                
+                                
+                          <hr style="border: 1px solid transparent;">
+
                           <div class="modal-footer">
                             <button type="buttons" class="btng">Guardar</button>
                           </div>
-                          
+      

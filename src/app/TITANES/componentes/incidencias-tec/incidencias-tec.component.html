@@ -14,11 +14,10 @@
       </div>
     </div>
   </nav>
-</header><nav class="navbar navbar-light bg-light">
-</nav>
+</header>
 
 <a href="titanes-menu">
-  <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 20px;"></i>
+  <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 30px;"></i>
   </button>
 </a>
 
@@ -35,44 +34,51 @@
                       </p>
                       
 <div class="col-md-1" style="text-align: left">
-  <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">                        
+  <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">   <!--Hora y fecha-->
 </div>
+
 <hr style="border: 2px solid transparent;">
 
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Servicio</label>
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Example input placeholder">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Servicio o estación" style="width: 700px; height: 40px">
 </div>
+
 <hr style="border: 2px solid transparent;">
 
-<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"  placeholder="ECO">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
+<div class="mb-3">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="ECO" style="width: 700px; height: 40px">
+</div>                       
 <hr style="border: 2px solid transparent;">
-<input class="col-md-2 form-control rounded-pill container px-4 " list="datalistOptions"  placeholder="Equipo afectado" style="width: 200px; height: 40px">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
-                        <hr style="border: 2px solid transparent;">
 
-<input  type="text" class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"  placeholder="Falla" style="width: 200px">
-                        <datalist id="datalistOptions">
-                            <option value="001">
-                            <option value="033">
-                            <option value="152">
-                            <option value="090">           
-                        </datalist>
-                        <input type="text" size="20" placeholder="Escribe aquí" style="width: 200px; height: 30px; background-color: #ffffff; color: #000000; border: 1px solid #cccccc; box-shadow: 2px 2px 2px #cccccc;">
+<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions" id="exampleDataList" placeholder="Equipo Afectado" style="width: 700px; height: 40px">
+<datalist id="datalistOptions">
+  <option value="Barras">
+    <option value="CET">
+    <option value="Consolas">
+    <option value="Camaras">
+    <option value="DVR">
+    <option value="Torniquetes">
+    <option value="VRT">
+    <option value="Pantallas">                                  
+    <option value="SITE">
+    <option value="Fibra optica">
+    <option value="Servidores">
+    <option value="Equipo de computo">
+    <option value="Sistema de pago electrÓnico">
+    <option value="Sistema de Gestión de flota">
+    <option value="Sistema de Video Vigilancia">
+    <option value="Sistema de Información al Usuario">
+    <option value="Sistema de Semaforización">
+</datalist>
 
-                        <hr style="border: 2px solid transparent;">
+<hr style="border: 2px solid transparent;">
 
-                        <div class="modal-footer">
-                          <button type="buttons" class="btng">Guardar</button>
-                        </div>
+<div class="mb-3">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Falla" style="width: 700px; height: 40px">
+</div> 
+
+<hr style="border: 2px solid transparent;">
+
+<div class="modal-footer rounded-pill">
+  <button type="buttons" class="btng">Guardar</button>
+</div>

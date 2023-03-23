@@ -40,13 +40,8 @@
 	font-size: 20px; /* Cambiar el tamaño de la tipografia */
 	border-radius: 20px; /* Borde del boton */
 	background-color: transparent; /* Color de fondo */
-	padding: 15px 15px; /* Relleno del boton */
-    height: 10px;
-    width: 10px;
-	right: 10px;
-    display:contents;
-    align-items:flex-end;
-    justify-content:left;
+    border: transparent;
+    float: right;
     
 
 }
@@ -72,3 +67,10 @@
     width: 1px;
     display: flex;
  }
+ .form-control{
+    border: 2px solid #000000;
+}
+
+body{
+    background-color:#f5f5f5;
+  }

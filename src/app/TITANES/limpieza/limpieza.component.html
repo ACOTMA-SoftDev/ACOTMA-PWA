@@ -14,11 +14,10 @@
         </div>
       </div>
     </nav>
-  </header><nav class="navbar navbar-light bg-light">
-  </nav>
+  </header>
   
   <a href="titanes-menu">
-    <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 20px;"></i>
+    <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 30px;"></i>
     </button>
   </a>
 
@@ -38,7 +37,8 @@
 
                        <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">                        
                         
-                       
+                       <hr style="border: 2px solid transparent;"> <!---->
+
                         <!--estaciones-->
                         
                         <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px">
@@ -76,14 +76,18 @@
                             <option value="25p. Plaza Juárez"> 
                             <option value="26. Niños Heroes Oriente">
                             <option value="26. Niños Heroes Poniente">
-                            <option value="27. Centro Histórico">            
+                            <option value="27. Centro Histórico">      
+                                    
                         </datalist>
                         
-                        <!--acciones-->
+
+                        <!--boton de comentarios-->
 
                         <button type="button" class="btn btn-primary btn btn-light " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                           <i class="bi bi-chat-left-dots" style="font-size: 32px;"></i>
                         </button>
+
+                        <!--acciones-->
 
                         <div class="form-check fs-5 mb-3">
                             <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
@@ -123,11 +127,12 @@
                           </div>
                         </div>
 
+
                         <!--boton de guardar-->
 
                         <div class="form-group position-relative">
                             <div class="col-md-12 text-center position-absolute top-100 start-50 translate-middle">
-                                <button type="submit" class="rounded-pill btn-limpieza">Guardar</button>
+                                <button type="submit" class="rounded-pill btn-limpieza">Guardar</button>        <!--boton btn-limpieza en css-->
                             </div>
                         </div>
                     </fieldset>
@@ -156,7 +161,7 @@
       </div>
 
       <div class="modal-footer">
-        <button type="buttons" class="btng">Guardar</button>
+        <button type="buttons" class="btng">Guardar</button>    <!--boton btng en css-->
         
       </div>
     </div>

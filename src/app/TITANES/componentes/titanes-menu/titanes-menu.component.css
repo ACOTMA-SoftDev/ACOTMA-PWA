@@ -60,7 +60,7 @@ hr.h-color{
   padding: 20px;
   border-radius: 15px;
   width: 250px; /* Establece el ancho inicial del elemento */
-  height: 100px;
+  height: 123px;
   margin: 20px 20px 20px 20px;
 }
 .btn1-menu:hover {
@@ -76,7 +76,7 @@ hr.h-color{
     color: white; /*color del texto*/
     font-size: 25px; /*tamaño de letra*/
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 250px; /* Establece el ancho inicial del elemento */
     height: 120px;
     margin: 10px 10px 10px 20px;
@@ -94,7 +94,7 @@ hr.h-color{
     color: white; /*color del texto*/
     font-size: 25px; /*tamaño de letra*/
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 250px; /* Establece el ancho inicial del elemento */
     height: 120px;
     margin: 10px 10px 10px 20px;
@@ -111,7 +111,7 @@ hr.h-color{
     color: white; /*color del texto*/
     font-size: 25px; /*tamaño de letra*/
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 250px; /* Establece el ancho inicial del elemento */
     height: 120px;
     margin: 10px 10px 10px 20px;
@@ -121,4 +121,12 @@ hr.h-color{
     cursor: pointer;
     color: black;
     border-radius: 15px;
+  }
+
+  .btnchat{
+    float: right;
+  }
+
+  body{
+    background-color:#f5f5f5;
   }
