@@ -5,40 +5,31 @@
     <h3 class="texto">CREAR USUARIO</h3>
     <hr>
     <div class="container">
-        <form class="row g-3">
+        <form (submit)="enviarUsuarios()">
           <div class="col-6">
 
             <div class="col-md-6">
               <label for="validationDefault01" class="form-label">Ingresa el nombre</label>
-              <input type="text" class="form-control" id="validationDefault01" value="" required>
+              <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
             </div>
             <div class="col-md-6">
               <label for="validationDefault01" class="form-label">Ingresa el apellido paterno</label>
-              <input type="text" class="form-control" id="validationDefault01" value="" required>
+              <input type="text" class="form-control" id="apellidoP" name="apellidoP" [(ngModel)]="apellidoP" required>
             </div>
             <div class="col-md-6">
               <label for="validationDefault01" class="form-label">Ingresa el apellido materno</label>
-              <input type="text" class="form-control" id="validationDefault01" value="" required>
+              <input type="text" class="form-control" id="apellidoM" name="apellidoM" [(ngModel)]="apellidoM" required>
             </div>
           </div>
-
           <div class="col-6"> <!--DIVIDE EL FORMULARIO-->
             <div class="col-md-6">
               <label for="validationDefault02" class="form-label">Ingresa el usuario</label>
-              <input type="text" class="form-control" id="validationDefault02" value="" required>
+              <input type="text" class="form-control" id="usuario" name="usuario" [(ngModel)]="usuario" required>
             </div>
 
               <div class="col-md-6">
                 <label for="validationDefault02" class="form-label">Ingresa la contraseña</label>
-                <input type="password" class="form-control" id="validationDefault02" value="" required>
-              </div>
-              <div class="col-md-7">
-                <label for="validationDefault04" class="form-label">ROL</label>
-                <select class="form-select" id="validationDefault04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>TITAN</option>
-                  <option>CRONOS</option>
-                </select>
+                <input type="password" class="form-control" id="pass" name="pass" [(ngModel)]="pass" required>
               </div>
           </div>
         
