@@ -82,7 +82,7 @@
       </section>
   </div>
 </nav>
-<div class="container" style="background-color: black; text-align: center;">
+<div class="container" style="background-color: rgb(202, 202, 202); text-align: center;">
   <app-stacks></app-stacks>
 
 </div>
@@ -107,17 +107,18 @@
                 </div>
                 <div class="mb-3">
                   <label for="Mensaje-text" class="col-form-label">Mensaje:</label>
-                  <textarea class="form-control" id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>
+                  <textarea class="form-control"  id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>
               
                 </div>
 
                 <div class="mb-3">
-                  <label for="Mensaje-text" class="col-form-label">imagen</label>
+                  <div class="file-upload" >
+                    <input (change)="capturarFile($event)" required id="ImagenP" multiple type="file" ng2FileSelect uploader="uploader" accept="image/x-png,image/gif,image/jpeg" name="ImagenP" >
+                  </div>
                 </div>
-              
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">PUBLICAR</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerar</button>
+              <button type="submit" class="btn btn-primary">LEST GOOO!</button>
             </div>
           </form>
         </div>
