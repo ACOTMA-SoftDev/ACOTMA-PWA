@@ -22,7 +22,6 @@ import { HeaderAdminComponent } from './JEFE_TURNO/componentes/header-admin/head
 import { InicioAdminComponent } from './JEFE_TURNO/componentes/inicio-admin/inicio-admin.component';
 import { HeaderAsignacionComponent } from './JEFE_TURNO/asignacion/componentes/header-asignacion/header-asignacion.component';
 import { HeaderInicioAdminComponent } from './JEFE_TURNO/componentes/header-inicio-admin/header-inicio-admin.component';
-import { RegistrosAsignacionComponent } from './JEFE_TURNO/asignacion/componentes/registros-asignacion/registros-asignacion.component';
 import { CrearUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/crear-usuario/crear-usuario.component';
 import { NavBarCrearUsuariosComponent } from './JEFE_TURNO/usuarios/componentes/nav-bar-crear-usuarios/nav-bar-crear-usuarios.component';
 import { RegistrosUsuarioComponent } from './JEFE_TURNO/usuarios/componentes/registros-usuario/registros-usuario.component';
@@ -46,6 +45,7 @@ import { EditarHoraComponent } from './OPERADORA/EditarHorarioServicio/Editar.Ho
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.component';
+import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/registro-radios/registro-radios.component';
 
 
 
@@ -77,7 +77,6 @@ import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.compone
     InicioAdminComponent,
     HeaderAsignacionComponent,
     HeaderInicioAdminComponent,
-    RegistrosAsignacionComponent,
     CrearUsuarioComponent,
     NavBarCrearUsuariosComponent,
     RegistrosUsuarioComponent,
@@ -85,6 +84,7 @@ import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.compone
     EditarServicioComponent,
     EditarHoraComponent,
     StacksComponent,
+    RegistroRadiosComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,41 @@
+<app-header-admin></app-header-admin>
+<app-header-asignacion></app-header-asignacion><!--barra de navegacion-->
+
+<div class="container">
+    <h3>ASIGNACIÓN</h3>
+    <div class="container">
+        <hr>
+        <div class="container text-center">
+          <h4>SITMAH</h4>
+        </div>
+        <table role="table" class="table table-bordered table-fixed text-center">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th role="columnheader">Usuario</th>
+                <th role="columnheader">Numero Radio</th>
+                <th role="columnheader">Codigo Radio</th>
+                <th role="columnheader">Tarjeta Maestra</th>
+                <th role="columnheader"></th>
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row" *ngFor="let asignado of Asignacion">
+                <td role="cell">{{asignado.usuario}}</td>
+                <td role="cell">{{asignado.Num_Radio}}</td>
+                <td role="cell">{{asignado.Codigo_Radio}}</td>
+                <td role="cell">{{asignado.Tarjeta_Maestra}}</td>
+                <td role="cell">
+                    <div class="d-grid d-md-block">
+                        <button class="btn btn-outline-dark" type="button" style="background-color: #D118BE;">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn btn-outline-dark" type="button" style="background-color: red;">
+                            <i class="bi bi-trash3-fill"></i>
+                        </button>
+                      </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+</div>
