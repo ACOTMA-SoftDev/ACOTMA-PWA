@@ -51,7 +51,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let estacion of semanales | filter : term; orderby:'Fecha_Limpieza'; let i = index">
+            <tr role="row" *ngFor="let estacion of semanales">
               <td role="cell">{{estacion.Estacion}}</td>
               <td role="cell">{{estacion.Fecha_Limpieza }}</td>
               <td role="cell">{{estacion.LimpiezaPiso}}</td>

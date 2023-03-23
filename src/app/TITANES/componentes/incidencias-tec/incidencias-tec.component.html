@@ -15,8 +15,13 @@
     </div>
   </nav>
 </header><nav class="navbar navbar-light bg-light">
-  <i class="bi bi-arrow-left"></i>
 </nav>
+
+<a href="titanes-menu">
+  <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 20px;"></i>
+  </button>
+</a>
+
 <div class="container">
   <div class="row">
       <div class="col-md-12">
@@ -24,17 +29,21 @@
               <form class="form-horizontal" method="post">
                   <fieldset>
                       <p class="fw-normal">
-                          <legend class="text-center header fw-bold">Incidencias Tecnologicas</legend>
+                        
+                      
+                          <legend class="text-center header">Incidencias tecnologicas</legend>
                       </p>
-
+                      
 <div class="col-md-1" style="text-align: left">
-  <span class=".selector"> FECHA: 00/00/00 </span>
+  <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">                        
 </div>
+<hr style="border: 2px solid transparent;">
 
 <div class="mb-3">
   <label for="formGroupExampleInput" class="form-label">Servicio</label>
   <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Example input placeholder">
 </div>
+<hr style="border: 2px solid transparent;">
 
 <input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"  placeholder="ECO">
                         <datalist id="datalistOptions">
@@ -43,22 +52,26 @@
                             <option value="152">
                             <option value="090">           
                         </datalist>
-
-<input class="col-md-2 form-control rounded-pill container px-4 " list="datalistOptions"  placeholder="Equipo afectado">
+<hr style="border: 2px solid transparent;">
+<input class="col-md-2 form-control rounded-pill container px-4 " list="datalistOptions"  placeholder="Equipo afectado" style="width: 200px; height: 40px">
                         <datalist id="datalistOptions">
                             <option value="001">
                             <option value="033">
                             <option value="152">
                             <option value="090">           
                         </datalist>
+                        <hr style="border: 2px solid transparent;">
 
-<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"  placeholder="Falla">
+<input  type="text" class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"  placeholder="Falla" style="width: 200px">
                         <datalist id="datalistOptions">
                             <option value="001">
                             <option value="033">
                             <option value="152">
                             <option value="090">           
                         </datalist>
+                        <input type="text" size="20" placeholder="Escribe aquí" style="width: 200px; height: 30px; background-color: #ffffff; color: #000000; border: 1px solid #cccccc; box-shadow: 2px 2px 2px #cccccc;">
+
+                        <hr style="border: 2px solid transparent;">
 
                         <div class="modal-footer">
                           <button type="buttons" class="btng">Guardar</button>

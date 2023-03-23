@@ -9,13 +9,19 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
           <span class="navbar-text text1">
-            INSPECCION DE LIMPIEZA
+            LIMPIEZA
           </span>
         </div>
       </div>
     </nav>
   </header><nav class="navbar navbar-light bg-light">
   </nav>
+  
+  <a href="titanes-menu">
+    <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 20px;"></i>
+    </button>
+  </a>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -24,14 +30,18 @@
                     <fieldset>
                         <p class="fw-normal">
                           
-                          <a href="titanes-menu">
-                          <button type="button" class="btn-regresar"><i class="bi bi-arrow-left"></i>
-                          </button>
-                        </a>
-                            <legend class="text-center header">Inspección de limpieza</legend>
+                        
+                            <legend class="text-center header"> Limpieza de estaciones</legend>
                         </p>
-                        <p class="text-decoration-underline fs-5 mb-3">Dia default</p>
-                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion">
+                        
+                        <!--fecha-->
+
+                       <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">                        
+                        
+                       
+                        <!--estaciones-->
+                        
+                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px">
                         <datalist id="datalistOptions">
                             <option value="1. Terminal Téllez">
                             <option value="2. Gabriel Mancera">
@@ -68,6 +78,12 @@
                             <option value="26. Niños Heroes Poniente">
                             <option value="27. Centro Histórico">            
                         </datalist>
+                        
+                        <!--acciones-->
+
+                        <button type="button" class="btn btn-primary btn btn-light " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                          <i class="bi bi-chat-left-dots" style="font-size: 32px;"></i>
+                        </button>
 
                         <div class="form-check fs-5 mb-3">
                             <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
@@ -107,7 +123,7 @@
                           </div>
                         </div>
 
-                        <button type="button" class="btn btn-primary btn btn-light bi bi-chat-left-dots" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                        <!--boton de guardar-->
 
                         <div class="form-group position-relative">
                             <div class="col-md-12 text-center position-absolute top-100 start-50 translate-middle">
@@ -122,6 +138,7 @@
 </div>
 
 
+                        <!--boton de guardar en comentarios-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -137,8 +154,10 @@
           </div>
         </form>
       </div>
+
       <div class="modal-footer">
         <button type="buttons" class="btng">Guardar</button>
+        
       </div>
     </div>
   </div>

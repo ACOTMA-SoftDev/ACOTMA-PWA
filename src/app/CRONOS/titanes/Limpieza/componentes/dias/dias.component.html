@@ -57,7 +57,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let ejemplo of ejemplos | filter : term; let i = index">
+            <tr role="row" *ngFor="let ejemplo of ejemplos">
               <td role="cell">{{ejemplo.Estacion}}</td>
               <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>

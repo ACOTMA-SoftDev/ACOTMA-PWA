@@ -44,12 +44,10 @@
     height: 10px;
     width: 10px;
 	right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:contents;
+    align-items:flex-end;
+    justify-content:left;
     
-    
-
 
 }
 
@@ -64,5 +62,13 @@
     justify-content: center;
     
 }
-
-
+ .btn-regresar{
+    background-color: transparent;
+    border: transparent;
+ }
+ .datalist option{
+    align-items: center;
+    margin-top: 20px;
+    width: 1px;
+    display: flex;
+ }
