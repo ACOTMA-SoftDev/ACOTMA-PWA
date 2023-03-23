@@ -10,23 +10,21 @@
         <table role="table" class="table table-bordered table-fixed text-center">
             <thead role="rowgroup">
               <tr role="row">
-                <th role="columnheader">NOMBRE</th>
-                <th role="columnheader">APELLIDO PATERNO</th>
-                <th role="columnheader">APELLIDO MATERNO</th>
-                <th role="columnheader">USUARIO</th>
-                <th role="columnheader">CONTRASEÑA</th>
-                <th role="columnheader">ROL</th>
+                <th role="columnheader">Nombre</th>
+                <th role="columnheader">Apellido paterno</th>
+                <th role="columnheader">Apellido materno</th>
+                <th role="columnheader">usuario</th>
+                <th role="columnheader">password</th>
                 <th role="columnheader"></th>
               </tr>
             </thead>
             <tbody role="rowgroup">
               <tr role="row" *ngFor="let Usuario of Usuarios"><!--Mandamos a llamar los datos que necesitamos-->
-                <td role="cell">{{Usuario.Nombre}}</td>
-                <td role="cell">{{Usuario.ApellidoP}}</td>
-                <td role="cell">{{Usuario.ApellidoM}}</td>
-                <td role="cell">{{Usuario.Usuario}}</td>
-                <td role="cell">{{Usuario.Password}}</td>
-                <td role="cell">{{Usuario.idPermiso}}</td>
+                <td role="cell">{{Usuario.nombre}}</td>
+                <td role="cell">{{Usuario.apellidoP}}</td>
+                <td role="cell">{{Usuario.apellidoM}}</td>
+                <td role="cell">{{Usuario.usuario}}</td>
+                <td role="cell">{{Usuario.password}}</td>
                 <td role="cell">
                     <div class="d-grid d-md-block">
                         <button class="btn btn-outline-dark" type="button" style="background-color: #D118BE;">
