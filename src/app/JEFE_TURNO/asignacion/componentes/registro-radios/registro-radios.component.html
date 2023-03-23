@@ -1,7 +1,8 @@
 <app-header-admin></app-header-admin>
-<app-nav-bar-crear-usuarios></app-nav-bar-crear-usuarios>
+<app-header-asignacion></app-header-asignacion><!--barra de navegacion-->
+
 <div class="container">
-    <h3>REGISTRO</h3>
+    <h3>ASIGNACIÓN</h3>
     <div class="container">
         <hr>
         <div class="container text-center">
@@ -10,21 +11,19 @@
         <table role="table" class="table table-bordered table-fixed text-center">
             <thead role="rowgroup">
               <tr role="row">
-                <th role="columnheader">Nombre</th>
-                <th role="columnheader">Apellido paterno</th>
-                <th role="columnheader">Apellido materno</th>
-                <th role="columnheader">usuario</th>
-                <th role="columnheader">password</th>
+                <th role="columnheader">Usuario</th>
+                <th role="columnheader">Numero Radio</th>
+                <th role="columnheader">Codigo Radio</th>
+                <th role="columnheader">Tarjeta Maestra</th>
                 <th role="columnheader"></th>
               </tr>
             </thead>
             <tbody role="rowgroup">
-              <tr role="row" *ngFor="let Usuario of Usuarios"><!--Mandamos a llamar los datos que necesitamos-->
-                <td role="cell">{{Usuario.nombre}}</td>
-                <td role="cell">{{Usuario.apellidoP}}</td>
-                <td role="cell">{{Usuario.apellidoM}}</td>
-                <td role="cell">{{Usuario.usuario}}</td>
-                <td role="cell">{{Usuario.password}}</td>
+              <tr role="row" *ngFor="let asignado of Asignacion">
+                <td role="cell">{{asignado.usuario}}</td>
+                <td role="cell">{{asignado.Num_Radio}}</td>
+                <td role="cell">{{asignado.Codigo_Radio}}</td>
+                <td role="cell">{{asignado.Tarjeta_Maestra}}</td>
                 <td role="cell">
                     <div class="d-grid d-md-block">
                         <button class="btn btn-outline-dark" type="button" style="background-color: #D118BE;">

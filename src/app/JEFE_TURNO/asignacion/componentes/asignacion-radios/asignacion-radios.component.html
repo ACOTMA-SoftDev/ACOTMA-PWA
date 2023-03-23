@@ -4,27 +4,33 @@
     <h3 class="texto">CREAR ASIGNACION</h3>
     <hr>
     <div class="container">
-        <form class="row g-3">
+        <form class="row g-3" (submit)="enviarAsignacionRadios()">
             <div class="col-12">
                 <div class="col-md-4">
                     <label for="validationDefault01" class="form-label">Ingresa el usuario</label>
-                    <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    <input type="text" class="form-control" id="usuario" name="usuario" [(ngModel)]="usuario" required>
                   </div>
             </div>
             <div class="col-12">
                 <div class="col-md-4">
                     <label for="validationDefaultUsername" class="form-label">Ingresa el número de la radio</label>
-                      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                      <input type="text" class="form-control" id="Num_Radio" name="Num_Radio" [(ngModel)]="Num_Radio" aria-describedby="inputGroupPrepend2" required>
                   </div>
             </div>
             <div class="col-12">
               <div class="col-md-4">
                   <label for="validationDefaultUsername" class="form-label">Ingresa el codigo de la radio</label>
-                    <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+                    <input type="text" class="form-control" id="Codigo_Radio" name="Codigo_Radio" [(ngModel)]="Codigo_Radio" aria-describedby="inputGroupPrepend3" required>
                 </div>
           </div>
+          <div class="col-12">
+            <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Ingresa el tarjeta maestra</label>
+                  <input type="text" class="form-control" id="Tarjeta_Maestra" name="Tarjeta_Maestra" [(ngModel)]="Tarjeta_Maestra"  aria-describedby="inputGroupPrepend2" required>
+              </div>
+        </div>
             <div class="col-9" style="text-align: right;">
-              <button class="btn btn-outline-secondary subir" type="submit">AGREGAR</button>
+              <button class="btn btn-outline-secondary subir" type="submit">Agregar</button>
             </div>
           </form>
     </div>
