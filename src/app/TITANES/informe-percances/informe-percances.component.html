@@ -26,51 +26,49 @@
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+                <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post">
                     <fieldset>
                         <p class="fw-normal">
-                            <legend class="text-center header fw-bold">Percances</legend>
-                        </p>
-
-                        <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">       <!--FECHA-->                 
+                            <legend class="text-center header fw-bold">Informe del accidente</legend>
+                        </p>             
 
                         <hr style="border: 2px solid transparent;">
 
-                        <div class="row">
-                          <div class="col">
-                            <label for="validationDefault03" class="form-label">Vehiculo (ECO)</label>
-                        <input class="form-control" list="datalistOptions"  placeholder="">
+                        <div class="col-12">
+                          <div class="col-12">
+                            <label for="validationDefault03" class="form-label">Num.Vehiculo (ECO)</label>
+                        <input class="form-control" list="datalistOptions"  placeholder="" [(ngModel)]="VehiculoECO" name="VehiculoECO" required>
               
                           </div>
-                          <div class="col">
+                          <div class="col-12">
                             <label for="validationDefault03" class="form-label">Tipo de unidad</label>
-                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="TipoUnidad" name="TipoUnidad" required>
                           </div>
                         </div>
                         <hr style="border: 2px solid transparent;">
 
-                        <div class="row">
-                          <div class="col">
+                        <div class="col-12">
+                          <div class="col-12">
                             <label for="validationDefault03" class="form-label">ID_tarjeton</label>
-                            <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                            <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Tarjeton" name="Tarjeton" required>
                           </div>
-                          <div class="col">
+                          <div class="col-12">
                             <label for="validationDefault03" class="form-label">Conductor</label>
-                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Conductor" name="Conductor" required>
                           </div>
                         </div>
 
                         <hr style="border: 2px solid transparent;">
 
 
-                        <div class="row">
-                          <div class="col">
+                        <div class="col-12">
+                          <div class="col-12">
                             <label for="validationDefault03" class="form-label">Servicio/ruta</label>
-                            <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                            <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="ServicioRuta" name="ServicioRuta" required>
                           </div>
-                          <div class="col">
+                          <div class="col-12">
                             <label for="validationDefault03" class="form-label">Ubicación</label>
-                            <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                            <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Ubicacion" name="Ubicacion" required>
                           </div>
                         </div>
 
@@ -78,27 +76,27 @@
 
                           <p class="text-decoration-underline fw-bold text-center" >DATOS DEL VEHICULO PARTICULAR</p>
 
-                          <div class="row">
-                            <div class="col">
+                          <div class="col-12">
+                            <div class="col-12">
                               <label for="validationDefault03" class="form-label">Marca</label>
-                              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                              <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Marca" name="Marca" required>
                             </div>
-                            <div class="col">
+                            <div class="col-12">
                               <label for="validationDefault03" class="form-label">Modelo</label>
-                              <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                              <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Modelo" name="Modelo" required>
                             </div>
                           </div>
 
                           <hr style="border: 1px solid transparent;">
 
-                          <div class="row">
-                            <div class="col">
+                          <div class="col-12">
+                            <div class="col-12">
                               <label for="validationDefault03" class="form-label">Color</label>
-                              <input type="text" class="form-control" placeholder="" aria-label="Nombre">
+                              <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Color" name="Color" required>
                             </div>
-                            <div class="col">
+                            <div class="col-12">
                               <label for="validationDefault03" class="form-label">Placas</label>
-                              <input type="text" class="form-control" placeholder="" aria-label="Apellido">
+                              <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Placas" name="Placas" required>
                             </div>
                           </div>
 
@@ -106,7 +104,7 @@
 
                           <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Relato de los hechos</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="RelatoEcho" name="RelatoEcho" required></textarea>
                           </div>
 
                           <hr style="border: 2px solid transparent;">
@@ -131,6 +129,26 @@
                           <hr style="border: 1px solid transparent;">
 
                           <div class="modal-footer">
-                            <button type="buttons" class="btng">Guardar</button>
+                            <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
                           </div>
+
+                          <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ALERTA!!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>¿Seguro que desea guardar el informe?</p>
+        <span>una vez guardado no se podra editar</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btng">Guardar Informe</button>
+      </div>
+    </div>
+  </div>
+</div>
       

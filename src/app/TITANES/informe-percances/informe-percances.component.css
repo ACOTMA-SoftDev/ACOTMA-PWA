@@ -5,7 +5,9 @@ background-color: black;
     color: rgb(255, 255, 255);
     background-color: #9C223C;
     font-size: 20px; /* Cambiar el tamaño de la tipografia */
-	text-transform: uppercase;
+    border-radius: 50px;
+    width: 200px;
+    height: 40px;
     align-items: self-end; /* Texto en mayusculas */
 }
 

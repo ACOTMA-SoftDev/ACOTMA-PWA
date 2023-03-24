@@ -1,26 +1,122 @@
-<div class="container">
-   <div class="card card_view">
-    <div class="card_inc container">
-        <a href="incidencias-b8" class="card_view" aria-current="true">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">INCIDENCIA 1</h5>
-            <h5>Hora</h5>
-          </div>
-        </a>
+<div class="container" style="background-color: rgb(248, 248, 248);">
+  
+  <div class="card" *ngFor="let accidente of accidentes" style="margin: 20px; border-radius: 30px;">
+    <div>
+    
+      <div class="container">
+        <div class="container">
+          <nav class="navbar navbar-light">
+            <div class="container-fluid">
+              <a class="navbar-brand">ACCIDENTE AUTOMOVILISTICO</a>
+              <div class=" d-flex">
+                <div class="form-group" style="margin: 25px;">
+                  <span style="font-size: 23px;">{{accidente.Ubicacion}}</span>
+                </div>
+                <div class="form-group" style="margin: 25px;">
+                  <span style="font-size: 23px;">{{accidente.TipoUnidad}}</span>
+                </div>
+                <div class="form-group" style="margin: 25px;">
+                  <span style="font-size: 23px;">{{accidente.Fecha_Percance}}</span>
+                </div>
+              </div>
+              <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+                <i class="bi bi-download"></i>
+              </button>
+            </div>
+          </nav>
+        </div>
+  
+          <hr> <!-- contiene los datos del vehiculo SITMAH -->
+        <div class="container" id="vehiculo_sitmah">
+            <h4>VEHICULO SITMAH</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">FECHA</th>
+                        <th scope="col">TIPO DE UNIDAD</th>
+                        <th scope="col">ID_TARJETON</th>
+                        <th scope="col">NoEconomico</th>
+                        <th scope="col">CONDUCTOR</th>
+                        <th scope="col">SERVICIO RUTA</th>
+                        <th scope="col">UBICACIÓN</th>
+                      </tr>     
+                    </thead>
+                    <tbody>
+                      <tr role="row">
+                        <td role="cell">{{accidente.Fecha_Percance}}</td>
+                        <td role="cell">{{accidente.TipoUnidad}}</td>
+                        <td role="cell">{{accidente.Tarjeton}}</td>
+                        <td role="cell">{{accidente.NoEconomico  }}</td>
+                        <td role="cell">{{accidente.Conductor}}</td>
+                        <td role="cell">{{accidente.ServicioRuta}}</td>
+                        <td role="cell">{{accidente.Ubicacion}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+        </div>
+        <!-- contiene los datos del vehiculo particular -->
+        <hr>
+        <div id="vehiculo_particular">
+            <h4>VEHICULO PARTICULAR</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">MARCA</th>
+                        <th scope="col">MODELO</th>
+                        <th scope="col">COLOR</th>
+                        <th scope="col">PLACA</th>
+                      </tr>     
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td role="cell">{{accidente.Marca}}</td>
+                        <td role="cell">{{accidente.Modelo}}</td>
+                        <td role="cell">{{accidente.Color}}</td>
+                        <td role="cell">{{accidente.Placas}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <th scope="col">RELATO DE LOS ECHOS</th>
+                    </tr>     
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td role="cell">{{accidente.Descripcion}}</td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                    <th scope="col">FOTOS</th>
+                  </tr>     
+                </thead>
+                <tbody>
+                  <tr *ngFor="let accidente of accidentes">
+                      <td role="cell">{{accidente.Foto_Eco}}</td>
+                      <td role="cell">{{accidente.Foto_Part}}</td>
+                      <td role="cell">{{accidente.Foto_Tarjeton}}</td>
+                  </tr>
+                </tbody>
+          </table>
       </div>
-   </div>
-</div>
-
-<div class="container">
-    <div class="card card_view">
-     <div class="card_inc container">
-         <a href="incidencias-b8" class="card_view" aria-current="true">
-           <div class="d-flex w-100 justify-content-between">
-             <h5 class="mb-1">INCIDENCIA 2</h5>
-             <h5>Hora</h5>
-           </div>
-         </a>
-       </div>
     </div>
- </div>
- 
+    </div>
+    </div>
+  
+    <div>
+    </div>
+  
+  </div>
+  </div>
+  
