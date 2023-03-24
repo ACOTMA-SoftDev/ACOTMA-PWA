@@ -2,8 +2,10 @@
     color: rgb(255, 255, 255);
     background-color: #9C223C;
     font-size: 20px; /* Cambiar el tamaño de la tipografia */
-	text-transform: uppercase;
-    align-items: self-end; /* Texto en mayusculas */
+    border-radius: 50px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
 }
 .pading1{
     background-color: #9C223C;

@@ -23,34 +23,29 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-12">
+      <div class="">
           <div class="well well-sm">
-              <form class="form-horizontal" method="post">
+              <form  (submit)="enviarInformeTec()" class="col-12">
                   <fieldset>
                       <p class="fw-normal">
-                        
                       
                           <legend class="text-center header">Incidencias tecnologicas</legend>
                       </p>
                       
-<div class="col-md-1" style="text-align: left">
-  <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">   <!--Hora y fecha-->
+<hr style="border: 2px solid transparent;">
+
+<div class="">
+  <input type="text" class="form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Servicio o estación" name="ServicioEst" [(ngModel)]="ServicioEst"requerid>
 </div>
 
 <hr style="border: 2px solid transparent;">
 
 <div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Servicio o estación" style="width: 700px; height: 40px">
-</div>
-
-<hr style="border: 2px solid transparent;">
-
-<div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="ECO" style="width: 700px; height: 40px">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Vehiculo ECO" name="NEco" [(ngModel)]="NEco" required>
 </div>                       
 <hr style="border: 2px solid transparent;">
 
-<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions" id="exampleDataList" placeholder="Equipo Afectado" style="width: 700px; height: 40px">
+<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions" id="exampleDataList" placeholder="Equipo Afectado" name="EquipoAfectado" [(ngModel)]="EquipoAfectado" required>
 <datalist id="datalistOptions">
   <option value="Barras">
     <option value="CET">
@@ -74,11 +69,36 @@
 <hr style="border: 2px solid transparent;">
 
 <div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Falla" style="width: 700px; height: 40px">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Id equipo Afectado" name="IdEquipoA" [(ngModel)]="IdEquipoA" required>
+</div>                       
+
+<hr style="border: 2px solid transparent;">
+
+<div class="mb-3">
+  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Falla"  name="Falla" [(ngModel)]="Falla" required>
 </div> 
 
 <hr style="border: 2px solid transparent;">
 
-<div class="modal-footer rounded-pill">
-  <button type="buttons" class="btng">Guardar</button>
+<div class="modal-footer rounded-pill" style="text-align: center;">
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ENVIAR INFORME</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿seguro que desea guardar el informe?
+      </div>
+      <div class="modal-footer" style="text-align: center;">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btng">Guardar informe</button>
+      </div>
+    </div>
+  </div>
 </div>
