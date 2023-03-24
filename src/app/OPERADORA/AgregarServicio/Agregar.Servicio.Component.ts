@@ -31,7 +31,19 @@ export class AgregarSerevicioComponent implements OnInit {
       this.respuesta=response
     })
   }
+  obtenerAsignacion(){
+    this.http.get<any[]>("api/consultarAsignacionDay").
+    subscribe(data=>{
+      this.estado=data
+      if(Array.isArray(this.estado)&&this.estado.length===0){
+      }
+      else{
+        this.estadodiv="hey"
+      }
+    })
+  }
   ngOnInit(): void {
+    this.obtenerAsignacion()
   }
   goServiciosIniciados() {
     this.router.navigate(['Operadora/ServiciosIniciados'])

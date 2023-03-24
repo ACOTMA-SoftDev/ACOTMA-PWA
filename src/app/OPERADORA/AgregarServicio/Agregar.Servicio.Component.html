@@ -1,4 +1,4 @@
-<div style="background-color: #9c223c; height:100vh; width:auto;">
+<div style="background-color: #9c223c; height:127vh; width:auto;">
   <!-- NAVBAR -->
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -103,5 +103,9 @@
 <p align="right">
 <button  class="btn btn-success" (click)="sendAsignacion()">Subir Asignaicon</button>
 </p>
+<div *ngIf="(respuesta == true)" class="alert alert-success" role="alert">Asignacion Correcta</div>
+    <div *ngIf="(respuesta == false)" class="alert alert-success" role="alert">Hubo un error</div>
+    <div *ngIf="(estadodiv ==null )" class="alert alert-danger" role="alert">Sin asignacion</div>
+    <div *ngIf="(estadodiv !=null )" class="alert alert-danger" role="alert">Ya existe una asignacion</div>
 </div>
 </div>
