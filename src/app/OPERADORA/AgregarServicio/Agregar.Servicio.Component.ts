@@ -1,36 +1,45 @@
 import { Component, OnInit } from "@angular/core";
 import * as XLSX from 'xlsx'
 import { Router } from "@angular/router";
+import { HttpClient } from "@angular/common/http";
 @Component({
-  templateUrl:'Agregar.Servicio.Component.html',
-  styleUrls:['Agregar.Servicio.Component.scss']
+  templateUrl: 'Agregar.Servicio.Component.html',
+  styleUrls: ['Agregar.Servicio.Component.scss']
 })
-export class AgregarSerevicioComponent implements OnInit{
-  constructor (private router: Router){
-
+export class AgregarSerevicioComponent implements OnInit {
+  icongif = 'assets/iconBlackAcotma.gif'
+  ExcelData: any;
+  respuesta:any
+  estado:any=[]
+  estadodiv:any
+  constructor(private router: Router,private http:HttpClient) {
   }
-  ExcelData:any;
-  fileUpload(event:any){
-  const selectedFile=event.target.files[0];
-  const fileReader=new FileReader();
-  fileReader.readAsBinaryString(selectedFile);
-  fileReader.onload=(event:any) =>{
-    var workbook=XLSX.read(fileReader.result,{type:'binary'})
-    var sheetNames= workbook.SheetNames;
-    this.ExcelData=XLSX.utils.sheet_to_json(workbook.Sheets[sheetNames[0]])
-    console.log(this.ExcelData);
+  fileUpload(event: any) {
+    const selectedFile = event.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.readAsBinaryString(selectedFile);
+    fileReader.onload = (event: any) => {
+      var workbook = XLSX.read(fileReader.result, { type: 'binary' })
+      var sheetNames = workbook.SheetNames;
+      this.ExcelData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetNames[0]])
+      console.log(this.ExcelData);
+    }
   }
-}
+  sendAsignacion(){
+    this.http.post("api/Agregar/Servicio",this.ExcelData).
+    toPromise().then((response:any)=>{
+      this.respuesta=response
+    })
+  }
   ngOnInit(): void {
   }
-  icongif='assets/iconBlackAcotma.gif'
-  goServiciosIniciados(){
+  goServiciosIniciados() {
     this.router.navigate(['Operadora/ServiciosIniciados'])
   }
-  goHorarioServicio(){
+  goHorarioServicio() {
     this.router.navigate(['Operadora/HorarioServicio'])
   }
-  goCerrar(){
+  goCerrar() {
     this.router.navigate(['login'])
   }
 }
