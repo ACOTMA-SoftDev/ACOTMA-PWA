@@ -25,7 +25,8 @@
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+              <!--aqui ira el boton-->
+                <form  (submit)="enviarInformeLimpieza()" class="form-horizontal" method="post">
                     <fieldset>
                         <p class="fw-normal">
                           
@@ -41,8 +42,8 @@
 
                         <!--estaciones-->
                         
-                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px">
-                        <datalist id="datalistOptions">
+                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px" [(ngModel)]="Estacion" name="Estacion">
+                        <datalist id="datalist">
                             <option value="1. Terminal Téllez">
                             <option value="2. Gabriel Mancera">
                             <option value="3. Matilde">
@@ -79,52 +80,50 @@
                             <option value="27. Centro Histórico">      
                                     
                         </datalist>
-                        
-
-                        <!--boton de comentarios-->
-
-                        <button type="button" class="btn btn-primary btn btn-light " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
-                          <i class="bi bi-chat-left-dots" style="font-size: 32px;"></i>
-                        </button>
 
                         <!--acciones-->
 
                         <div class="form-check fs-5 mb-3">
                             <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
                             <div class="checkbox">
-                                <label><input type="checkbox">  Limpieza de piso
+                                <label><input type="checkbox" [(ngModel)]="LimpiezaPiso" name="LimpiezaPiso">  Limpieza de piso
                               </label>
                               </div>
                         </div>
 
                         <div class="form-check tex fs-5 mb mb-3">
                         <div class="checkbox">
-                            <label><input type="checkbox">  Limpieza de vidrio</label>
+                            <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaVidrio" name="LimpiezaVidrio" >  Limpieza de vidrio</label>
                           </div>
                         </div>
 
                         <div class="form-check tex fs-5 mb-3">
                           <div class=>
-                            <label><input type="checkbox">  Limpieza de área de servicio</label>
+                            <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaServicio" name="LimpiezaServicio" >  Limpieza de área de servicio</label>
                           </div>
                         </div>
 
                         <div class="form-check tex fs-5 mb-3">
                           <div class="checkbox">
-                            <label><input type="checkbox">  Limpieza de estructura</label>
+                            <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaEstructura" name="LimpiezaEstructura" >  Limpieza de estructura</label>
                           </div>
                         </div>
 
                           <div class="form-check tex fs-5 mb-3">
                           <div class="checkbox">
-                            <label><input type="checkbox">  Limpieza de torniquete en espacios de VRT</label>
+                            <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaTorniquetez" name="LimpiezaTorniquetez" >  Limpieza de torniquete en espacios de VRT</label>
                           </div>
                         </div>
 
                           <div class="form-check tex fs-5 mb-5">
                           <div class="checkbox">
-                            <label><input type="checkbox">  Limpieza de sanitarios</label>
+                            <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaSanitarios" name=" LimpiezaSanitarios" >  Limpieza de sanitarios</label>
                           </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="formGroupExampleInput" class="form-label">Obervaciones</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tus observaciones" [(ngModel)]="Observaciones" name="Observaciones" >
                         </div>
 
 
@@ -132,7 +131,7 @@
 
                         <div class="form-group position-relative">
                             <div class="col-md-12 text-center position-absolute top-100 start-50 translate-middle">
-                                <button type="submit" class="rounded-pill btn-limpieza">Guardar</button>        <!--boton btn-limpieza en css-->
+                                <button type="submit" class="rounded-pill btn-limpieza" style="font-size: 20px;">Guardar</button>        <!--boton btn-limpieza en css-->
                             </div>
                         </div>
                     </fieldset>
@@ -140,30 +139,4 @@
             </div>
         </div>
     </div>
-</div>
-
-
-                        <!--boton de guardar en comentarios-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Comentarios</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label"></label>
-            <textarea class="form-control" required="required" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-
-      <div class="modal-footer">
-        <button type="buttons" class="btng">Guardar</button>    <!--boton btng en css-->
-        
-      </div>
-    </div>
-  </div>
 </div>
