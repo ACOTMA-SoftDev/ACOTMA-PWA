@@ -27,10 +27,10 @@
           </div>
 
         </div>
-        <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
-          <i class="bi bi-download"></i>
-        </button>
       </div>
+      <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+        <i class="bi bi-download"></i>
+      </button>
     </div>
   </nav>
 </div>
@@ -57,7 +57,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let ejemplo of ejemplos">
+            <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
               <td role="cell">{{ejemplo.Estacion}}</td>
               <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
@@ -74,4 +74,3 @@
     </div>
 
   
-

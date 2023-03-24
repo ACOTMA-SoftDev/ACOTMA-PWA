@@ -24,10 +24,10 @@
           </div>
 
         </div>
-        <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
-          <i class="bi bi-download"></i>
-        </button>
       </div>
+      <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+        <i class="bi bi-download"></i>
+      </button>
     </div>
   </nav>
 </div>
@@ -51,7 +51,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let estacion of semanales">
+            <tr role="row" *ngFor="let estacion of semanales | filter:term ">
               <td role="cell">{{estacion.Estacion}}</td>
               <td role="cell">{{estacion.Fecha_Limpieza }}</td>
               <td role="cell">{{estacion.LimpiezaPiso}}</td>
