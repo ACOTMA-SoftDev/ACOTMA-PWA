@@ -32,18 +32,14 @@
                           
                         
                             <legend class="text-center header"> Limpieza de estaciones</legend>
-                        </p>
-                        
-                        <!--fecha-->
-
-                       <input type="datetime" name="fechahora" step="1" min="2013-01-01T00:00Z" max="2013-12-31T12:00Z" value="2013-01-01T12:00">                        
+                        </p>                       
                         
                        <hr style="border: 2px solid transparent;"> <!---->
 
                         <!--estaciones-->
                         
-                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px" [(ngModel)]="Estacion" name="Estacion">
-                        <datalist id="datalist">
+                        <input class="form-control mb-5" list="datalistOptions"  placeholder="Nombre de la estacion" style="width: 300px" [(ngModel)]="Estacion" name="Estacion" required>
+                        <datalist id="datalistOptions" required>
                             <option value="1. Terminal Téllez">
                             <option value="2. Gabriel Mancera">
                             <option value="3. Matilde">
@@ -86,7 +82,7 @@
                         <div class="form-check fs-5 mb-3">
                             <span class="col-md-1 col-md-offset-2 "><i class="fa fa-user bigicon"></i></span>
                             <div class="checkbox">
-                                <label><input type="checkbox" [(ngModel)]="LimpiezaPiso" name="LimpiezaPiso">  Limpieza de piso
+                                <label><input type="checkbox" [(ngModel)]="LimpiezaPiso" name="LimpiezaPiso" >  Limpieza de piso
                               </label>
                               </div>
                         </div>
@@ -115,13 +111,13 @@
                           </div>
                         </div>
 
-                          <div class="form-check tex fs-5 mb-5">
+                          <div class="form-check tex fs-5 mb-3">
                           <div class="checkbox">
                             <label><input type="checkbox" value="true" [(ngModel)]="LimpiezaSanitarios" name=" LimpiezaSanitarios" >  Limpieza de sanitarios</label>
                           </div>
                         </div>
 
-                        <div class="mb-3">
+                        <div class="form-check tex fs-5 mb-3">
                           <label for="formGroupExampleInput" class="form-label">Obervaciones</label>
                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tus observaciones" [(ngModel)]="Observaciones" name="Observaciones" >
                         </div>
@@ -129,12 +125,29 @@
 
                         <!--boton de guardar-->
 
-                        <div class="form-group position-relative">
-                            <div class="col-md-12 text-center position-absolute top-100 start-50 translate-middle">
-                                <button type="submit" class="rounded-pill btn-limpieza" style="font-size: 20px;">Guardar</button>        <!--boton btn-limpieza en css-->
+                        <div class="form-check tex fs-5 mb-3" style="text-align: center; margin: 40px;" >
+                            <div class="">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-limpieza">Guardar</button>        <!--boton btn-limpieza en css-->
                             </div>
                         </div>
                     </fieldset>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">SEGURO QUE DESEA GUADAR LOS CAMBIOS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            una vez que se guarde el informe no se podran editar los datos..
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary" class="btn-limpieza">Guardar informe</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </form>
             </div>
         </div>
