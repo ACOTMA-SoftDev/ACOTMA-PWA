@@ -16,41 +16,65 @@
     </nav>
   </header>
   <body>
+    <nav class="navbar">
+      <div class="container">
+          <li class="item-5 deeper parent" style="list-style-type: none;">
+          <button class="btn btn-outline-light text2" type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#menuLateral">
+          <i class="bi bi-list-ul"></i>
+          </button>
+          </li>
+          <li class="item-5 deeper parent" style="list-style-type: none;">
+              <a href="inicio_titanes" class="nav-link link-dark">
+                <button type="button" class="btn btn-outline-light text2">
+                  <i class="bi bi-house-door"></i>
+                </button>
+              </a>
+            </li>
+            <li class="item-5 deeper parent" style="list-style-type: none;">
+              <a href="#" class="nav-link link-dark">
+                <button type="button" class="btn btn-outline-light text2">
+                </button>
+              </a>
+            </li>
     
-            <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
-                <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                      <span class="fs-4">MENU</span>
-                    </a>
+          <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
+              <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
+                  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <span class="fs-4">MENU</span>
+                  </a>
+                  <hr>
+                  <ul class="nav nav-pills flex-column mb-auto">
+                
                     <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="item-5 deeper parent" style="list-style-type: none;">
+                      <a href="titanes-menu" class="nav-link link-dark">
+                        <button type="button" class="btn btn-outline-light text2">
+                          <i class="bi bi-file-earmark-person"></i>
+                          Menu 
+                        </button>
+                      </a>
+                    </li>
+                  </ul>
+                  <hr>
+                  <ul>
+                    <div class="dropdown">
                       <li class="item-5 deeper parent" style="list-style-type: none;">
-                      </li>
-                      <hr>
-                      <li class="item-5 deeper parent" style="list-style-type: none;">
-                        <a href="titanes-menu" class="nav-link link-dark">
+                        <a href="#" class="nav-link link-dark">
                           <button type="button" class="btn btn-outline-light text2">
-                            <i class="bi bi-file-earmark-person"></i>
-                            TITANES
+                            <i class="bi bi-box-arrow-right"></i>
+                            SALIR
                           </button>
                         </a>
                       </li>
-                    </ul>
-                    <hr>
-                    <ul>
-                      <div class="dropdown">
-                        <li class="item-5 deeper parent" style="list-style-type: none;">
-                          <a href="#" class="nav-link link-dark">
-                            <button type="button" class="btn btn-outline-light text2">
-                              <i class="bi bi-box-arrow-right"></i>
-                              SALIR
-                            </button>
-                          </a>
-                        </li>
-                      </div>
-                    </ul>
-                  </div>
-            </section>
+                    </div>
+                  </ul>
+                </div>
+          </section>
+      </div>
+    </nav>
+
       <div class="container overflow-hidden text-center">
         <div class="d-grid gap-1 d-md-block">
           <a href="limpieza">
