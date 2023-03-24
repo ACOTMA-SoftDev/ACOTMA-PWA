@@ -5,14 +5,15 @@ import { TitanesMenuComponent } from '../TITANES/componentes/titanes-menu/titane
 import { InformeDatosComponent } from '../TITANES/informe-datos/informe-datos.component';
 import { InformePercancesComponent } from '../TITANES/informe-percances/informe-percances.component';
 import { IncidenciasTecComponent } from '../TITANES/componentes/incidencias-tec/incidencias-tec.component';
+import { InicioTitanesComponent } from '../TITANES/Inicio/inicio-titanes.component';
 
 const appTitanesRoutes: Routes = [
     {path: 'limpieza', component: LimpiezaComponent},
     {path: 'titanes-menu', component:TitanesMenuComponent},
     {path: 'informe-datos', component:InformeDatosComponent},
     {path: 'informe-percances', component: InformePercancesComponent},
-    {path: 'incidencias-tec', component: IncidenciasTecComponent}
-    
+    {path: 'incidencias-tec', component: IncidenciasTecComponent},
+    {path: 'inicio_titanes',component: InicioTitanesComponent}
 
 ]
 
