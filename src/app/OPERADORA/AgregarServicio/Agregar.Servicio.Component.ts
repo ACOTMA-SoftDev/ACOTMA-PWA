@@ -2,10 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import * as XLSX from 'xlsx'
 import { Router } from "@angular/router";
 @Component({
-  templateUrl:'Home.Component.html',
-  styleUrls:['Home.Component.scss']
+  templateUrl:'Agregar.Servicio.Component.html',
+  styleUrls:['Agregar.Servicio.Component.scss']
 })
-export class HomeComponent implements OnInit{
+export class AgregarSerevicioComponent implements OnInit{
   constructor (private router: Router){
 
   }

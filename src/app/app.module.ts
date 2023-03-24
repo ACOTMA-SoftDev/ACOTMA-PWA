@@ -47,6 +47,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.component';
 import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/registro-radios/registro-radios.component';
 import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.component';
+import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.Servicio.Component';
 
 
 
@@ -87,6 +88,7 @@ import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.componen
     StacksComponent,
     RegistroRadiosComponent,
     Stacks2Component,
+    AgregarSerevicioComponent,
   ],
   imports: [
     BrowserModule,
