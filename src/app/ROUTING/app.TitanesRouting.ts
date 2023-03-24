@@ -6,6 +6,7 @@ import { InformeDatosComponent } from '../TITANES/informe-datos/informe-datos.co
 import { InformePercancesComponent } from '../TITANES/informe-percances/informe-percances.component';
 import { IncidenciasTecComponent } from '../TITANES/componentes/incidencias-tec/incidencias-tec.component';
 import { InicioTitanesComponent } from '../TITANES/Inicio/inicio-titanes.component';
+import { Stacks2Component } from '../TITANES/componentes/stacks2/stacks2.component';
 
 const appTitanesRoutes: Routes = [
     {path: 'limpieza', component: LimpiezaComponent},
@@ -13,7 +14,8 @@ const appTitanesRoutes: Routes = [
     {path: 'informe-datos', component:InformeDatosComponent},
     {path: 'informe-percances', component: InformePercancesComponent},
     {path: 'incidencias-tec', component: IncidenciasTecComponent},
-    {path: 'inicio_titanes',component: InicioTitanesComponent}
+    {path: 'inicio_titanes',component: InicioTitanesComponent},
+    {path: 'stack',component: Stacks2Component}
 
 ]
 

@@ -6,22 +6,6 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './inicio-titanes.component.html',
   styleUrls: ['./inicio-titanes.component.css']
 })
-export class InicioTitanesComponent implements OnInit {
-
-  Mensajes:any=[];
-
-  constructor ( private http:HttpClient){
-  };
-
-  getMensaje(){
-   this.http.get('api/Publicaciones').subscribe(data=>{
-      console.log(data)
-      this.Mensajes=data
-    })
-  }
-
-  ngOnInit(): void {
-    this.getMensaje();
-  }
+export class InicioTitanesComponent{
 
 }

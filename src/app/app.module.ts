@@ -46,6 +46,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.component';
 import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/registro-radios/registro-radios.component';
+import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.component';
 
 
 
@@ -85,6 +86,7 @@ import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/reg
     EditarHoraComponent,
     StacksComponent,
     RegistroRadiosComponent,
+    Stacks2Component,
   ],
   imports: [
     BrowserModule,
