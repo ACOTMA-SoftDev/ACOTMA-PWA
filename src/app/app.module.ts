@@ -48,6 +48,7 @@ import { StacksComponent } from './CRONOS/menu/componentes/stacks/stacks.compone
 import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/registro-radios/registro-radios.component';
 import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.component';
 import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.Servicio.Component';
+import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
 
 
 
@@ -89,6 +90,7 @@ import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.S
     RegistroRadiosComponent,
     Stacks2Component,
     AgregarSerevicioComponent,
+    ServiciosIniciadosComponent,
   ],
   imports: [
     BrowserModule,

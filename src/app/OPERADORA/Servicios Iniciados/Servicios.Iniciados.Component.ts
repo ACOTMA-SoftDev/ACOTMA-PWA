@@ -10,10 +10,15 @@ export class ServiciosIniciadosComponent implements OnInit{
   dataAsignacion:any
   constructor(private router:Router,private http:HttpClient){
   }
-  getAsignacion(){
-    this.http.get("")
+  GetServiciosIniciados(){
+    this.http.get("https://localhost:44397/api/ServiciosIniciados").
+    subscribe(data=>{
+      this.dataAsignacion=data
+      console.log(this.dataAsignacion)
+    })
   }
   ngOnInit(): void {
+    this.GetServiciosIniciados()
   }
   goApertura(){
     this.router.navigate(['Operadora/Home'])
