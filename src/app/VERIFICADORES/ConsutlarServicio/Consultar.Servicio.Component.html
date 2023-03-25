@@ -2,7 +2,7 @@
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{icongif}}" style="width: 90px;" alt="logo">
+        <img src="{{icongif}}" style="width: 80px;" alt="logo">
       </a>
       <a class="navbar-brand" href="#">Verificacion de Unidades</a>
 
@@ -30,12 +30,16 @@
   <br>
   <br>
   <br>
-  <br>
+
   <br>
   <br>
   <div class="container">
-
-    <div class="table-responsive">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="filtro">
+    </div>
+    <br>
+      <div class="ex1">
       <table class="table table-dark border">
 
         <thead>
@@ -48,36 +52,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Mark</td>
-            <td>Otto</td>
+          <tr
+          *ngFor="let data of dataVerificacion | filter:filtro">
+            <th>{{data.tipoUnidad}}</th>
+            <td>{{data.ruta}}</td>
+            <td>{{data.economico}}</td>
             <td>
-              <button type="button" class="btn btn-outline-success " (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger" (click)="goReportar()"><i
-                  class="bi bi-file-earmark-excel-fill"></i></button>
+              <button type="button" class="btn btn-outline-success " (click)="goValidar(data.idAsignacion)"><i class="bi bi-bag-check"></i></button>
             </td>
-
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>
-              <button type="button" class="btn btn-outline-success" (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger" (click)="goReportar()"><i
-                  class="bi bi-file-earmark-excel-fill"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>
-              <button type="button" class="btn btn-outline-success" (click)="goValidar()"><i class="bi bi-bag-check"></i></button> &nbsp;
-              <button type="button" class="btn btn-outline-danger" (click)="goValidar()"><i
-                  class="bi bi-file-earmark-excel-fill"></i></button>
-            </td>
+            <td>{{data.horarioLiberado}}</td>
 
           </tr>
 
@@ -85,9 +68,10 @@
 
       </table>
     </div>
+    </div>
 
     <div class="text-center">
       <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 400px;">
     </div>
   </div>
-</div>
+

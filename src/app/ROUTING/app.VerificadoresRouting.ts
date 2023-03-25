@@ -6,7 +6,7 @@ import { ReportarUnidad } from "../VERIFICADORES/ReportarUnidad/Reportar.Unidad.
 import { VerificarDia } from "../VERIFICADORES/VerificacionDia/Verificar.Dia.Component";
 const appVerificadoresRouting: Routes=[
     {path:'Verificadores/ConsultaServicio',component:ConsultarServicioComponent},
-    {path:'Verificadores/VerificarUnidad', component:VerificarUnidadesComponent},
+    {path:'Verificadores/VerificarUnidad/:idAsignacion', component:VerificarUnidadesComponent},
     {path:'Verificadores/ReportarUnidad',component:ReportarUnidad},
     {path:'Verificadores/VerificacionDia',component:VerificarDia},
 

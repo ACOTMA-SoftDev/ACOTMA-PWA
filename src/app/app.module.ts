@@ -49,6 +49,7 @@ import { RegistroRadiosComponent } from './JEFE_TURNO/asignacion/componentes/reg
 import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.component';
 import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.Servicio.Component';
 import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
+import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
 
 
 
@@ -91,6 +92,7 @@ import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Ser
     Stacks2Component,
     AgregarSerevicioComponent,
     ServiciosIniciadosComponent,
+    ConsultarServicioComponent
   ],
   imports: [
     BrowserModule,
