@@ -39,6 +39,11 @@
   <br>
   <br>
   <div class="container">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="filtro">
+    </div>
+    <br>
 
     <div class="ex1">
     <table class="table table-dark border" >
@@ -56,7 +61,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let data of dataAsignacion">
+                    <tr *ngFor="let data of dataAsignacion | filter:filtro">
                       <th>{{data.tipoUnidad}}</th>
                       <td>{{data.ruta}}</td>
                       <td>{{data.economico}}</td>

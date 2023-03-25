@@ -8,7 +8,11 @@ import { Router } from '@angular/router'
 export class ServiciosIniciadosComponent implements OnInit{
   icongif='assets/iconBlackAcotma.gif'
   dataAsignacion:any
+  filtro!:string
   constructor(private router:Router,private http:HttpClient){
+  }
+  filterItems(dato:any,filtro:string){
+    return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   GetServiciosIniciados(){
     this.http.get("https://localhost:44397/api/ServiciosIniciados").
