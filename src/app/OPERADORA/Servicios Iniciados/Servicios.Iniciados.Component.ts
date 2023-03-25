@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http'
 import {Component, OnInit} from '@angular/core'
 import { Router } from '@angular/router'
 @Component({
@@ -5,9 +6,13 @@ import { Router } from '@angular/router'
   styleUrls:['Servicios.Iniciados.Component.scss']
 })
 export class ServiciosIniciadosComponent implements OnInit{
-  constructor(private router:Router){
-  }
   icongif='assets/iconBlackAcotma.gif'
+  dataAsignacion:any
+  constructor(private router:Router,private http:HttpClient){
+  }
+  getAsignacion(){
+    this.http.get("")
+  }
   ngOnInit(): void {
   }
   goApertura(){
@@ -24,8 +29,8 @@ export class ServiciosIniciadosComponent implements OnInit{
   }
   goButtonEditarTable(){
     this.router.navigate(['Operadora/EditarServicio'])
-  } 
+  }
 
-  
+
 
 }
