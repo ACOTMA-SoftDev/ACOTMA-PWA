@@ -18,7 +18,6 @@ export class ServiciosIniciadosComponent implements OnInit{
     this.http.get("https://localhost:44397/api/ServiciosIniciados").
     subscribe(data=>{
       this.dataAsignacion=data
-      console.log(this.dataAsignacion)
     })
   }
   ngOnInit(): void {
@@ -36,8 +35,8 @@ export class ServiciosIniciadosComponent implements OnInit{
   goCerrar(){
     this.router.navigate(['login'])
   }
-  goButtonEditarTable(){
-    this.router.navigate(['Operadora/EditarServicio'])
+  goEditarServicio(idAsignacion:any){
+    this.router.navigate(['Operadora/EditarServicio',idAsignacion])
   }
 
 

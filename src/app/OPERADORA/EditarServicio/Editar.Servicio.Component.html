@@ -45,24 +45,24 @@
     <br>
     <br>
     <br>
-    <div class="container ">
+    <div class="container" *ngFor="let data of dataServiciosIniciados">
         <div class="row g-4 ">
-            <div class="col-4 ">
+            <div class="col-4 " >
                 <label style="color: aliceblue;">TIPO DE UNIDAD:</label>
-                <div class="form-floating " >
-                    <input class="form-control "placeholder="Introduce tu nombre" required style="color: black;"/>
+                <div class="" >
+                    <input class="form-control" value="{{data.tipoUnidad}}" required style="color: black;"/>
                 </div>
             </div>
             <div class="col-4">
                 <label style="color: aliceblue;">RUTA:</label>
-                <div class="form-floating">
-                    <input class="form-control" />
+                <div class="">
+                    <input class="form-control" value="{{data.ruta}}"/>
                 </div>
             </div>
             <div class="col-4">
                 <label style="color: aliceblue;">ECONOMICO:</label>
-                <div class="form-floating">
-                    <input class="form-control"/>
+                <div class="">
+                    <input class="form-control" value="{{data.economico}}" />
                 </div>
             </div>
         </div>
@@ -73,19 +73,19 @@
             <div class="row g-0">
                 <div class="col-4 mx-auto">
                     <label style="color: aliceblue;">No. TARJETON:</label>
-                    <div class="form-floating">
-                        <input class="form-control"/>
+                    <div class="">
+                        <input class="form-control" value="{{data.tarjeton}}"/>
                     </div>
                 </div>
-                <div class="col-4 mx-auto">
+                <div class="col-6 mx-auto">
                     <label style="color: rgb(247, 247, 247);">NOMBRE : </label>
-                    <div class="form-floating">
-                        <input class="form-control"/>
+                    <div class="">
+                        <input class="form-control" value="{{data.nomChofer}}"/>
                     </div>
                 </div>
             </div>
         </div>
-       
+
     <br>
     <br>
     <br>

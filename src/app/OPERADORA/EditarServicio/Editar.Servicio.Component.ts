@@ -1,16 +1,24 @@
+import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router'
+import { Router,ActivatedRoute } from '@angular/router'
 @Component({
-    
+
 templateUrl:'Editar.Servicio.Component.html',
 styleUrls:['Editar.Servicio.Component.scss']
 })
 export class EditarServicioComponent implements OnInit{
-    constructor(private router:Router){
-
+  icongif='assets/iconBlackAcotma.gif'
+  idAsignacion:any
+  dataServiciosIniciados:any
+    constructor(private router:Router,private route:ActivatedRoute,private http:HttpClient){
     }
-    icongif='assets/iconBlackAcotma.gif'
+
     ngOnInit(): void {
+      this.idAsignacion=this.route.snapshot.params['idAsignacion']
+      let url=`https://localhost:44397/api/ServiciosIniciadosById?idAsignacion=${this.idAsignacion}`
+      this.http.get<any>(url).subscribe(data=>{
+        this.dataServiciosIniciados=data
+      })
     }
         goApertura(){
             this.router.navigate(['Operadora/Home'])

@@ -13,7 +13,7 @@ const appOperadoraRouting:Routes=[
   {path:'Operadora/Agregar/Servicio', component:AgregarSerevicioComponent},
   {path: 'Operadora/ServiciosIniciados',component:ServiciosIniciadosComponent},
   {path: 'Operadora/HorarioServicio',component:HorarioComponent},
-  {path: 'Operadora/EditarServicio',component:EditarServicioComponent},
+  {path: 'Operadora/EditarServicio/:idAsignacion',component:EditarServicioComponent},
   {path: 'Operadora/EditarHoraServicio',component:EditarHoraComponent},
   {path:'Operadora/AdminVerificadores',component:AdministrarVerificadores},
   {path:'Operadora/Agregar/Verificador',component:AgregarVerificadores},
