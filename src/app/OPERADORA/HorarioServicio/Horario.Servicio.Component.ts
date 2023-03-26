@@ -11,15 +11,18 @@ import { map } from "rxjs";
 })
 export class HorarioComponent implements OnInit {
   icongif = 'assets/iconBlackAcotma.gif'
-  fechaInicial!: string
-  fechaFinal!: string
-  ruta!: string
+  loading='assets/loading.gif'
+  fechaInicio!: any
+  fechaFinal!: any
+  ruta!: any
   intervalo!: any
   corridaInicial: any
   corridaFinal: any
+  primeraSalida:any
   horarioToday: any
-  filtro !: string
-  filtro2 !: string
+  filtro !: any
+  filtro2 !: any
+  public mostrarImagen: boolean = false;
   constructor(private router: Router, private http: HttpClient) {
   }
   filterItems(dato: any, filtro: string) {
@@ -28,30 +31,27 @@ export class HorarioComponent implements OnInit {
   filterItems2(dato: any, filtro2: string) {
     return dato.nombre.toLowerCase().indexOf(filtro2.toLowerCase()) !== -1;
   }
-    //const terminosBusqueda = filtro.toLowerCase().split(' ');
-    //return terminosBusqueda.every((term) =>
-      //dato.ruta.toLowerCase().includes(term) ||
-      //dato.fecha.toLowerCase().includes(term)
-    //);
-  //}
   sendHorarios() {
+    this.mostrarImagen = true;
     const datosSen = {
-      fechaInicial: this.fechaInicial,
+      fechaInicio: this.fechaInicio,
       fechaFinal: this.fechaFinal,
       ruta: this.ruta,
       intervalo: this.intervalo,
       corridaInicial: this.corridaInicial,
       corridaFinal: this.corridaFinal,
+      primeraSalida:this.primeraSalida
+
+
     }
-    console.log(datosSen)
+    let url="https://localhost:44397/api/HorarioServicio"
+    this.http.post(url,datosSen).toPromise().then(data=>{
+      if(data===true){
+        this.mostrarImagen =false;
+      }
+    })
   }
-  getDateToday() {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = (today.getMonth() + 1).toString().padStart(2, '0');
-    const day = today.getDate().toString().padStart(2, '0');
-    this.fechaInicial = `${year}/${month}/${day}`;
-  }
+
   getHorarioToday() {
     this.http.get<any>("https://localhost:44397/api/GetHorarios/Today/Id").
       subscribe(data => {
@@ -60,9 +60,6 @@ export class HorarioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.getDateToday()
-    }, 5000)
     setInterval(() => {
       this.getHorarioToday()
     }, 500)

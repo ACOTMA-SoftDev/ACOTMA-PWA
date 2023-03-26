@@ -71,8 +71,15 @@
       </div>
       <div class="row">
         <div class="col">
+          <label for="">Salida Inicial
+          <input type="time" class="form-control" placeholder="Introduce Salida de la primera Corrida" [(ngModel)]="primeraSalida" name="corridaInicial">
+        </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
           <label for="">Del:
-          <input type="text" class="form-control" [value]="fechaInicial" readonly>
+          <input type="date" class="form-control" [(ngModel)]="fechaInicio" name="fechaInicial" >
         </label>
         </div>
         <div class="col">
@@ -126,3 +133,4 @@
     </div>
   </div>
 </div>
+<img *ngIf="mostrarImagen" src="{{loading}}" id="imagen-superior">
