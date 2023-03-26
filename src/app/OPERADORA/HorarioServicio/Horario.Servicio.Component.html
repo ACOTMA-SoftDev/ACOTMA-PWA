@@ -48,48 +48,57 @@
       <div class="row">
         <div class="col">
           <label for="">Ruta
-          <input type="text" class="form-control" placeholder="Introduce la Ruta">
+          <input type="text" class="form-control" placeholder="Introduce la Ruta" [(ngModel)]="ruta" id="ruta" name="ruta">
         </label>
         </div>
         <div class="col">
           <label for="">Intervalo
-          <input type="text" class="form-control" placeholder="Introduce el Intervalo">
+          <input type="text" class="form-control" placeholder="Introduce el Intervalo" [(ngModel)]="intervalo" name="intervalo">
         </label>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label for="">Corrida Inicial
-          <input type="text" class="form-control" placeholder="Introduce la primera corrida de patio Tellez">
+          <input type="text" class="form-control" placeholder="Introduce la primera corrida de patio Tellez" [(ngModel)]="corridaInicial" name="corridaInicial">
         </label>
         </div>
         <div class="col">
           <label for="">Corrida Final
-          <input type="text" class="form-control" placeholder="Introduce la ultima corrida">
+          <input type="text" class="form-control" placeholder="Introduce la ultima corrida" [(ngModel)]="corridaFinal" name="corridaFinal">
         </label>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label for="">Del:
-          <input type="text" class="form-control" [value]="currentDate" readonly>
+          <input type="text" class="form-control" [value]="fechaInicial" readonly>
         </label>
         </div>
         <div class="col">
           <label for="">Al:
-          <input type="date" class="form-control" placeholder="Introduce la ultima corrida">
+          <input type="date" class="form-control" placeholder="Introduce la Vigencia" [(ngModel)]="fechaFinal" name="fechaFinal">
         </label>
         </div>
       </div>
-    </form>
-    <br>
+      <div class="row">
+      <br>
     <br>
     <p align="right">
       <button type="button" class="btn btn-success col-2"
-        style="background-color: rgb(73, 167, 167); height: 40px;">SUBIR</button>
+        style="background-color: rgb(73, 167, 167); height: 40px;" (click)="sendHorarios()">SUBIR</button>
     </p>
     <br>
-    <div class="table-responsive">
+  </div>
+    </form>
+    <div class="input-group">
+      <div class="input-group-prepend">
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="filtro" placeholder="Ruta">
+      <input type="text" class="form-control" [(ngModel)]="filtro2" placeholder="fecha yyyy-mm-dd">
+    </div>
+    <br>
+    <div class="row ex1">
       <table class="table table-dark border">
         <thead>
           <tr>
@@ -99,33 +108,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
+          <tr *ngFor="let data of horarioToday | filter:filtro | filter:filtro2">
+            <td>{{data.ruta}}</td>
+            <td>{{data.fecha | date:'dd/MM/yyyy'}}</td>
             <td>
               <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i
                   class="bi bi-pencil-square"></i></button>
             </td>
           </tr>
-          <tr>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>
-              <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i
-                  class="bi bi-pencil-square"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>
-              <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i
-                  class="bi bi-pencil-square"></i></button>
-            </td>
-          </tr>
+
         </tbody>
       </table>
-    </div>
+
+  </div>
     <div class="text-center">
       <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 700px;">
     </div>

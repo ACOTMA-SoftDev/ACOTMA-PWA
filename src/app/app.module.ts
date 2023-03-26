@@ -92,7 +92,8 @@ import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Co
     Stacks2Component,
     AgregarSerevicioComponent,
     ServiciosIniciadosComponent,
-    ConsultarServicioComponent
+    ConsultarServicioComponent,
+    HorarioComponent
   ],
   imports: [
     BrowserModule,

@@ -4,8 +4,13 @@ label {
     color: white;
 }
 
-input,
+
 label {
     margin: 0.4rem 0;
 }
+div.ex1 {
 
+  height: 300px;
+  width: 100%;
+  overflow-y: auto;
+}
