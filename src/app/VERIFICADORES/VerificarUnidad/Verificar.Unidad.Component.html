@@ -1,10 +1,10 @@
-<div style="background-color: #9c223c; height:110vh; width:auto;">
+<div style="background-color: #9c223c; height:115vh; width:auto;">
   <nav class="navbar navbar-dark bg-dark fixed-top" >
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="{{icongif}}" style="width: 90px;" alt="logo">
       </a>
-      <a class="navbar-brand" href="#">Validar Unidad</a>
+      <a class="navbar-brand" href="#">Verificar Unidad</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
         aria-controls="offcanvasDarkNavbar">
@@ -32,49 +32,56 @@
   <br>
   <br>
   <br>
+  <br>
   <div class="container">
-    <form action="" method="post">
-      <div class="row">
+      <p align="right">
+        <button class="btn btn-warning" (click)="toggleDisabled()" id="editBlock"></button>
+      </p>
+      <div *ngFor="let data of dataAsignacion" class="row">
         <div class="form-group ">
           <label for="exampleFormControlInput" class="colorwhite">No.Unidad</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="102" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.economico}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">No.Tarjeton</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="502" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Ruta</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="T01" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Corrida</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="106" readonly>
+          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}"  name="corrida" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Hora de Acople</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="5:50" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.horarioSalida}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlTextarea1" class="colorwhite">Observaciones</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"
-            placeholder="Introduce tus observaciones"></textarea>
+          <textarea class="form-control" id="Observaciones" rows="7" name="Observaciones"
+            placeholder="Introduce tus observaciones" [(ngModel)]="Observaciones"></textarea>
         </div>
-      </div>
+
       <br>
 
       <div align="center">
-        <button type="submit" class="btn btn-success text-center col-12" (click)="goLiberarUnidad()">Liberar</button>
+        <button type="submit" class="btn btn-success text-center col-12" (click)="goLiberarUnidad(data.corrida,data.fecha)">Liberar</button>
       </div>
-    </form>
-    <br>
-    <div class="text-center">
-      <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 600px;">
+      <br>
+      <br>
+      <div align="center">
+        <button type="submit" class="btn btn-danger text-center col-12" >Reportar</button>
+      </div>
     </div>
+
+    <br>
+
   </div>
 </div>

@@ -66,7 +66,7 @@ export class HorarioComponent implements OnInit {
 
   }
   goApertura() {
-    this.router.navigate(['Operadora/Home'])
+    this.router.navigate(['Operadora/Agregar/Servicio'])
   }
   goServiciosIniciados() {
     this.router.navigate(['Operadora/ServiciosIniciados'])

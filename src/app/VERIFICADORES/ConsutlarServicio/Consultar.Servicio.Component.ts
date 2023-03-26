@@ -17,13 +17,14 @@ export class ConsultarServicioComponent implements OnInit {
     return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   getAsignacion() {
-    this.http.get("https://localhost:44397/api/VerificacionApertura").subscribe(data => {
-      console.log(data)
+    this.http.get("https://localhost:44397/api/Verificacion/Servicio/Completo").subscribe(data => {
       this.dataVerificacion = data
     })
   }
   ngOnInit(): void {
+    setInterval(() => {
     this.getAsignacion()
+  }, 500)
   }
   goValidar(idAsignado: any) {
     console.log(idAsignado)

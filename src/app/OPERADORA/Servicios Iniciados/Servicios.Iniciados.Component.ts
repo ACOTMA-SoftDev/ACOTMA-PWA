@@ -21,10 +21,12 @@ export class ServiciosIniciadosComponent implements OnInit{
     })
   }
   ngOnInit(): void {
+    setInterval(() => {
     this.GetServiciosIniciados()
+  }, 500)
   }
   goApertura(){
-    this.router.navigate(['Operadora/Home'])
+    this.router.navigate(['Operadora/Agregar/Servicio'])
   }
   goServiciosIniciados(){
     this.router.navigate(['Operadora/ServiciosIniciados'])

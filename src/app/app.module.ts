@@ -50,6 +50,7 @@ import { Stacks2Component } from './TITANES/componentes/stacks2/stacks2.componen
 import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.Servicio.Component';
 import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
 import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
+import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Verificar.Unidad.Component';
 
 
 
@@ -93,7 +94,8 @@ import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Co
     AgregarSerevicioComponent,
     ServiciosIniciadosComponent,
     ConsultarServicioComponent,
-    HorarioComponent
+    HorarioComponent,
+    VerificarUnidadesComponent
   ],
   imports: [
     BrowserModule,
