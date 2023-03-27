@@ -29,7 +29,7 @@ export class VerificacionComponent implements OnInit{
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any>('https://localhost:44397/api/CentroControl/Verificaciones/Hoy').subscribe(data => {
+    this.http.get<any>('http://pruebaacotma2.somee.com/api/CentroControl/Verificaciones/Hoy').subscribe(data => {
       const jsonData=data.reduce((acc:any,curr:any)=>Object.assign(acc,curr),{})
       const jsonLabels=Object.keys(jsonData)
       const jsonDataC=Object.values(jsonData)
@@ -38,4 +38,15 @@ export class VerificacionComponent implements OnInit{
       console.log(this.barChartData.labels)
     });
   }
+  public pieChartOptions: ChartConfiguration['options'] = {
+    responsive: true,
+  };
+  public pieChartData: ChartData<'pie', number[], string | string[]> = {
+    labels: [ [ 'RA-02-A', 'Corridas' ], [ 'RA-15B', 'Corrida'], [ 'RA-15C', 'Corrida'], [ 'RAMAL', 'Corrida'] ],
+    datasets: [ {
+      data: [ 1, 2, 2,13 ]
+    } ]
+  };
+  public pieChartType: ChartType = 'pie';
+
 }
