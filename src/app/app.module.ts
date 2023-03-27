@@ -119,6 +119,9 @@ import { NgChartsModule } from 'ng2-charts';
     BrowserAnimationsModule,
     NgChartsModule
   ],
+  exports: [
+    Stacks2Component //LO EXPORTAMOS AQUI
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

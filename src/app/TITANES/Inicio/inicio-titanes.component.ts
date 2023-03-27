@@ -8,4 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InicioTitanesComponent{
 
+  Mensajes:any=[];
+
+  constructor ( private http:HttpClient){
+  };
+
+  getPublicacion(){
+   this.http.get('api/Publicaciones').subscribe(data=>{
+      console.log(data)
+      this.Mensajes=data
+    })
+  }
+
+  ngOnInit(): void {
+    this.getPublicacion();
+  }
 }

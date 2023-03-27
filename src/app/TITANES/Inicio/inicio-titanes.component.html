@@ -77,6 +77,16 @@
   </div>
 </nav>
 <div class="container" style="background-color: rgb(202, 202, 202); text-align: center;">
+  <div class="card" *ngFor="let Mensaje of Mensajes" style="margin: 20px;">
+    <div class="card-header">
+      {{Mensaje .Fecha_Pub}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{Mensaje.Titulo_Pub}}</h5>
+      <p class="card-text">{{Mensaje.Descripcion_Pub}}</p>
+      <img>{{Mensaje.ImagenP}}
+    </div>
+  </div>
 </div>
 </body>
 

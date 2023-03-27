@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class Stacks2Component implements OnInit{
   Mensajes:any=[];
 
-  constructor ( private http:HttpClient){
+  constructor ( public http:HttpClient){
   };
 
   getPublicacion(){
