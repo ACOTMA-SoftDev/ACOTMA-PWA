@@ -42,9 +42,9 @@ export class VerificacionComponent implements OnInit{
     responsive: true,
   };
   public pieChartData: ChartData<'pie', number[], string | string[]> = {
-    labels: [ [ 'RA-02-A', 'Corridas' ], [ 'RA-15B', 'Corrida'], [ 'RA-15C', 'Corrida'], [ 'RAMAL', 'Corrida'] ],
+    labels: [ [ 'RA-02-A', 'Corridas' ], [ 'RA-15B', 'Corrida'], [ 'RA-15C', 'Corrida'], [ 'RAMAL', 'Corrida'], [ 'Ordinaria', 'Corrida'] ],
     datasets: [ {
-      data: [ 1, 2, 2,13 ]
+      data: [ 1, 2, 2,13,24 ]
     } ]
   };
   public pieChartType: ChartType = 'pie';

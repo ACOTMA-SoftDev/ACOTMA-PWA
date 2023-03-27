@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "sitmah": {
+      
       "projectType": "application",
       "schematics": {},
       "root": "",
