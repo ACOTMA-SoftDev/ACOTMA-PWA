@@ -9,6 +9,8 @@ import { SemanalComponent } from '../CRONOS/titanes/Limpieza/componentes/semanal
 import { InicioIncidenciasComponent } from '../CRONOS/titanes/inf-incidencias/componentes/inicio-incidencias/inicio-incidencias.component';
 import { RegistroVehiComponent } from '../CRONOS/titanes/componentes/registro-vehi/registro-vehi.component';
 import { VerificacionComponent } from '../CRONOS/Verificacion/Verificacion.Component';
+import { MapSreensComponent } from '../maps/screens/map-sreens/map-sreens.component';
+
 
 const appCronosRoutes: Routes = [
     {path:'', redirectTo:'inicio',pathMatch:'full'},/* por default si no esxite ninguna ruta se ira a la pagia principal* */
@@ -23,6 +25,7 @@ const appCronosRoutes: Routes = [
     {path:'incidencias-b8', component: B8Component},
     {path: 'registro_vehicular', component: RegistroVehiComponent},
     {path:'Verificacion', component:VerificacionComponent},
+    {path: 'Ubicacion_Titan', component: MapSreensComponent} /*CREAMOS LA RUTA DEL COMPONENTE */
   ];
 
 @NgModule({
