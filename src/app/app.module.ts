@@ -53,7 +53,8 @@ import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Co
 import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Verificar.Unidad.Component';
 import { VerificacionComponent } from './CRONOS/Verificacion/Verificacion.Component';
 import { NgChartsModule } from 'ng2-charts';
-
+import { MapsModule } from './maps/maps.module';
+import { UbicacionComponent } from './CRONOS/ubicacion/ubicacion.component';
 
 
 
@@ -100,6 +101,7 @@ import { NgChartsModule } from 'ng2-charts';
     HorarioComponent,
     VerificarUnidadesComponent,
     VerificacionComponent,
+    UbicacionComponent
   ],
   imports: [
     BrowserModule,
@@ -117,7 +119,8 @@ import { NgChartsModule } from 'ng2-charts';
     TooltipModule.forRoot(),
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
-    NgChartsModule
+    NgChartsModule,
+    MapsModule
   ],
   exports: [
     Stacks2Component //LO EXPORTAMOS AQUI

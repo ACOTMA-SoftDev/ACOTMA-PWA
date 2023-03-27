@@ -1,0 +1,10 @@
+.loading-map{
+    background:black;
+    color: white;
+    height: 108vh;
+    position: fixed;
+    right:0px;
+    top: end;;
+    width: 100vw;
+    height: 50vw;
+}
