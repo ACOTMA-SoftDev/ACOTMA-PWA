@@ -60,7 +60,7 @@
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Hora de Acople</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.horarioSalida}}" [disabled]="isDisable">
+          <input type="email" class="form-control" id="horarioSalida" value="{{data.horarioSalida}}" [(ngModel)]="data.horarioSalida" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
@@ -72,7 +72,7 @@
       <br>
 
       <div align="center">
-        <button type="submit" class="btn btn-success text-center col-12" (click)="goLiberarUnidad(data.corrida,data.fecha)">Liberar</button>
+        <button type="submit" class="btn btn-success text-center col-12" (click)="goLiberarUnidad(data.corrida,data.fecha,data.idAsignacion)">Liberar</button>
       </div>
       <br>
       <br>

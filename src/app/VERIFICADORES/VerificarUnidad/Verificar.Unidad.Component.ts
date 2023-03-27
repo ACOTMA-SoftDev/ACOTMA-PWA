@@ -8,13 +8,13 @@ import { map } from "rxjs";
 })
 
 export class VerificarUnidadesComponent implements OnInit {
-  isDisable=false
-  Estado="Verificacion"
-  Observaciones:any
-  horaLlegada:any
+  lista:any;
+  isDisable = false
+  Observaciones: any
   idAsigancion: any
-  dataAsignacion:any
+  dataAsignacion: any
   icongif = 'assets/iconBlackAcotma.gif'
+  horaLlegada:any
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) {
   }
   ngOnInit(): void {
@@ -24,31 +24,66 @@ export class VerificarUnidadesComponent implements OnInit {
     let url = `https://localhost:44397/api/Verificacion/Servicio?idAsignacion=${this.idAsigancion}`;
     this.http.get(url).pipe(
       map((respuesta: any) => {
-        this.dataAsignacion=respuesta
+        this.dataAsignacion = respuesta
       })
     ).subscribe();
   }
-  goLiberarUnidad(corrida:any,fecha:any) {
-    const fechas=new Date()
-    const hora=fechas.getHours()
-    const minutes=fechas.getMinutes()
-    this.horaLlegada=`${hora}:${minutes}`
-    const datos={
-      corrida,
-      fecha
+  goLiberarUnidad(corrida:any,fecha:any,fkAsignacion:any) {
+    const fechas = new Date()
+    const hora = fechas.getHours()
+    const minutes = fechas.getMinutes()
+    this.horaLlegada = `${hora}:${minutes}`
+    const datosSen = {
+      corrida:corrida,
+      fecha:fecha,
+      horaLlegada:this.horaLlegada
     }
-    console.log(datos)
-    //this.router.navigate(['Verificadores/ConsultaServicio'])
-  }
-  toggleDisabled(){
-    const editBlock=document.getElementById('editBlock')
-    this.isDisable=!this.isDisable
+    let url = "https://localhost:44397/api/Liberar/Unidades"
+    this.http.post(url, datosSen).toPromise().then(Response => {
+      if (Response === true) {
+        this.router.navigate(['Verificadores/ConsultaServicio'])
+      }
+    })
 
-    if(this.isDisable==true){
-      editBlock!.textContent='Editar'
+    const Verificadores={
+      estado:"Verificado",
+      observaciones:this.Observaciones,
+      horaSalida:this.horaLlegada,
+      fkAsignacion:fkAsignacion
     }
-    else{
-      editBlock!.textContent='Bloquear'
+    let urlV="https://localhost:44397/api/addverificacion"
+    this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
+      if (Response2 === true) {
+        console.log("checale  ")
+      }
+    })
+  }
+  goReportarUnidad(corrida:any,fecha:any) {
+    const fechas = new Date()
+    const hora = fechas.getHours()
+    const minutes = fechas.getMinutes()
+    this.horaLlegada = `${hora}:${minutes}`
+    const datosSen = {
+      corrida:corrida,
+      fecha:fecha,
+      horaLlegada:this.horaLlegada
+    }
+    let url = "https://localhost:44397/api/Liberar/Unidades"
+    this.http.post(url, datosSen).toPromise().then(Response => {
+      if (Response === true) {
+        this.router.navigate(['Verificadores/ConsultaServicio'])
+      }
+    })
+  }
+  toggleDisabled() {
+    const editBlock = document.getElementById('editBlock')
+    this.isDisable = !this.isDisable
+
+    if (this.isDisable == true) {
+      editBlock!.textContent = 'Editar'
+    }
+    else {
+      editBlock!.textContent = 'Bloquear'
     }
   }
   goCerrar() {
