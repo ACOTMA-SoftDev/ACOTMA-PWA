@@ -1,0 +1,90 @@
+<header style="background-color: #9C223C;">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid pading1">
+        <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <span class="navbar-text text1">
+            UBICACION
+          </span>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<nav class="navbar">
+    <div class="container">
+        <li class="item-5 deeper parent" style="list-style-type: none;"><!-- de esta forma le quitamos el puntito de li-->
+        <button class="btn btn-outline-light text2" type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuLateral">
+        <i class="bi bi-list-ul"></i>
+        </button>
+        </li>
+        <li class="item-5 deeper parent" style="list-style-type: none;">
+            <a href="#" class="nav-link link-dark">
+              <button type="button" class="btn btn-outline-light text2">
+                <i class="bi bi-house-door"></i>
+              </button>
+            </a>
+          </li>
+          <li class="item-5 deeper parent" style="list-style-type: none;">
+            <a href="Ubicacion_Titan" class="nav-link link-dark"><!--AGREGAUE LA DIRECION DEL MAPA-->
+              <button type="button" class="btn btn-outline-light text2">
+                <i class="bi bi-geo-alt-fill"></i>
+              </button>
+            </a>
+          </li>
+
+        <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                  <span class="fs-4">MENU</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                  <li class="item-5 deeper parent" style="list-style-type: none;">
+                    <a href="#" class="nav-link link-dark">
+                      <button type="button" class="btn btn-outline-light text2"><i class="bi bi-folder2-open"></i>
+                        DESPACHO</button>
+                    </a>
+                  </li>
+                  <hr>
+                  <li class="item-5 deeper parent" style="list-style-type: none;">
+                    <a href="titanes" class="nav-link link-dark">
+                      <button type="button" class="btn btn-outline-light text2">
+                        <i class="bi bi-file-earmark-person"></i>
+                        TITANES
+                      </button>
+                    </a>
+                  </li>
+                </ul>
+                <hr>
+                <ul>
+                  <div class="dropdown">
+                    <li class="item-5 deeper parent" style="list-style-type: none;">
+                      <a href="#" class="nav-link link-dark">
+                        <button type="button" class="btn btn-outline-light text2">
+                          <i class="bi bi-box-arrow-right"></i>
+                          SALIR
+                        </button>
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+        </section>
+    </div>
+  </nav>
+  <app-loading *ngIf="!isUserLocationReady; else mapReady"></app-loading><!--de esta forma mandamos a llamar la funcion para que si la geolocalizacion no esta presente aparzca esta pantalla-->
+  <ng-template #mapReady>
+    <app-map-view></app-map-view><!--Mandamos a llamar a los componenetes de nuestro mapa-->
+    <app-btn-my-location></app-btn-my-location>
+    <app-search-bar></app-search-bar>
+  </ng-template>
+
+  <!--<app-angular-logo></app-angular-logo>-->
