@@ -51,6 +51,9 @@ import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.S
 import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
 import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
 import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Verificar.Unidad.Component';
+import { VerificacionComponent } from './CRONOS/Verificacion/Verificacion.Component';
+import { NgChartsModule } from 'ng2-charts';
+
 
 
 
@@ -95,7 +98,8 @@ import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Veri
     ServiciosIniciadosComponent,
     ConsultarServicioComponent,
     HorarioComponent,
-    VerificarUnidadesComponent
+    VerificarUnidadesComponent,
+    VerificacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,6 +117,7 @@ import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Veri
     TooltipModule.forRoot(),
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

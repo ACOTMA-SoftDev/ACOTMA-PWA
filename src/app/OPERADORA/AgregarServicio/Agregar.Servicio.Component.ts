@@ -26,13 +26,13 @@ export class AgregarSerevicioComponent implements OnInit {
     }
   }
   sendAsignacion(){
-    this.http.post("https://localhost:44397/api/Agregar/Servicio",this.ExcelData).
+    this.http.post("http://pruebaacotma2.somee.com/api/Agregar/Servicio",this.ExcelData).
     toPromise().then((response:any)=>{
       this.respuesta=response
     })
   }
   obtenerAsignacion(){
-    this.http.get<any[]>("https://localhost:44397/api/consultarAsignacionDay").
+    this.http.get<any[]>("http://pruebaacotma2.somee.com/api/consultarAsignacionDay").
     subscribe(data=>{
       this.estado=data
       if(Array.isArray(this.estado)&&this.estado.length===0){

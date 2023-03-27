@@ -21,7 +21,7 @@ export class VerificarUnidadesComponent implements OnInit {
     this.toggleDisabled()
     this.idAsigancion = this.route.snapshot.params['idAsignacion'];
     console.log(this.idAsigancion)
-    let url = `https://localhost:44397/api/Verificacion/Servicio?idAsignacion=${this.idAsigancion}`;
+    let url = `http://pruebaacotma2.somee.com/api/Verificacion/Servicio?idAsignacion=${this.idAsigancion}`;
     this.http.get(url).pipe(
       map((respuesta: any) => {
         this.dataAsignacion = respuesta
@@ -38,7 +38,7 @@ export class VerificarUnidadesComponent implements OnInit {
       fecha:fecha,
       horaLlegada:this.horaLlegada
     }
-    let url = "https://localhost:44397/api/Liberar/Unidades"
+    let url = "http://pruebaacotma2.somee.com/api/Liberar/Unidades"
     this.http.post(url, datosSen).toPromise().then(Response => {
       if (Response === true) {
         this.router.navigate(['Verificadores/ConsultaServicio'])
@@ -51,7 +51,7 @@ export class VerificarUnidadesComponent implements OnInit {
       horaSalida:this.horaLlegada,
       fkAsignacion:fkAsignacion
     }
-    let urlV="https://localhost:44397/api/addverificacion"
+    let urlV="http://pruebaacotma2.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
       if (Response2 === true) {
         console.log("checale  ")
@@ -68,7 +68,7 @@ export class VerificarUnidadesComponent implements OnInit {
       fecha:fecha,
       horaLlegada:this.horaLlegada
     }
-    let url = "https://localhost:44397/api/Liberar/Unidades"
+    let url = "http://pruebaacotma2.somee.com/api/Liberar/Unidades"
     this.http.post(url, datosSen).toPromise().then(Response => {
       if (Response === true) {
         this.router.navigate(['Verificadores/ConsultaServicio'])

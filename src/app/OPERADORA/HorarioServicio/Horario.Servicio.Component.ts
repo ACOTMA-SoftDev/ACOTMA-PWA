@@ -44,7 +44,7 @@ export class HorarioComponent implements OnInit {
 
 
     }
-    let url="https://localhost:44397/api/HorarioServicio"
+    let url="http://pruebaacotma2.somee.com/api/HorarioServicio"
     this.http.post(url,datosSen).toPromise().then(data=>{
       if(data===true){
         this.mostrarImagen =false;
@@ -53,7 +53,7 @@ export class HorarioComponent implements OnInit {
   }
 
   getHorarioToday() {
-    this.http.get<any>("https://localhost:44397/api/GetHorarios/Today/Id").
+    this.http.get<any>("http://pruebaacotma2.somee.com/api/GetHorarios/Today/Id").
       subscribe(data => {
         this.horarioToday = data
       })

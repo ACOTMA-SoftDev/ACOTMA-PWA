@@ -15,7 +15,7 @@ export class ServiciosIniciadosComponent implements OnInit{
     return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   GetServiciosIniciados(){
-    this.http.get("https://localhost:44397/api/ServiciosIniciados").
+    this.http.get("http://pruebaacotma2.somee.com/api/ServiciosIniciados").
     subscribe(data=>{
       this.dataAsignacion=data
     })

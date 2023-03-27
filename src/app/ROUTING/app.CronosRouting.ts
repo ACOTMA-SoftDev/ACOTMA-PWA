@@ -1,5 +1,5 @@
 import { RouterModule, Routes} from '@angular/router';/**IMPORTAR LOS ROUTERS MODULES creaste una crapeta donde los routing solo seran para los cronos */
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { MenuTitanesComponent } from "../CRONOS/titanes/componentes/menu-titanes/menu-titanes.component";
 import { InicioComponent } from '../CRONOS/menu/componentes/inicio/inicio.component';
 import { InfTecnologicosComponent } from '../CRONOS/titanes/componentes/inf-tecnologicos/inf-tecnologicos.component';
@@ -8,6 +8,7 @@ import { DiasComponent } from '../CRONOS/titanes/Limpieza/componentes/dias/dias.
 import { SemanalComponent } from '../CRONOS/titanes/Limpieza/componentes/semanal/semanal.component';
 import { InicioIncidenciasComponent } from '../CRONOS/titanes/inf-incidencias/componentes/inicio-incidencias/inicio-incidencias.component';
 import { RegistroVehiComponent } from '../CRONOS/titanes/componentes/registro-vehi/registro-vehi.component';
+import { VerificacionComponent } from '../CRONOS/Verificacion/Verificacion.Component';
 
 const appCronosRoutes: Routes = [
     {path:'', redirectTo:'inicio',pathMatch:'full'},/* por default si no esxite ninguna ruta se ira a la pagia principal* */
@@ -20,7 +21,8 @@ const appCronosRoutes: Routes = [
     {path: 'informe_de_limpieza_de_la_semana', component: SemanalComponent},
     {path: 'incidencias_inicio', component: InicioIncidenciasComponent},
     {path:'incidencias-b8', component: B8Component},
-    {path: 'registro_vehicular', component: RegistroVehiComponent}
+    {path: 'registro_vehicular', component: RegistroVehiComponent},
+    {path:'Verificacion', component:VerificacionComponent},
   ];
 
 @NgModule({
