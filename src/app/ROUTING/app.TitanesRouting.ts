@@ -15,13 +15,13 @@ const appTitanesRoutes: Routes = [
     {path: 'informe-percances', component: InformePercancesComponent},
     {path: 'incidencias-tec', component: IncidenciasTecComponent},
     {path: 'inicio_titanes',component: InicioTitanesComponent},
-    {path: 'stack',component: Stacks2Component}
+    {path: 'stack2',component: Stacks2Component}
 
 ]
 
 @NgModule({
     imports: [RouterModule.forRoot(appTitanesRoutes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
   })
 
 export class TitanesRouting {};

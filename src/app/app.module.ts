@@ -114,6 +114,9 @@ import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Veri
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
   ],
+  exports: [
+    Stacks2Component //LO EXPORTAMOS AQUI
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
