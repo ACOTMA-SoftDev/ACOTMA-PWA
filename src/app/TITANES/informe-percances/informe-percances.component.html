@@ -29,7 +29,7 @@
                 <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post">
                     <fieldset>
                         <p class="fw-normal">
-                            <legend class="text-center header fw-bold">Informe del accidente</legend>
+                            <legend class="text-center header fw-bold">Informe del percance</legend>
                         </p>             
 
                         <hr style="border: 2px solid transparent;">
@@ -48,7 +48,7 @@
                         <hr style="border: 2px solid transparent;">
 
                         <div class="col-12">
-                          <div class="col-12">
+                          <div class="col-md-6">
                             <label for="validationDefault03" class="form-label">ID_tarjeton</label>
                             <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Tarjeton" name="Tarjeton" required>
                           </div>
@@ -142,7 +142,7 @@
       </div>
       <div class="modal-body">
         <p>¿Seguro que desea guardar el informe?</p>
-        <span>na vez guardado no se podra editar</span>
+        <span>Una vez guardado no se podra editar</span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

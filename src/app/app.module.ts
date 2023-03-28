@@ -55,7 +55,8 @@ import { VerificacionComponent } from './CRONOS/Verificacion/Verificacion.Compon
 import { NgChartsModule } from 'ng2-charts';
 import { MapsModule } from './maps/maps.module';
 import { UbicacionComponent } from './CRONOS/ubicacion/ubicacion.component';
-import { PrestamoVehicularComponent } from './prestamo-vehicular/prestamo-vehicular.component';
+import { DatosAccidentesComponent } from './datos-accidentes/datos-accidentes.component';
+import { PrestamoComponent } from './PrestamoVehicular/component/prestamo/prestamo.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { PrestamoVehicularComponent } from './prestamo-vehicular/prestamo-vehicu
     VerificarUnidadesComponent,
     VerificacionComponent,
     UbicacionComponent,
-    PrestamoVehicularComponent,
+    DatosAccidentesComponent,
+    PrestamoComponent
     
   ],
   imports: [
