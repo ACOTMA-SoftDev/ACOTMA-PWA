@@ -1,6 +1,6 @@
 {
     "/api/*":{
-        "target":"https://pruebaacotma.somee.com/",
+        "target":"https://localhost:44374/",
         "secure": false,
         "changeOrigin": true
     }

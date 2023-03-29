@@ -1,12 +1,12 @@
 <div>
-    <div class="card" *ngFor="let Mensaje of Mensajes" style="margin: 20px;">
-        <div class="card-header">
-          {{Mensaje .Fecha_Pub}}
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{Mensaje.Titulo_Pub}}</h5>
-          <p class="card-text">{{Mensaje.Descripcion_Pub}}</p>
-          <img>{{Mensaje.ImagenP}}
-        </div>
+  <div class="card" *ngFor="let Mensaje of Mensajes" style="margin: 20px;">
+      <div class="card-header">
+        {{Mensaje .Fecha_Pub}}
       </div>
-  </div>
+      <div class="card-body">
+        <h5 class="card-title">{{Mensaje.Titulo_Pub}}</h5>
+        <p class="card-text">{{Mensaje.Descripcion_Pub}}</p>
+        <img [src]="Mensaje.ImagenP" style="width: 50%;">   
+      </div>
+    </div>
+</div>
