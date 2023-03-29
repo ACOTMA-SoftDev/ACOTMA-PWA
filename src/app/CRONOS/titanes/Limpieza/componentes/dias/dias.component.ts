@@ -40,7 +40,9 @@ export class DiasComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    setInterval(() => {
     this.getAllEstaciones();
+  }, 500)
   }
           dateRangeCreated($event:any) { 
             let startDate = $event[0].toJSON().split('T')[0];  

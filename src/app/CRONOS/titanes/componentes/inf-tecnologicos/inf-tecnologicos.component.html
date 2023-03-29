@@ -23,13 +23,7 @@
     <div class="container-fluid">
       <a class="navbar-brand">INFORMES DE INCIDENCIAS TÉCNOLOGICAS DEL DIA</a>
       <div class=" d-flex">
-        <select class="form-select" aria-label="Default select example" style="border: none; box-shadow: none;">
-          <option selected>ESTACION</option>
-          <option value="1">One</option>
-          <option value="2">tecnologico de monterrey</option>
-          <option value="3">Three</option>
-        </select>
-        
+        <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar Informe">
         <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
           <i class="bi bi-download"></i>
         </button>
@@ -67,7 +61,7 @@
         </thead>
         <tbody role="rowgroup">
           <tr role="row" *ngFor="let Incidencia of InformeIncidenciasTec">
-            <td role="cell">{{Incidencia.Fecha_incidencia}}</td>
+            <td role="cell">{{Incidencia.Fecha_incidencia | date:'dd/mm/yyyy'}}</td>
             <td role="cell">{{Incidencia.Servicio }}</td>
             <td role="cell">{{Incidencia.VehiculoECO}}</td>
             <td role="cell">{{Incidencia.Equipo_afectado}}</td>

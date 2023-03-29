@@ -56,6 +56,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { MapsModule } from './maps/maps.module';
 import { UbicacionComponent } from './CRONOS/ubicacion/ubicacion.component';
 import { PrestamoComponent } from './PrestamoVehicular/component/prestamo/prestamo.component';
+import { PublicacionesComponent } from './TITANES/publicaciones/publicaciones.component';
+import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +103,8 @@ import { PrestamoComponent } from './PrestamoVehicular/component/prestamo/presta
     VerificacionComponent,
     UbicacionComponent,
     PrestamoComponent,
+    PublicacionesComponent,
+    InicioTitanesComponent
     
   ],
   imports: [

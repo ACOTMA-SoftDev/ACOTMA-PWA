@@ -16,7 +16,7 @@
                   <span style="font-size: 23px;">{{accidente.TipoUnidad}}</span>
                 </div>
                 <div class="form-group" style="margin: 25px;">
-                  <span style="font-size: 23px;">{{accidente.Fecha_Percance}}</span>
+                  <span style="font-size: 23px;">{{accidente.Fecha_Percance | date:'dd/mm/yyyy'}}</span>
                 </div>
               </div>
               <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
@@ -35,22 +35,24 @@
                       <tr>
                         <th scope="col">FECHA</th>
                         <th scope="col">TIPO DE UNIDAD</th>
-                        <th scope="col">ID_TARJETON</th>
                         <th scope="col">NoEconomico</th>
-                        <th scope="col">CONDUCTOR</th>
                         <th scope="col">SERVICIO RUTA</th>
+                        <th scope="col">CONDUCTOR</th>
+                        <th scope="col">ID_TARJETON</th>
                         <th scope="col">UBICACIÓN</th>
+                        <th scope="col">SENTIDO</th>
                       </tr>     
                     </thead>
                     <tbody>
                       <tr role="row">
                         <td role="cell">{{accidente.Fecha_Percance}}</td>
                         <td role="cell">{{accidente.TipoUnidad}}</td>
-                        <td role="cell">{{accidente.Tarjeton}}</td>
                         <td role="cell">{{accidente.NoEconomico  }}</td>
-                        <td role="cell">{{accidente.Conductor}}</td>
                         <td role="cell">{{accidente.ServicioRuta}}</td>
+                        <td role="cell">{{accidente.Conductor}}</td>
+                        <td role="cell">{{accidente.Credencial}}</td>           
                         <td role="cell">{{accidente.Ubicacion}}</td>
+                        <td role="cell">{{accidente.Sentido}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -64,17 +66,19 @@
                     <thead>
                       <tr>
                         <th scope="col">MARCA</th>
-                        <th scope="col">MODELO</th>
+                        <th scope="col">SUBMARCA</th>
                         <th scope="col">COLOR</th>
                         <th scope="col">PLACA</th>
+                        <th scope="col">AÑO</th>
                       </tr>     
                     </thead>
                     <tbody>
                       <tr>
                         <td role="cell">{{accidente.Marca}}</td>
-                        <td role="cell">{{accidente.Modelo}}</td>
+                        <td role="cell">{{accidente.Submarca}}</td>
                         <td role="cell">{{accidente.Color}}</td>
                         <td role="cell">{{accidente.Placas}}</td>
+                        <td role="cell">{{accidente.Anio}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -84,7 +88,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                      <th scope="col">RELATO DE LOS ECHOS</th>
+                      <th scope="col">RELATO DE LOS HECHOS</th>
                     </tr>     
                   </thead>
                   <tbody>
@@ -96,19 +100,40 @@
         </div>
         <div class="table-responsive">
           <table class="table table-bordered">
+              <thead> 
+                        <th scope="col">LESIONADOS</th>
+                        <th scope="col">NOMBRES</th>
+                        <th scope="col">AMBULANCIA</th>
+                        <th scope="col">SEGURIDAD PUBLICA</th>
+                        <th scope="col">PATRULLA</th>
+                        <th scope="col">OFICIAL A CARGO</th>
+                        <th scope="col">SEGURO</th>
+                        <th scope="col">SUPERVISOR</th> 
+              </thead>
+              <tbody>
+                <tr role="row">
+                  <td role="cell">{{accidente.Lesionados}}</td>
+                  <td role="cell">{{accidente.Nombres}}</td>
+                  <td role="cell">{{accidente.Ambulancia}}</td>
+                  <td role="cell">{{accidente.SeguridaPublica}}</td>
+                  <td role="cell">{{accidente.PatrullaNumero  }}</td>
+                  <td role="cell">{{accidente.OficialAcargo}}</td>           
+                  <td role="cell">{{accidente.Seguro}}</td>
+                  <td role="cell">{{accidente.Supervisor}}</td>
+                </tr>
+              </tbody>
+            </table>
+  </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
               <thead>
-                  <tr>
-                    <th scope="col">FOTOS</th>
-                  </tr>     
                 </thead>
-                <tbody>
-                  <tr *ngFor="let accidente of accidentes">
-                      <td role="cell">{{accidente.Foto_Eco}}</td>
-                      <td role="cell">{{accidente.Foto_Part}}</td>
-                      <td role="cell">{{accidente.Foto_Tarjeton}}</td>
-                  </tr>
-                </tbody>
           </table>
+          <div class="card-body" style="text-align: center;">
+            <img [src]="accidente.Foto_Eco" style="width: 45%; margin: 10px;">
+            <img [src]="accidente.Foto_Part" style="width: 45%; margin: 10px;">
+            <img [src]="accidente.Foto_Tarjeton" style="width: 45%; margin: 10px;">
+          </div>
       </div>
     </div>
     </div>

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-stacks',
@@ -7,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stacks.component.css']
 })
 export class StacksComponent implements OnInit{
-
+  base64String!:string;
+  imageUrl!:any;
   publicaciones:any=[];
-
   constructor ( private http:HttpClient){
   };
 
   getPublicacion(){
-   this.http.get('api/Publicaciones').subscribe(data=>{
-      console.log(data)
-      this.publicaciones=data
-    })
-  }
-
+   this.http.get('api/Publicaciones').subscribe(response=>{
+    this.publicaciones=response
+    console.log(this.publicaciones)
+   })
+   }   
   ngOnInit(): void {
-    this.getPublicacion();
+    setInterval(() => {
+      this.getPublicacion();
+    }, 500)
   }
-
 }

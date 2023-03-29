@@ -10,10 +10,10 @@
 
 <div class="row">
   <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
-    <input type="text"
+   <!---- <input type="text"
            placeholder="Daterangepicker"
            class="form-control"
-           bsDaterangepicker>
+           bsDaterangepicker>-->
   </div>
 </div>
 
@@ -59,7 +59,7 @@
           <tbody role="rowgroup">
             <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
               <td role="cell">{{ejemplo.Estacion}}</td>
-              <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
+              <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/mm/yyyy' }}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
               <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
               <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>

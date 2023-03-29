@@ -14,14 +14,16 @@ export class CardIncidenciasComponent {
   };
 
   getAccidenteAHT(){
-   this.http.get('api/Informe_de_Accidente_de_hoy').subscribe(data=>{
-      console.log(data)
-      this.accidentes=data
-    })
+   this.http.get('api/Informe_de_Accidente_de_hoy').subscribe(response=>{
+    this.accidentes=response
+    console.log(this.accidentes)
+   })
   }
 
   ngOnInit(): void {
+    setInterval(() => {
     this.getAccidenteAHT();
+  }, 500)
   }
 
 

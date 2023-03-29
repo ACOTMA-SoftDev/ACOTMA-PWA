@@ -102,23 +102,20 @@
             <div class="modal-body">
               <form (submit)="enviarMensaje()">
                 <div class="mb-3">
-                  <label for="Titulo-name" class="col-form-label" required="required">Titulo:</label>
-                  <input type="text" class="form-control" id="titulo" name="Titulo_Pub" [(ngModel)]="Titulo_Pub">
+                  <label for="titulo" class="col-form-label" required="required">Titulo:</label>
+                  <input type="text" class="form-control" id="titulo" name="Titulo_Pub" [(ngModel)]="Titulo_Pub" [required]="Titulo_Pub">
                 </div>
                 <div class="mb-3">
                   <label for="Mensaje-text" class="col-form-label">Mensaje:</label>
-                  <textarea class="form-control"  id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>
-              
+                  <textarea class="form-control"  id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>             
                 </div>
-
-                <div class="mb-3">
-                  <div class="file-upload" >
-                    <input (change)="capturarFile($event)" required id="ImagenP" multiple type="file" ng2FileSelect uploader="uploader" accept="image/x-png,image/gif,image/jpeg" name="ImagenP" >
-                  </div>
+                <div class="mainPage">
+                  <input type="file" (change)="onFileChanged($event)" ><!--aqui se selecciona la imagen-->
+                  <br />
                 </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="submit" class="btn btn-primary">LEST GOOO!</button>
+              <button type="submit" class="btn btn-primary" (click)="convertToBase64()">ENVIAR</button>
             </div>
           </form>
         </div>
@@ -127,3 +124,4 @@
       </div>
   </div>
 </body>
+ 

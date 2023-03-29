@@ -1,12 +1,12 @@
 <div>
   <div class="card" *ngFor="let publicacion of publicaciones" style="margin: 20px;">
-      <div class="card-header">
-        {{publicacion.Fecha_Pub}}
-      </div>
+      <div class="card-header" >
+        {{publicacion.Fecha_Pub | date:'dd/mm/yyyy'}} 
+      </div> 
       <div class="card-body">
         <h5 class="card-title">{{publicacion.Titulo_Pub}}</h5>
         <p class="card-text">{{publicacion.Descripcion_Pub}}</p>
-        <img>{{publicacion.ImagenP}}
+        <img [src]="publicacion.ImagenP" style="width: 50%;">         
       </div>
     </div>
 </div>

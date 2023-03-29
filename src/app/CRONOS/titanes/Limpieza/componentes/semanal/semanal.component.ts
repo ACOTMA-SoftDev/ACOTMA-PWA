@@ -23,7 +23,9 @@ export class SemanalComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    setInterval(() => {
     this.getSemanal();
+  }, 500)
   }
 
 

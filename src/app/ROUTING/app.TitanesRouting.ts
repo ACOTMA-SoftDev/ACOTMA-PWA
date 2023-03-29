@@ -5,8 +5,9 @@ import { TitanesMenuComponent } from '../TITANES/componentes/titanes-menu/titane
 import { InformeDatosComponent } from '../TITANES/informe-datos/informe-datos.component';
 import { InformePercancesComponent } from '../TITANES/informe-percances/informe-percances.component';
 import { IncidenciasTecComponent } from '../TITANES/componentes/incidencias-tec/incidencias-tec.component';
-import { InicioTitanesComponent } from '../TITANES/Inicio/inicio-titanes.component';
 import { Stacks2Component } from '../TITANES/componentes/stacks2/stacks2.component';
+import { PublicacionesComponent } from '../TITANES/publicaciones/publicaciones.component';
+import { InicioTitanesComponent } from '../TITANES/inicio-titanes/inicio-titanes.component';
 
 const appTitanesRoutes: Routes = [
     {path: 'limpieza', component: LimpiezaComponent},
@@ -15,8 +16,8 @@ const appTitanesRoutes: Routes = [
     {path: 'informe-percances', component: InformePercancesComponent},
     {path: 'incidencias-tec', component: IncidenciasTecComponent},
     {path: 'inicio_titanes',component: InicioTitanesComponent},
-    {path: 'stack2',component: Stacks2Component}
-
+    {path: 'stack2',component: Stacks2Component},
+    {path: 'Publicaciones',component: PublicacionesComponent}
 ]
 
 @NgModule({

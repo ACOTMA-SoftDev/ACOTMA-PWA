@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { ResourceLoader } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterPreloader } from '@angular/router';
-import { Location } from '@angular/common';
-import { async } from '@angular/core/testing';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -14,33 +10,83 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 
 
-export class InicioComponent {
-
-  Titulo_Pub!: string;
+export class InicioComponent implements OnInit {
+  base64Image!:string;
+  base64String!:string;
+  file!:File;
+  Titulo_Pub!:string;
   Descripcion_Pub!:string;
   usuario:string="";
-  ImagenP: any=[];
-  
 
-  constructor(private http:HttpClient, private location: Location, private sanitizer:DomSanitizer){}
 
-  capturarFile(event:any){
-    const archivoCapturado = event.target.files[0]
-    this.ImagenP.push(archivoCapturado)
+  constructor(private http:HttpClient, private sant:DomSanitizer){
+  }
+
+  onFileChanged(event:any){
+    this.file = event.target.files[0];
+  }
+
+  convertToBase64(){ //este fucion lo convierte a base 64
+    if (!this.file){
+      const reader = new FileReader();
+    reader.readAsDataURL(this.file);
+    reader.onload = () =>{
+      this.base64String = reader.result as string;
+      this.base64Image = reader.result as  string;
+      return;
+    }
+    }
+  }
+
+  copyToClipboard(){
+    const textArea = document.createElement('textarea');
+
+    textArea.value = this.base64String;
+
+    document.body.appendChild(textArea);
+
+    textArea.select();
+
+    document.execCommand('copy');
+
+    textArea.remove();
+
+    alert('basse65 string copied to clipboard succesfully!');
+  }
+
+
+  ngOnInit(): void {
+    
   }
 
   enviarMensaje(){
-    const datos = {
-      Titulo_Pub:this.Titulo_Pub, 
-      Descripcion_Pub:this.Descripcion_Pub,
-      usuario:this.usuario,
-      ImagenP:this.ImagenP
+    var imagenSend
+    if (this.file){
+      const reader = new FileReader();
+    reader.readAsDataURL(this.file);
+    reader.onload = () =>{
+      this.base64String = reader.result as string;
+      this.base64Image = reader.result as  string;
+      imagenSend=this.base64String      
+      console.log(imagenSend)
+
+      const datos = {
+        Titulo_Pub:this.Titulo_Pub, 
+        Descripcion_Pub:this.Descripcion_Pub,
+        usuario:this.usuario,
+        ImagenP:this.base64String
+      }
+      console.log(datos)
+      let url="api/agregarPublicaciones"
+      this.http.post(url,datos).toPromise().then((data:any)=>{
+        console.log(data)
+        location.reload();
+      })
+
     }
-    let url="api/agregarPublicaciones"
-    this.http.post(url,datos).toPromise().then((data:any)=>{
-      console.log(data)
-      location.reload();
-    })
+    
+    }
+
     
   }
 

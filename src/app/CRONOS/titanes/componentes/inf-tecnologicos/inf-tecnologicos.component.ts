@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./inf-tecnologicos.component.css']
 })
 export class InfTecnologicosComponent implements OnInit{
-
   term:any;
   InformeIncidenciasTec:any=[];//recolectamos todos los datos para luego mostrarlos
 
@@ -23,7 +22,9 @@ export class InfTecnologicosComponent implements OnInit{
     }
 
   ngOnInit(): void {
+    setInterval(() => {
     this.getAllEstacionesToday();
+  }, 500)
   }
 
 }
