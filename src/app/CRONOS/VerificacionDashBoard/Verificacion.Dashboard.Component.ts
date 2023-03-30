@@ -7,6 +7,9 @@ import { Component, OnInit } from "@angular/core";
     styleUrls: ['Verificacion.Dashboard.Component.scss']
   })
 export class VerificacionDashboardComponent implements OnInit {
+  icongif='assets/iconBlackAcotma.gif'
+  dataAsignacion:any
+  filtro!:string
   unidadesAsignadas: any
   unidadesLiberadas: any
   tipoUnidad: any
@@ -16,6 +19,15 @@ export class VerificacionDashboardComponent implements OnInit {
   lista2: any=[];
   resultado: any=[];
   constructor(private http: HttpClient) {
+  }
+  filterItems(dato:any,filtro:string){
+    return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
+  }
+  GetServiciosIniciados(){
+    this.http.get("http://PruebaAcotma2.somee.com/api/CentroControl/Verificacion/Liberado").
+    subscribe(data=>{
+      this.dataAsignacion=data
+    })
   }
   getDataUnidades() {
     this.http.get<any[]>("http://pruebaacotma2.somee.com/api/CentroControl/Verificaciones/Hoy").subscribe(data => {
@@ -43,5 +55,8 @@ export class VerificacionDashboardComponent implements OnInit {
     setInterval(() => {
       this.getDataUnidades()
     }, 1000)
+    setInterval(() => {
+      this.GetServiciosIniciados()
+    }, 500)
   }
 }
