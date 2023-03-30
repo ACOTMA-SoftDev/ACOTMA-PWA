@@ -7,13 +7,13 @@
   <nav class="navbar navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand">INFORME DEL DIA</a>
-
+  
 <div class="row">
   <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
-   <!---- <input type="text"
+    <input type="text"
            placeholder="Daterangepicker"
            class="form-control"
-           bsDaterangepicker>-->
+           bsDaterangepicker>
   </div>
 </div>
 
@@ -28,18 +28,17 @@
 
         </div>
       </div>
-      <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+      <button (click)="descargarPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
         <i class="bi bi-download"></i>
       </button>
     </div>
   </nav>
 </div>
-
+<form id="limpiezaDia">
 <hr>
-
     <div class="container justify-content-center" >
       <hr>
-      <table role="table" class="table table-bordered table-fixed">
+      <table #content role="table" class="table table-bordered table-fixed">
           <thead role="rowgroup">
             <tr role="row">
               <th role="columnheader">Estacion</th>
@@ -59,7 +58,7 @@
           <tbody role="rowgroup">
             <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
               <td role="cell">{{ejemplo.Estacion}}</td>
-              <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/mm/yyyy' }}</td>
+              <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
               <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
               <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>
@@ -72,5 +71,5 @@
           </tbody>
         </table>
     </div>
+  </form>
 
-  
