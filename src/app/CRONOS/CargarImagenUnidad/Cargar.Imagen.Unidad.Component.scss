@@ -1,0 +1,14 @@
+.container {
+  height: 100vh; /* suponiendo que quieres centrar respecto a todo el alto de la pantalla */
+  width: 200%;
+  display: flex; /* propiedad flexbox */
+  justify-content: center; /* centra el contenido horizontalmmente */
+  align-items: center; /* centra el contenido verticalmente */
+}
+
+.content{
+  height: 450px;
+  width: 450px;
+  background-color: chocolate;
+  padding: 5%;
+}

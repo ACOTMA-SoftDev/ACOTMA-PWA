@@ -11,6 +11,8 @@ import { RegistroVehiComponent } from '../CRONOS/titanes/componentes/registro-ve
 import { VerificacionComponent } from '../CRONOS/Verificacion/Verificacion.Component';
 import { MapSreensComponent } from '../maps/screens/map-sreens/map-sreens.component';
 import { PrestamoComponent } from '../PrestamoVehicular/component/prestamo/prestamo.component';
+import { VerificacionDashboardComponent } from '../CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
+import { CargarImagenUnidadComponent } from '../CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
 
 
 const appCronosRoutes: Routes = [
@@ -25,9 +27,11 @@ const appCronosRoutes: Routes = [
     {path: 'incidencias_inicio', component: InicioIncidenciasComponent},
     {path:'incidencias-b8', component: B8Component},
     {path: 'registro_vehicular', component: RegistroVehiComponent},
-    {path:'Verificacion', component:VerificacionComponent},
+    {path:'Verificacion/Servicio', component:VerificacionComponent},
     {path: 'Ubicacion_Titan', component: MapSreensComponent}, /*CREAMOS LA RUTA DEL COMPONENTE */
-    {path: 'PrestamoVehicular', component: PrestamoComponent}
+    {path: 'PrestamoVehicular', component: PrestamoComponent},
+    {path:'Verificacion/Inicio',component:VerificacionDashboardComponent},
+    {path:'Verificacion/CargarImagen',component:CargarImagenUnidadComponent},
 
   ];
 

@@ -1,0 +1,51 @@
+<div style="background-color: #9c223c; height:100vh;">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/iconBlackAcotma.gif" style="width: 80px;" alt="logo">
+      </a>
+      <a class="navbar-brand" href="#">Centro de Control</a>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <button class="btn btn-outline-danger" aria-current="page"><i class="bi bi-box-arrow-left"></i>
+                Cerrrar Sesion</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br><br><br>
+  <br><br><br>
+  <div class="row">
+    <div class="container text-center col-3" *ngFor="let data of resultado">
+      <div class="col-2">
+        <div class="card" style="width: 18rem;">
+          <img src="{{data.ImagenUnidad}}" class="card-img-top" width="290" height="100">
+          <div>
+            <div class="card-body">
+              <h5 class="card-title">{{data.tipoUnidad}}</h5>
+              <p class="card-text">Asignadas: {{data.cantidad}}</p>
+              <p class="card-text">En servicio: {{data.cantidadLiberado}}</p>
+              <a href="#" class="btn btn-primary">Detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="text-center">
+    <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 900px;">
+  </div>
+</div>
