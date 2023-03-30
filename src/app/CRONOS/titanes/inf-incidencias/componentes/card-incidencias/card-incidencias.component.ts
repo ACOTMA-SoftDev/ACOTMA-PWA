@@ -14,7 +14,7 @@ export class CardIncidenciasComponent {
   };
 
   getAccidenteAHT(){
-   this.http.get('api/Informe_de_Accidente_de_hoy').subscribe(response=>{
+   this.http.get('https://pruebaacotma2.somee.com/api/Informe_de_Accidente_de_hoy').subscribe(response=>{
     this.accidentes=response
     console.log(this.accidentes)
    })

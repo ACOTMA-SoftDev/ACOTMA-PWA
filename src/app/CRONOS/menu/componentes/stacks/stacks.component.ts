@@ -14,7 +14,7 @@ export class StacksComponent implements OnInit{
   };
 
   getPublicacion(){
-   this.http.get('api/Publicaciones').subscribe(response=>{
+   this.http.get('https://pruebaacotma2.somee.com/api/Publicaciones').subscribe(response=>{
     this.publicaciones=response
     console.log(this.publicaciones)
    })

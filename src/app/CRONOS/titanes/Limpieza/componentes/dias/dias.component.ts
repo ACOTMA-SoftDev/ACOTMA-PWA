@@ -33,7 +33,7 @@ export class DiasComponent implements OnInit{
   //}
   
   getAllEstaciones(){
-    this.http.get('api/limpieza_del_dia_de_hoy').subscribe(data=>{
+    this.http.get('https://pruebaacotma2.somee.com/api/limpieza_del_dia_de_hoy').subscribe(data=>{
       console.log(data)
       this.ejemplos=data
     })

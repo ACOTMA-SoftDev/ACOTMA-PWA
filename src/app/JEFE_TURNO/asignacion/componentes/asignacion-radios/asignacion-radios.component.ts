@@ -29,7 +29,7 @@ export class AsignacionRadiosComponent {
       Codigo_Radio:this.Codigo_Radio,
       Tarjeta_Maestra:this.Tarjeta_Maestra
     }
-    let url="api/agregar_Asignacion_de_Radios"
+    let url="https://pruebaacotma2.somee.com/api/agregar_Asignacion_de_Radios"
     this.http.post(url,datos).toPromise().then((data:any )=>{
       console.log(data)
       location.reload();

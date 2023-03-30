@@ -16,7 +16,7 @@ export class RegistroRadiosComponent {
   };
 
   getAsignacionRadios(){
-   this.http.get('api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
+   this.http.get('https://pruebaacotma2.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
       console.log(data)
       this.Asignacion=data
     })
@@ -27,7 +27,7 @@ export class RegistroRadiosComponent {
   }
 
   eliminarRegistro(Id_asignacionRadio: number) {
-    const url = `api/eliminar_Asignacion_de_Radios/${Id_asignacionRadio}`;
+    const url = `https://pruebaacotma2.somee.com/api/eliminar_Asignacion_de_Radios/${Id_asignacionRadio}`;
     this.http.delete(url).subscribe(
       () => {
         console.log('Registro eliminado correctamente');

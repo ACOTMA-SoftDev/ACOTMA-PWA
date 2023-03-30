@@ -150,7 +150,7 @@ export class InformePercancesComponent implements OnInit{
   
             console.log(datos)
         
-            let url="api/Agregar_Informe_de_Accidente"
+            let url="https://pruebaacotma2.somee.com/api/Agregar_Informe_de_Accidente"
             this.http.post(url,datos).toPromise().then((data:any)=>{
               console.log(data)
               console.log(datos)

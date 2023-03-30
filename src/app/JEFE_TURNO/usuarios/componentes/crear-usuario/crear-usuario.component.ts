@@ -30,7 +30,7 @@ export class CrearUsuarioComponent{
       apellidoM:this.apellidoM,
       pass:this.pass,
     }
-    let url="api/agregar_usuarios"
+    let url="https://pruebaacotma2.somee.com/api/agregar_usuarios"
     this.http.post(url,datos).toPromise().then((data:any )=>{
       console.log(data)
       location.reload();

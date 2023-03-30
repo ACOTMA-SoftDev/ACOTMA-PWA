@@ -33,7 +33,7 @@ export class IncidenciasTecComponent {
       Falla:this.Falla,
       Estado:this. Estado,
     }
-    let url="api/agregar_nueva_incidencia_tecnologica"
+    let url="https://pruebaacotma2.somee.com/api/agregar_nueva_incidencia_tecnologica"
     this.http.post(url,datos).toPromise().then((data:any)=>{
       console.log(data)
       location.reload();

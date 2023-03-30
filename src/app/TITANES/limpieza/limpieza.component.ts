@@ -38,7 +38,7 @@ export class LimpiezaComponent {
       Observaciones:this.Observaciones,
       usuario:this.usuario,
     }
-    let url="api/agregar_informeLimpieza_del_dia_hoy"
+    let url="https://pruebaacotma2.somee.com/api/agregar_informeLimpieza_del_dia_hoy"
     this.http.post(url,datos).toPromise().then((data:any)=>{
       console.log(data)
       location.reload();
