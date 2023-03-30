@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-inicio',
@@ -16,10 +17,10 @@ export class InicioComponent implements OnInit {
   file!:File;
   Titulo_Pub!:string;
   Descripcion_Pub!:string;
-  usuario:string="";
+  usuario:string="Titan 1";
 
 
-  constructor(private http:HttpClient, private sant:DomSanitizer){
+  constructor(private http:HttpClient, private sant:DomSanitizer, private location: Location,){
   }
 
   onFileChanged(event:any){
@@ -38,45 +39,31 @@ export class InicioComponent implements OnInit {
     }
   }
 
-  copyToClipboard(){
-    const textArea = document.createElement('textarea');
-
-    textArea.value = this.base64String;
-
-    document.body.appendChild(textArea);
-
-    textArea.select();
-
-    document.execCommand('copy');
-
-    textArea.remove();
-
-    alert('basse65 string copied to clipboard succesfully!');
-  }
-
-
   ngOnInit(): void {
     
   }
 
   enviarMensaje(){
+
     var imagenSend
     if (this.file){
-      const reader = new FileReader();
+    const reader = new FileReader();
     reader.readAsDataURL(this.file);
     reader.onload = () =>{
-      this.base64String = reader.result as string;
-      this.base64Image = reader.result as  string;
-      imagenSend=this.base64String      
-      console.log(imagenSend)
+    this.base64String = reader.result as string;
+
+      imagenSend=this.base64String   
+
 
       const datos = {
         Titulo_Pub:this.Titulo_Pub, 
         Descripcion_Pub:this.Descripcion_Pub,
+        ImagenP:this.base64String,
         usuario:this.usuario,
-        ImagenP:this.base64String
       }
+      
       console.log(datos)
+
       let url="https://prueba252.somee.com/api/agregarPublicaciones"
       this.http.post(url,datos).toPromise().then((data:any)=>{
         console.log(data)

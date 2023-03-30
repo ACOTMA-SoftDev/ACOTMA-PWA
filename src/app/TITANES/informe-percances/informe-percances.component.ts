@@ -47,7 +47,7 @@ export class InformePercancesComponent implements OnInit{
   OficialAcargo!:string;
   Seguro!:string;
   Supervisor!:string;
-  usuario:string="Titan 1";
+  usuario:string=("Titan 1");
 
 
   constructor(private http:HttpClient,private sanitizer:DomSanitizer,private location: Location,){}
@@ -63,18 +63,6 @@ export class InformePercancesComponent implements OnInit{
     this.file3 = event.target.files[0];
   }
 
-  convertToBase64(){ //este fucion lo convierte a base 64
-    if (!this.file){
-      const reader = new FileReader();
-    reader.readAsDataURL(this.file);
-    reader.onload = () =>{
-      this.base64String1 = reader.result as string;
-      this.base64Image1 = reader.result as  string;
-      return;
-    }
-    }
-  }
-
   ngOnInit(): void {  
   }
 
@@ -84,7 +72,7 @@ export class InformePercancesComponent implements OnInit{
     var imagenSend2
     var imagenSend3
     
-    if (this.file,this.file2){
+    if (this.file,this.file2,this.file3){
       const reader = new FileReader();
       const reader2 = new FileReader();
       const reader3 = new FileReader();
@@ -115,7 +103,6 @@ export class InformePercancesComponent implements OnInit{
             this.base64String1 = reader.result as string;
             this.base64String2 = reader2.result as string;
             this.base64String3 = reader3.result as string;
-            console.log(imagenSend,imagenSend2,imagenSend3)
 
             const datos = {
 
@@ -146,14 +133,13 @@ export class InformePercancesComponent implements OnInit{
               Foto_Part:this.base64String2,
               Foto_Tarjeton:this.base64String3
             }
-  
-            console.log(datos)
-        
-            let url="https://prueba252.somee.com/api/Agregar_Informe_de_Accidente"
-            this.http.post(url,datos).toPromise().then((data:any)=>{
-              console.log(data)
-              location.reload();
-            })
+
+      console.log(datos)
+      let url="https://prueba252.somee.com/api/Agregar_Informe_de_Accidente"
+      this.http.post(url,datos).toPromise().then((data:any)=>{
+        console.log(data)
+        location.reload();
+      })
           }
           }
     }

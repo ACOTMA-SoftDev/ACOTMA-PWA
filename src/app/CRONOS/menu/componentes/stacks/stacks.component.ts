@@ -7,8 +7,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
   styleUrls: ['./stacks.component.css']
 })
 export class StacksComponent implements OnInit{
-  base64String!:string;
-  imageUrl!:any;
+
   publicaciones:any=[];
   constructor ( private http:HttpClient){
   };
@@ -20,8 +19,6 @@ export class StacksComponent implements OnInit{
    })
    }   
   ngOnInit(): void {
-    setInterval(() => {
       this.getPublicacion();
-    }, 500)
   }
 }

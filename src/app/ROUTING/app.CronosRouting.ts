@@ -13,6 +13,9 @@ import { MapSreensComponent } from '../maps/screens/map-sreens/map-sreens.compon
 import { PrestamoComponent } from '../PrestamoVehicular/component/prestamo/prestamo.component';
 import { VerificacionDashboardComponent } from '../CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
 import { CargarImagenUnidadComponent } from '../CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
+import { ConsultarServicioComponent } from '../VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
+import { InicioTitanesComponent } from '../TITANES/inicio-titanes/inicio-titanes.component';
+import { InicioAdminComponent } from '../JEFE_TURNO/componentes/inicio-admin/inicio-admin.component';
 
 
 const appCronosRoutes: Routes = [
@@ -32,6 +35,9 @@ const appCronosRoutes: Routes = [
     {path: 'PrestamoVehicular', component: PrestamoComponent},
     {path:'Verificacion/Inicio',component:VerificacionDashboardComponent},
     {path:'Verificacion/CargarImagen',component:CargarImagenUnidadComponent},
+    {path:'Verificadores/ConsultaServicio',component:ConsultarServicioComponent},
+    {path: 'inicio_titanes',component: InicioTitanesComponent},
+    {path: 'inicio-admin', component: InicioAdminComponent},
 
   ];
 
