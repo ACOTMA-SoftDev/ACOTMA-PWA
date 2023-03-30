@@ -20,7 +20,7 @@ export class VerificacionComponent implements OnInit{
     return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   GetServiciosIniciados(){
-    this.http.get("http://PruebaAcotma2.somee.com/api/CentroControl/Verificacion/Liberado").
+    this.http.get("https://prueba252.somee.com/CentroControl/Verificacion/Liberado").
     subscribe(data=>{
       this.dataAsignacion=data
     })

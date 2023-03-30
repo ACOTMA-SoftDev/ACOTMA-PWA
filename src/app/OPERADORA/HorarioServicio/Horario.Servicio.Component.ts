@@ -44,7 +44,7 @@ export class HorarioComponent implements OnInit {
 
 
     }
-    let url="http://pruebaacotma2.somee.com/api/HorarioServicio"
+    let url="https://prueba252.somee.com/api/HorarioServicio"
     this.http.post(url,datosSen).toPromise().then(data=>{
       if(data===true){
         this.mostrarImagen =false;

@@ -34,7 +34,7 @@ export class CargarImagenUnidadComponent implements OnInit {
           NombreUnidad:this.verSeleccion
         }
         console.log(datos)
-        let url = "http://pruebaacotma2.somee.com/api/CentroControl/Verificacion/ImagenUnidades"
+        let url = "https://prueba252.somee.com/api/CentroControl/Verificacion/ImagenUnidades"
         this.http.post(url, datos).toPromise().then(Response => {
           console.log(datos)
         })
@@ -42,7 +42,7 @@ export class CargarImagenUnidadComponent implements OnInit {
     }
   }
   loadUnidades(){
-    this.http.get("http://pruebaacotma2.somee.com/api/CentroControl/Asignaciones/Hoy").subscribe(data=>{
+    this.http.get("https://prueba252.somee.com/api/CentroControl/Asignaciones/Hoy").subscribe(data=>{
       this.cargarUnidades=data
 
     })

@@ -13,7 +13,7 @@ export class Stacks2Component implements OnInit{
   };
 
   getPublicacion(){
-   this.http.get('https://pruebaacotma2.somee.com/api/Publicaciones').subscribe(data=>{
+   this.http.get('https://prueba252.somee.com/api/Publicaciones').subscribe(data=>{
       console.log(data)
       this.Mensajes=data
     })

@@ -20,146 +20,131 @@
     <button type="button" class="btn-regresar"><i class="bi bi-arrow-left" style="font-size: 30px;"></i>
     </button>
   </a>
-<body>
-<!--titulo-->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="well well-sm">
-        <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post">
-            <p class="fw-normal">
-                <legend class="text-center header fw-bold">Informe del percance</legend>
-            </p>             
 
-            <hr style="border: 2px solid transparent;">
+  <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post"><!--aqui inicia el form-->
 
-            <div class="col-12">
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Num.Vehiculo (ECO)</label>
-            <input class="form-control" list="datalistOptions"  placeholder="" [(ngModel)]="VehiculoECO" name="VehiculoECO" required>
-  
-              </div>
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Tipo de unidad</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="TipoUnidad" name="TipoUnidad" required>
-              </div>
-            </div>
-            <hr style="border: 2px solid transparent;">
+    <p class="fw-normal">
+      <legend class="text-center header fw-bold">Informe del percance</legend>
+    </p>  
 
-            <div class="col-12">
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Credencial</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Credencial" name="Credencial" required>
-              </div>
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Conductor</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Conductor" name="Conductor" required>
-              </div>
-            </div>
+    <hr style="border: 2px solid transparent;"><!--aqui empieza la primera parte-->
 
-            <hr style="border: 2px solid transparent;">
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault01" class="form-label">Num.Vehiculo (ECO)</label>
+    <input class="form-control" list="datalistOptions"  placeholder="" [(ngModel)]="VehiculoECO" name="VehiculoECO" required>
 
+      </div>
+      <div class="col-12">
+        <label for="validationDefault02" class="form-label">Tipo de unidad</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="TipoUnidad" name="TipoUnidad" required>
+      </div>
+    </div>
+    <hr style="border: 2px solid transparent;"> <!--Aqui empieza la segunda parte-->
 
-            <div class="col-12">
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Servicio/ruta</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="ServicioRuta" name="ServicioRuta" required>
-              </div>
-              <div class="col-12">
-                <label for="validationDefault03" class="form-label">Sentido</label>
-                <input type="text" class="form-control" placeholder="" [(ngModel)]="Sentido" name="Sentido" >
-              </div>
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Ubicación</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Ubicacion" name="Ubicacion" required>
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Hora</label>
-              <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Hora" name="Hora" required>
-            </div>
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault03" class="form-label">Credencial</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Credencial" name="Credencial" required>
+      </div>
+      <div class="col-12">
+        <label for="validationDefault04" class="form-label">Conductor</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Conductor" name="Conductor" required>
+      </div>
+    </div>
 
-              <hr style="border: 2px solid transparent;">
+    <hr style="border: 2px solid transparent;"><!--aqui va la tercera parte-->
 
-              <p class="text-decoration-underline fw-bold text-center" >DATOS DEL PARTICULAR Y DEL VEHICULO</p>
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault5" class="form-label">Servicio/ruta</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="ServicioRuta" name="ServicioRuta" required>
+      </div>
+      <div class="col-12">
+        <label for="validationDefault06" class="form-label">Sentido</label>
+        <input type="text" class="form-control" placeholder="" [(ngModel)]="Sentido" name="Sentido" >
+      </div>
+    </div>
 
-              <div class="col-12">
-               <!-- <div class="col-12">
-                  <label for="validationDefault03" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" placeholder="" aria-label="Nombre">
-                </div>-->
-              <div class="col-12">
-                <div class="col-12">
-                  <label for="validationDefault03" class="form-label">Marca</label>
-                  <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Marca" name="Marca" required>
-                </div>
-                <div class="col-12">
-                  <label for="validationDefault03" class="form-label">Submarca</label>
-                  <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Submarca" name="Submarca" required>
-                </div>
-              </div>
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault07" class="form-label">Ubicación</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Ubicacion" name="Ubicacion" required>
+      </div>
+      <div class="col-12">
+        <label for="validationDefault08" class="form-label">Hora</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Hora" name="Hora" required>
+      </div>
+    </div>
+    <hr style="border: 2px solid transparent;"><!--Aqui va la cuarta parte-->
+    <p class="text-decoration-underline fw-bold text-center" >DATOS DEL PARTICULAR Y DEL VEHICULO</p>
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault09" class="form-label">Marca</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Marca" name="Marca" required>
+      </div>
+      <div class="col-12">
+        <label for="validationDefault10" class="form-label">Submarca</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Submarca" name="Submarca" required>
+      </div>
+    </div>
+    <hr style="border: 1px solid transparent;">
+    <div class="col-12">
+      <div class="col-12">
+        <label for="validationDefault11" class="form-label">Color</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Color" name="Color" required>
+      </div>
+      <div class="col-12">
+        <label for="validationDefault12" class="form-label">Placas</label>
+        <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Placas" name="Placas" required>
+      </div>
+    </div>
+    <div class="col-12">
+      <label for="validationDefault13" class="form-label">Anio</label>
+      <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Anio" name="Anio" required>
+    </div>
 
-              <hr style="border: 1px solid transparent;">
-
-              <div class="col-12">
-                <div class="col-12">
-                  <label for="validationDefault03" class="form-label">Color</label>
-                  <input type="text" class="form-control" placeholder="" aria-label="Nombre" [(ngModel)]="Color" name="Color" required>
-                </div>
-                <div class="col-12">
-                  <label for="validationDefault03" class="form-label">Placas</label>
-                  <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Placas" name="Placas" required>
-                </div>
-              </div>
-               <div class="col-12">
-                <label for="validationDefault03" class="form-label">Anio</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Apellido" [(ngModel)]="Anio" name="Anio" required>
-              </div>
-
-              <hr style="border: 2px solid transparent;">
-
-              <p class="text-decoration-underline fw-bold text-center" >DESCRIPCIÓN </p>
-
+    <hr style="border: 2px solid transparent;"><!--Quinta Parte-->
+    <p class="text-decoration-underline fw-bold text-center" >DESCRIPCIÓN </p>
 
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Relato de los hechos</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="RelatoEcho" name="RelatoEcho" required></textarea>
               </div>
               <div class="col-12">
-                <label for="validationDefault03" class="form-label">Lesionados</label>
+                <label for="validationDefault14" class="form-label">Lesionados</label>
                 <input type="text" class="form-control" placeholder="" [(ngModel)]="Lesionados" name="Lesionados" >
               </div>
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Nombres de los lesionados</label>
+              <div class="col-12">
+              <label for="validationDefault15" class="form-label">Nombres de los lesionados</label>
               <input type="text" class="form-control" placeholder="" id="validationDefault03" [(ngModel)]="Nombres" name="Nombres" required>
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Ambulancia </label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="Ambulancia" name="Ambulancia">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Seguridad Pública </label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="SeguridaPublica" name="SeguridaPublica">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Patrulla número </label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="PatrullaNumero" name="PatrullaNumero">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Oficial a cargo</label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="OficialAcargo" name="OficialAcargo">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">o19-Seguro</label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="Seguro" name="Seguro">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Supervisor que atiende</label>
-              <input type="text" class="form-control" placeholder="" [(ngModel)]="Supervisor" name="Supervisor">
-            </div>
+              </div>
+              <div class="col-12">
+                <label for="validationDefault16" class="form-label">Ambulancia </label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="Ambulancia" name="Ambulancia">
+              </div>
+              <div class="col-12">
+                <label for="validationDefault17" class="form-label">Seguridad Pública </label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="SeguridaPublica" name="SeguridaPublica">
+              </div>
+              <div class="col-12">
+                <label for="validationDefault18" class="form-label">Patrulla número </label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="PatrullaNumero" name="PatrullaNumero">
+              </div>
+              <div class="col-12">
+                <label for="validationDefault19" class="form-label">Oficial a cargo</label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="OficialAcargo" name="OficialAcargo">
+              </div>
+              <div class="col-12">
+                <label for="validationDefault20" class="form-label">o19-Seguro</label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="Seguro" name="Seguro">
+              </div>
+              <div class="col-12">
+                <label for="validationDefault21" class="form-label">Supervisor que atiende</label>
+                <input type="text" class="form-control" placeholder="" [(ngModel)]="Supervisor" name="Supervisor">
+              </div>
 
-              <hr style="border: 2px solid transparent;">
+              <hr style="border: 2px solid transparent;"><!--Sexta Parte-->
 
               <p class="text-decoration-underline fw-bold text-center" >FOTOS DEL PERCANCE</p>
 
@@ -170,42 +155,39 @@
               <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Fotos del carro particular</label>
                 <input type="file" (change)="onFileChanged2($event)" >
-              </div>
-                    
+              </div>     
               <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Fotos del tarjetón</label>
                 <input type="file" (change)="onFileChanged3($event)" >
               </div>
-                            
+
               <hr style="border: 1px solid transparent;">
 
-              <div class="modal-footer">
-                <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
-              </div>          
-              <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="exampleModalLabel">ALERTA!!</h5>
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<p>¿Seguro que desea guardar el informe?</p>
-<span>Una vez guardado no se podra editar</span>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-<button  type="submit" class="btn btng">Guardar Informe</button>
-</div>
-</div>
-</div>
-</div>
-</form>
+              <div style="text-align: right;">
+                <button type="submit" class="btn btn-outline-secondary subir">Guardar</button>
+              </div>
+  </form>
 
-      </div>
-    </div>
-  </div>
-</div>
-</body>
- 
+
+
+                       
+
+            
+
+
+
+
+
+
+              
+
+
+               
+
+              
+            
+
+              
+              
+                            
+              

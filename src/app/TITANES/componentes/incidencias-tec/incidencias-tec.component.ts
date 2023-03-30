@@ -20,20 +20,30 @@ export class IncidenciasTecComponent {
   IdEquipoA!:string;
   Falla!:string;
   Estado=null;
+  verSeleccion:any;
+  Capturar(){
+    this.verSeleccion = this.EquipoAfectado;
+    console.log()
+    }
+
 
   constructor(private http:HttpClient, private location: Location, private sanitizer:DomSanitizer){}
 
   enviarInformeTec(){
     const datos = {
-
+      Equipo_afectado:this.verSeleccion,
+      Estado:this. Estado,
+      Falla:this.Falla,
+      Id_equipo_afectado:this.IdEquipoA,
       Servicio:this.ServicioEst,
       VehiculoECO:this.NEco, 
-      Equipo_afectado:this.EquipoAfectado,
-      Id_equipo_afectado:this.IdEquipoA,
-      Falla:this.Falla,
-      Estado:this. Estado,
+     
+     
+     
     }
-    let url="https://pruebaacotma2.somee.com/api/agregar_nueva_incidencia_tecnologica"
+    console.log(datos)
+
+    let url="https://prueba252.somee.com/api/agregar_nueva_incidencia_tecnologica"
     this.http.post(url,datos).toPromise().then((data:any)=>{
       console.log(data)
       location.reload();

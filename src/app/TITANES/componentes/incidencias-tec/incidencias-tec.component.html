@@ -2,7 +2,8 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid pading1">
       <a class="navbar-brand text1" href="#">SITMAH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
@@ -23,82 +24,88 @@
 
 <div class="container">
   <div class="row">
-      <div class="">
-          <div class="well well-sm">
-              <form  (submit)="enviarInformeTec()" class="col-12">
-                  <fieldset>
-                      <p class="fw-normal">
-                      
-                          <legend class="text-center header">Incidencias tecnologicas</legend>
-                      </p>
-                      
-<hr style="border: 2px solid transparent;">
+    <div class="">
+      <div class="well well-sm">
+        <form (submit)="enviarInformeTec()" class="col-12">
+          <fieldset>
+            <p class="fw-normal">
 
-<div class="">
-  <input type="text" class="form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Servicio o estación" name="ServicioEst" [(ngModel)]="ServicioEst"requerid>
-</div>
+              <legend class="text-center header">Incidencias tecnologicas</legend>
+            </p>
 
-<hr style="border: 2px solid transparent;">
+            <hr style="border: 2px solid transparent;">
 
-<div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Vehiculo ECO" name="NEco" [(ngModel)]="NEco" required>
-</div>                       
-<hr style="border: 2px solid transparent;">
+            <div class="">
+              <input type="text" class="form-control rounded-pill container px-4"
+                placeholder="Servicio o estación" name="ServicioEst" [(ngModel)]="ServicioEst" requerid>
+            </div>
 
-<input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions" id="exampleDataList" placeholder="Equipo Afectado" name="EquipoAfectado" [(ngModel)]="EquipoAfectado" required>
-<datalist id="datalistOptions">
-  <option value="Barras">
-    <option value="CET">
-    <option value="Consolas">
-    <option value="Camaras">
-    <option value="DVR">
-    <option value="Torniquetes">
-    <option value="VRT">
-    <option value="Pantallas">                                  
-    <option value="SITE">
-    <option value="Fibra optica">
-    <option value="Servidores">
-    <option value="Equipo de computo">
-    <option value="Sistema de pago electrÓnico">
-    <option value="Sistema de Gestión de flota">
-    <option value="Sistema de Video Vigilancia">
-    <option value="Sistema de Información al Usuario">
-    <option value="Sistema de Semaforización">
-</datalist>
+            <hr style="border: 2px solid transparent;">
 
-<hr style="border: 2px solid transparent;">
+            <div class="mb-3">
+              <input type="text" class="col-md-2 form-control rounded-pill container px-4"
+                placeholder="Vehiculo ECO" name="NEco" [(ngModel)]="NEco" required>
+            </div>
+            <hr style="border: 2px solid transparent;">
 
-<div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Id equipo Afectado" name="IdEquipoA" [(ngModel)]="IdEquipoA" required>
-</div>                       
+            <input class="col-md-2 form-control rounded-pill container px-4" list="datalistOptions"
+              placeholder="Equipo Afectado" name="EquipoAfectado" [(ngModel)]="EquipoAfectado" (change)="Capturar()" required>
+            <datalist id="datalistOptions">
+              <option value="Barras">
+              <option value="CET">
+              <option value="Consolas">
+              <option value="Camaras">
+              <option value="DVR">
+              <option value="Torniquetes">
+              <option value="VRT">
+              <option value="Pantallas">
+              <option value="SITE">
+              <option value="Fibra optica">
+              <option value="Servidores">
+              <option value="Equipo de computo">
+              <option value="Sistema de pago electrÓnico">
+              <option value="Sistema de Gestión de flota">
+              <option value="Sistema de Video Vigilancia">
+              <option value="Sistema de Información al Usuario">
+              <option value="Sistema de Semaforización">
+            </datalist>
 
-<hr style="border: 2px solid transparent;">
+            <hr style="border: 2px solid transparent;">
 
-<div class="mb-3">
-  <input type="text" class="col-md-2 form-control rounded-pill container px-4" id="formGroupExampleInput" placeholder="Falla"  name="Falla" [(ngModel)]="Falla" required>
-</div> 
+            <div class="mb-3">
+              <input type="text" class="col-md-2 form-control rounded-pill container px-4"
+                placeholder="Id equipo Afectado" name="IdEquipoA" [(ngModel)]="IdEquipoA" required>
+            </div>
 
-<hr style="border: 2px solid transparent;">
+            <hr style="border: 2px solid transparent;">
 
-<div class="modal-footer rounded-pill" style="text-align: center;">
-  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
-</div>
+            <div class="mb-3">
+              <input type="text" class="col-md-2 form-control rounded-pill container px-4"
+                placeholder="Falla" name="Falla" [(ngModel)]="Falla" required>
+            </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">ENVIAR INFORME</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¿seguro que desea guardar el informe?
-      </div>
-      <div class="modal-footer" style="text-align: center;">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btng">Guardar informe</button>
-      </div>
-    </div>
-  </div>
-</div>
+            <hr style="border: 2px solid transparent;">
+
+            <div class="modal-footer rounded-pill" style="text-align: center;">
+              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">ENVIAR INFORME</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    ¿seguro que desea guardar el informe?
+                  </div>
+                  <div class="modal-footer" style="text-align: center;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btng">Guardar informe</button>
+                  </div>
+                </div>
+              </div>
+            </div>

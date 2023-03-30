@@ -15,7 +15,7 @@ export class InfTecnologicosComponent implements OnInit{
    title = 'Informe de accidentes';
 
    getAllEstacionesToday(){
-    this.http.get('https://pruebaacotma2.somee.com/api/Informe_de_incidencias_tecnologicas_de_hoy').subscribe(data=>{
+    this.http.get('https://prueba252.somee.com/api/Informe_de_incidencias_tecnologicas_de_hoy').subscribe(data=>{
       console.log(data)
       this.InformeIncidenciasTec=data
     })

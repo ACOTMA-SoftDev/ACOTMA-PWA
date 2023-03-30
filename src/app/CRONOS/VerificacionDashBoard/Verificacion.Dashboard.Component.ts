@@ -24,16 +24,16 @@ export class VerificacionDashboardComponent implements OnInit {
     return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   GetServiciosIniciados(){
-    this.http.get("http://PruebaAcotma2.somee.com/api/CentroControl/Verificacion/Liberado").
+    this.http.get("https://prueba252.somee.com/api/CentroControl/Verificacion/Liberado").
     subscribe(data=>{
       this.dataAsignacion=data
     })
   }
   getDataUnidades() {
-    this.http.get<any[]>("http://pruebaacotma2.somee.com/api/CentroControl/Verificaciones/Hoy").subscribe(data => {
+    this.http.get<any[]>("https://prueba252.somee.com/api/CentroControl/Verificaciones/Hoy").subscribe(data => {
       this.lista1 = data;
       // Hacer la petición HTTP GET para recibir los datos de la lista2
-      this.http.get<any[]>('http://pruebaacotma2.somee.com/api/CentroControl/Verificacion/GetImagenesUnidades').subscribe(data => {
+      this.http.get<any[]>('https://prueba252.somee.com/api/CentroControl/Verificacion/GetImagenesUnidades').subscribe(data => {
         this.lista2 = data;
         // Unir las dos listas por el identificador
         this.resultado = this.lista1.map((item1:any) => {

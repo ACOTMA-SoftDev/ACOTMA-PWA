@@ -17,7 +17,7 @@ export class ConsultarServicioComponent implements OnInit {
     return dato.nombre.toLowerCase().indexOf(filtro.toLowerCase()) !== -1;
   }
   getAsignacion() {
-    this.http.get("http://pruebaacotma2.somee.com/api/Verificacion/Servicio/Completo").subscribe(data => {
+    this.http.get("https://prueba252.somee.com/api/Verificacion/Servicio/Completo").subscribe(data => {
       this.dataVerificacion = data
     })
   }

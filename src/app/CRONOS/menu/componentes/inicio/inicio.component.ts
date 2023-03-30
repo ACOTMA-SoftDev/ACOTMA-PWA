@@ -77,7 +77,7 @@ export class InicioComponent implements OnInit {
         ImagenP:this.base64String
       }
       console.log(datos)
-      let url="https://pruebaacotma2.somee.com/api/agregarPublicaciones"
+      let url="https://prueba252.somee.com/api/agregarPublicaciones"
       this.http.post(url,datos).toPromise().then((data:any)=>{
         console.log(data)
         location.reload();

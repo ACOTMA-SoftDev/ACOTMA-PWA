@@ -24,13 +24,14 @@ export class CrearUsuarioComponent{
 
   enviarUsuarios(){
     const datos = {
-      usuario:this.usuario, 
-      Num_Radio:this.nombre,
+      usuario:this.usuario,
+      nombre:this.nombre,
       apellidoP:this.apellidoP,
       apellidoM:this.apellidoM,
-      pass:this.pass,
+      pass:this.pass
+
     }
-    let url="https://pruebaacotma2.somee.com/api/agregar_usuarios"
+    let url="https://prueba252.somee.com/api/agregar_usuarios"
     this.http.post(url,datos).toPromise().then((data:any )=>{
       console.log(data)
       location.reload();

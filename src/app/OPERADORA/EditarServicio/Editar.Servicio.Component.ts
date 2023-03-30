@@ -15,7 +15,7 @@ export class EditarServicioComponent implements OnInit{
 
     ngOnInit(): void {
       this.idAsignacion=this.route.snapshot.params['idAsignacion']
-      let url=`http://pruebaacotma2.somee.com/api/ServiciosIniciadosById?idAsignacion=${this.idAsignacion}`
+      let url=`https://prueba252.somee.com/api/ServiciosIniciadosById?idAsignacion=${this.idAsignacion}`
       this.http.get<any>(url).subscribe(data=>{
         this.dataServiciosIniciados=data
       })

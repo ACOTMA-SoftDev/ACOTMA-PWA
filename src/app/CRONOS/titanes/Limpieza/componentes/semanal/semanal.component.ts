@@ -16,7 +16,7 @@ export class SemanalComponent implements OnInit{
   };
 
   getSemanal(){
-   this.http.get('https://pruebaacotma2.somee.com/api/resumen_limpieza').subscribe(data=>{
+   this.http.get('https://prueba252.somee.com/api/resumen_limpieza').subscribe(data=>{
       console.log(data)
       this.semanales=data
     })

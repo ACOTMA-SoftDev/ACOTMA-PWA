@@ -20,7 +20,7 @@ export class RegistrosUsuarioComponent implements OnInit{
 
    getAllRegistros(){
 
-    this.http.get('https://pruebaacotma2.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
+    this.http.get('https://prueba252.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
       console.log(data)
       this.Usuarios=data
     })

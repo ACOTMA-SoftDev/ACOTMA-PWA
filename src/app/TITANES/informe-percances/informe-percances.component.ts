@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterPreloader } from '@angular/router';
 import { Location } from '@angular/common';
-import { async } from '@angular/core/testing';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -51,7 +50,7 @@ export class InformePercancesComponent implements OnInit{
   usuario:string="Titan 1";
 
 
-  constructor(private http:HttpClient,private sanitizer:DomSanitizer){}
+  constructor(private http:HttpClient,private sanitizer:DomSanitizer,private location: Location,){}
 
 
   onFileChanged1(event:any){
@@ -150,19 +149,13 @@ export class InformePercancesComponent implements OnInit{
   
             console.log(datos)
         
-            let url="https://pruebaacotma2.somee.com/api/Agregar_Informe_de_Accidente"
+            let url="https://prueba252.somee.com/api/Agregar_Informe_de_Accidente"
             this.http.post(url,datos).toPromise().then((data:any)=>{
               console.log(data)
-              console.log(datos)
-             
+              location.reload();
             })
-          
           }
-
-
-
           }
-
     }
 
   };
