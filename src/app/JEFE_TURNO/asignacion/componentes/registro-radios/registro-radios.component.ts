@@ -1,44 +1,33 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-
+import { HttpClient } from '@angular/common/http';
+//import { UsuariosCrudService } from 'src/app/Servicios/usuarios-crud.service'; //importamos la clase desde el directorio
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-radios',
   templateUrl: './registro-radios.component.html',
   styleUrls: ['./registro-radios.component.css']
 })
-export class RegistroRadiosComponent {
+export class RegistroRadiosComponent implements OnInit{
 
-  Asignacion:any=[];
+  //creamos un contrucutor
+  asignaciones:any=[];//recolectamos todos los datos para luego mostrarlos
+  term:any;
 
-  constructor ( private http:HttpClient){
-  };
+	constructor(private http:HttpClient) {}
+   //creamos un contrucutor
+   title = 'Registro de usuarios';
 
-  getAsignacionRadios(){
-   this.http.get('https://pruebaacotma2.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
+   GetAsignacionRadios(){
+
+    this.http.get('https://pruebaacotma2.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
       console.log(data)
-      this.Asignacion=data
+      this.asignaciones=data
     })
   }
 
   ngOnInit(): void {
-    this.getAsignacionRadios();
+    this.GetAsignacionRadios();
   }
-
-  eliminarRegistro(Id_asignacionRadio: number) {
-    const url = `https://pruebaacotma2.somee.com/api/eliminar_Asignacion_de_Radios/${Id_asignacionRadio}`;
-    this.http.delete(url).subscribe(
-      () => {
-        console.log('Registro eliminado correctamente');
-        // realiza cualquier otra acción necesaria después de eliminar el registro
-      },
-      error => {
-        console.error('Error al eliminar registro', error);
-        // maneja el error de manera adecuada
-      }
-    );
-  }
-
-
+  
 }

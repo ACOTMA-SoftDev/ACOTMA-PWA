@@ -18,8 +18,8 @@
                 <th role="columnheader"></th>
               </tr>
             </thead>
-            <tbody role="rowgroup">
-              <tr role="row" *ngFor="let asignado of Asignacion">
+            <tbody role="rowgroup" *ngFor="let asignado of asignaciones">
+              <tr role="row">
                 <td role="cell">{{asignado.usuario}}</td>
                 <td role="cell">{{asignado.Num_Radio}}</td>
                 <td role="cell">{{asignado.Codigo_Radio}}</td>

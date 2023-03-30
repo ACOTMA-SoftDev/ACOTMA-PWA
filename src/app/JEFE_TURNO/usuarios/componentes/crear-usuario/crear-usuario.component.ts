@@ -25,7 +25,7 @@ export class CrearUsuarioComponent{
   enviarUsuarios(){
     const datos = {
       usuario:this.usuario, 
-      nombre:this.nombre,
+      Num_Radio:this.nombre,
       apellidoP:this.apellidoP,
       apellidoM:this.apellidoM,
       pass:this.pass,

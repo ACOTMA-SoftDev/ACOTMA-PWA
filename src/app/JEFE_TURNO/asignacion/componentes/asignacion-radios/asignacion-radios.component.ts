@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { ResourceLoader } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterPreloader } from '@angular/router';
 import { Location } from '@angular/common';
@@ -12,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './asignacion-radios.component.html',
   styleUrls: ['./asignacion-radios.component.css']
 })
-export class AsignacionRadiosComponent {
+export class AsignacionRadiosComponent{
 
   usuario!: string;
   Num_Radio!:Int16Array;
@@ -20,7 +20,7 @@ export class AsignacionRadiosComponent {
   Tarjeta_Maestra!:string;
 
 
-  constructor(private http:HttpClient, private location: Location, private sanitizer:DomSanitizer){}
+  constructor(private http:HttpClient,private sanitizer:DomSanitizer){}
 
   enviarAsignacionRadios(){
     const datos = {

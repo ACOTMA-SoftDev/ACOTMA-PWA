@@ -13,7 +13,7 @@ export class DiasComponent implements OnInit{
 
   term:any;
 
-  ejemplos:any=[];
+  ejemplos:any=[];//varibale que pondras en el html
   InformeLimpiezasdia:any=[];//recolectamos todos los datos para luego mostrarlos
 
 	constructor(private http:HttpClient) {}
