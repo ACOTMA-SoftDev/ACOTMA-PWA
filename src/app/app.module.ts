@@ -58,6 +58,8 @@ import { UbicacionComponent } from './CRONOS/ubicacion/ubicacion.component';
 import { PrestamoComponent } from './PrestamoVehicular/component/prestamo/prestamo.component';
 import { PublicacionesComponent } from './TITANES/publicaciones/publicaciones.component';
 import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.component';
+import { CargarImagenUnidadComponent } from './CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
+import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
 
 @NgModule({
   declarations: [
@@ -104,8 +106,10 @@ import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.
     UbicacionComponent,
     PrestamoComponent,
     PublicacionesComponent,
-    InicioTitanesComponent
-    
+    InicioTitanesComponent,
+    CargarImagenUnidadComponent,
+    VerificacionDashboardComponent
+
   ],
   imports: [
     BrowserModule,
