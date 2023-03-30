@@ -31,12 +31,11 @@ export class CargarImagenUnidadComponent implements OnInit {
         this.byteImg=reader.result as string
         const datos = {
           ImagenUnidad: this.byteImg,
-          NombreUnidad:this.verSeleccion
         }
         console.log(datos)
-        let url = "https://prueba252.somee.com/api/CentroControl/Verificacion/ImagenUnidades"
-        this.http.post(url, datos).toPromise().then(Response => {
-          console.log(datos)
+        let url = "https://api.imgbb.com/1/upload"
+        this.http.post(url, this.byteImg).toPromise().then(Response => {
+          console.log(Response)
         })
       }
     }

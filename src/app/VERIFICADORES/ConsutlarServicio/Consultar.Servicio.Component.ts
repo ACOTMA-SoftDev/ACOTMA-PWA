@@ -8,6 +8,7 @@ import { Router } from "@angular/router";
 export class ConsultarServicioComponent implements OnInit {
   icongif = 'assets/iconBlackAcotma.gif'
   dataVerificacion: any
+  dataVerificados:any
   dataHorario:any
   filtro!:string
 
@@ -21,10 +22,20 @@ export class ConsultarServicioComponent implements OnInit {
       this.dataVerificacion = data
     })
   }
+  getVerificados(){
+    this.http.get("https://prueba252.somee.com/api/CentroControl/Verificacion/Liberado").subscribe(data=>{
+      this.dataVerificados=data;
+    })
+
+  }
   ngOnInit(): void {
     setInterval(() => {
     this.getAsignacion()
-  }, 500)
+  }, 2000)
+  setInterval(() => {
+    this.getVerificados()
+    console.log(this.dataVerificados)
+  }, 2000)
   }
   goValidar(idAsignado: any) {
     console.log(idAsignado)
