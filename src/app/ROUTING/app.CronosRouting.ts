@@ -32,7 +32,7 @@ const appCronosRoutes: Routes = [
     {path: 'PrestamoVehicular', component: PrestamoComponent},
     {path:'Verificacion/Inicio',component:VerificacionDashboardComponent},
     {path:'Verificacion/CargarImagen',component:CargarImagenUnidadComponent},
-    {path:'Verificadores/ConsultaServicio',component:ConsultarServicioComponent},
+    {path:'Cronos/Despacho/board',component:VerificacionComponent},
     {path: 'inicio_titanes',component: InicioTitanesComponent},
     {path: 'inicio-admin', component: InicioAdminComponent},
 

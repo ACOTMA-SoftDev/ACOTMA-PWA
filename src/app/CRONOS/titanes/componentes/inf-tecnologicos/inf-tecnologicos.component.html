@@ -21,6 +21,13 @@
 <div class="container">
   <nav class="navbar navbar-light">
     <div class="container-fluid">
+      <li class="item-5 deeper parent" style="list-style-type: none; width: 100px;text-align: center;"><!-- de esta forma le quitamos el puntito de li-->
+        <button class="btn btn-outline-light text2" type="button">
+        <a class="navbar-brand" href="menu/cronos" style="font-size: 40px; color: rgb(0, 0, 0);">
+          <i class="bi bi-arrow-90deg-left"></i>
+        </a>
+        </button>
+        </li>
       <a class="navbar-brand">INFORMES DE INCIDENCIAS TÉCNOLOGICAS DEL DIA</a>
       <div class=" d-flex">
         <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar Informe">
@@ -28,9 +35,8 @@
           <i class="bi bi-download"></i>
         </button>
       </div>
-
     </div>
-  </nav>
+    </nav>
 </div>
 
 <div class="container">

@@ -1,0 +1,76 @@
+<header style="background-color: #9C223C;">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid pading1">
+        <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          <span class="navbar-text text1">
+            INCIDENCIAS TÉCNOLOGICAS
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <app-nav-bar></app-nav-bar>
+  
+  <div class="container">
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">INFORMES DE INCIDENCIAS TÉCNOLOGICAS DEL DIA</a>
+        <div class=" d-flex">
+          <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar Informe">
+          <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+            <i class="bi bi-download"></i>
+          </button>
+        </div>
+  
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container">
+    <div>
+        <a href="" class="btn-flotante" title="agrega incidencias">
+          <i class="bi bi-plus" style="font-size: 40px;"></i>
+        </a>
+    </div>
+    </div>
+  
+    <div class="container">
+      <hr>
+      <div class="container text-center">
+        <h4>SITMAH</h4>
+      </div>
+      <table role="table" class="table table-dark table-fixed">
+          <thead role="rowgroup">
+            <tr role="row">
+              <th role="columnheader">FECHA_INCIDENCIA</th>
+              <th role="columnheader">SERVICIO</th>
+              <th role="columnheader">(ECO)</th>
+              <th role="columnheader">EQUIPO AFECTADO</th>
+              <th role="columnheader">ID EQUIPO AFECTADO</th>
+              <th role="columnheader">FALLA</th>
+              <!--<th role="columnheader">Estado</th>-->
+              <!--<th role="columnheader">TITAN/ANALISTA QUE REPORTA</th>-->
+            </tr>
+          </thead>
+          <tbody role="rowgroup">
+            <tr role="row" *ngFor="let Incidencia of InformeIncidenciasTec.reverse()">
+              <td role="cell">{{Incidencia.Fecha_incidencia | date:'dd/mm/yyyy'}}</td>
+              <td role="cell">{{Incidencia.Servicio }}</td>
+              <td role="cell">{{Incidencia.VehiculoECO}}</td>
+              <td role="cell">{{Incidencia.Equipo_afectado}}</td>
+              <td role="cell">{{Incidencia.Id_equipo_afectado}}</td>
+              <td role="cell">{{Incidencia.Falla }}</td>
+              <!--<td role="cell">{{Incidencia.Estado}}</td>-->
+              <!--<td role="cell">{{Incidencia.usuario}}</td>-->
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  
