@@ -37,8 +37,24 @@ export class DiasComponent implements OnInit{
       head:[tabledata[0]],
       body:tabledata.slice(1),
       styles:{
-        
+        cellPadding: 1,
+        fontSize: 8,
+        valign: 'middle',
+        halign: 'center',
+        fillColor: [120, 66, 18],
+        textColor: [0, 0, 0]          //color de texto de la informacion
+      },
+      headStyles: {
+        fillColor: [156, 34, 60],       //color de fondo del encabezado de la tabla
+        textColor: [255, 255, 255],       //color del texto del encabezado
+        fontSize:10,
+        halign: 'center'
+      },
+      margin:{ top:10},
+      didDrawPage: (data) =>{
+        doc.text('', data.settings.margin.left +50, 10);
       }
+
     })
     doc.save("Limpieza"+ this.fechahoy)
 

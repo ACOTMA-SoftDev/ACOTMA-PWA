@@ -40,7 +40,7 @@ export class SemanalComponent implements OnInit{
         
       }
     })
-    doc.save("Limpieza"+ this.fechahoy)
+    doc.save("Limpieza Semanal"+ this.fechahoy)
 
   }
 
