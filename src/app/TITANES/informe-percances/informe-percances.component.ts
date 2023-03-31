@@ -13,17 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class InformePercancesComponent implements OnInit{
 
-  base64Image1!:string;
-  base64String1!:string;
-  file!:File;
 
-  base64Image2!:string;
-  base64String2!:string;
-  file2!:File;
-
-  base64Image3!:string;
-  base64String3!:string;
-  file3!:File;
 
   VehiculoECO!:String;
   TipoUnidad!:string;
@@ -53,56 +43,11 @@ export class InformePercancesComponent implements OnInit{
   constructor(private http:HttpClient,private sanitizer:DomSanitizer,private location: Location,){}
 
 
-  onFileChanged1(event:any){
-    this.file = event.target.files[0];
-  }
-  onFileChanged2(event:any){
-    this.file2 = event.target.files[0];
-  }
-  onFileChanged3(event:any){
-    this.file3 = event.target.files[0];
-  }
-
   ngOnInit(): void {  
   }
 
 
   enviarInformeAccidente(){
-    var imagenSend
-    var imagenSend2
-    var imagenSend3
-    
-    if (this.file,this.file2,this.file3){
-      const reader = new FileReader();
-      const reader2 = new FileReader();
-      const reader3 = new FileReader();
-
-      reader.readAsDataURL(this.file);
-      reader2.readAsDataURL(this.file2);
-      reader3.readAsDataURL(this.file3);
-
-
-      reader.onload=()=>{
-        this.base64String1 = reader.result as string;
-        this.base64Image1 = reader.result as  string;
-        imagenSend=this.base64String1
-
-        reader2.onload = () =>{
-          this.base64String2 = reader2.result as string;
-          this.base64Image2 = reader2.result as  string;
-          imagenSend2=this.base64String2
-          this.base64String1 = reader.result as string;
-          this.base64String2 = reader2.result as string;
-
-          reader3.onload = () =>{
-            this.base64String3 = reader3.result as string;
-            this.base64Image3 = reader3.result as  string;
-            imagenSend=this.base64String1
-            imagenSend3=this.base64String3
-            imagenSend2=this.base64String2
-            this.base64String1 = reader.result as string;
-            this.base64String2 = reader2.result as string;
-            this.base64String3 = reader3.result as string;
 
             const datos = {
 
@@ -129,9 +74,6 @@ export class InformePercancesComponent implements OnInit{
               Seguro:this.Seguro,
               Supervisor:this.Supervisor,
               usuario:this.usuario,
-              Foto_Eco:this.base64String1,
-              Foto_Part:this.base64String2,
-              Foto_Tarjeton:this.base64String3
             }
 
       console.log(datos)
@@ -140,11 +82,10 @@ export class InformePercancesComponent implements OnInit{
         console.log(data)
         location.reload();
       })
-          }
-          }
-    }
+          
+          
 
-  };
+  
 
     
   }

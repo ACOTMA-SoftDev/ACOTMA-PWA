@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Location } from '@angular/common';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -45,21 +46,11 @@ export class InicioComponent implements OnInit {
 
   enviarMensaje(){
 
-    var imagenSend
-    if (this.file){
-    const reader = new FileReader();
-    reader.readAsDataURL(this.file);
-    reader.onload = () =>{
-    this.base64String = reader.result as string;
-
-      imagenSend=this.base64String   
-
-
       const datos = {
         Titulo_Pub:this.Titulo_Pub, 
         Descripcion_Pub:this.Descripcion_Pub,
-        ImagenP:this.base64String,
-        usuario:this.usuario,
+        //ImagenP:this.base64String,
+        //usuario:this.usuario,
       }
       
       console.log(datos)
@@ -72,12 +63,17 @@ export class InicioComponent implements OnInit {
 
     }
     
-    }
-
+    
     
   }
+/*var imagenSend
+if (this.file){
+const reader = new FileReader();
+reader.readAsDataURL(this.file);
+reader.onload = () =>{
+this.base64String = reader.result as string;
 
+  imagenSend=this.base64String   
+}}*/
 
-
-}
 

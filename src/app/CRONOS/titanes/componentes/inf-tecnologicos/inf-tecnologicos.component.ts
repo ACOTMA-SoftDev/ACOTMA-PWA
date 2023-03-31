@@ -26,5 +26,4 @@ export class InfTecnologicosComponent implements OnInit{
     this.getAllEstacionesToday();
   }, 500)
   }
-
 }

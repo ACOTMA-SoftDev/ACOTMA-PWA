@@ -1,12 +1,11 @@
-<div>
-  <div class="card" *ngFor="let publicacion of publicaciones" style="margin: 20px;">
-      <div class="card-header" >
+
+  <div class="card" *ngFor="let publicacion of publicaciones" style="margin: 40px; border-radius: 20px;">
+      <div class="card-header stack"  >
         {{publicacion.Fecha_Pub | date:'dd/mm/yyyy'}} 
       </div> 
       <div class="card-body">
-        <h5 class="card-title">{{publicacion.Titulo_Pub}}</h5>
+        <h5 class="card-title" style="font-size: x-large;">{{publicacion.Titulo_Pub}}</h5>
         <p class="card-text">{{publicacion.Descripcion_Pub}}</p>
-        <img [src]="publicacion.ImagenP" style="width: 50%;">         
+        <!--<img [src]="publicacion.ImagenP" style="width: 50%;">  aqui iba una imagen se puede agregar pero se tiene que camiar toda la api-->      
       </div>
     </div>
-</div>

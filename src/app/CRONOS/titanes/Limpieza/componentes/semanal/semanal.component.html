@@ -3,7 +3,7 @@
 <div class="container">
   <nav class="navbar navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand">INFORME POR FECHA</a>
+      <a class="navbar-brand">INFORMES PASADOS</a>
 
 <div class="row">
   <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
@@ -25,44 +25,47 @@
 
         </div>
       </div>
-      <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
+      <button (click)="descargarPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
         <i class="bi bi-download"></i>
       </button>
     </div>
   </nav>
 </div>
-    <div class="container justify-content-center">
-      <hr>
-      <table role="table" class="table table-striped table-fixed">
-          <thead role="rowgroup">
-            <tr role="row">
-              <th role="columnheader">Estacion</th>
-              <th role="columnheader">Fecha</th>
-              <th role="columnheader">Limpieza de piso</th>
-              <th role="columnheader">impieza de vidrio</th>
-              <th role="columnheader">Limpieza de area de servicio</th>
-              <th role="columnheader">Limpieza de estructura</th>
-              <th role="columnheader">Limpieza de torniquete en 
-                espacios de venta y recarga
-                de tarjeta</th>
-              <th role="columnheader">Limpieza de sanitarios</th>
-              <th role="columnheader">Observciones</th>
-              <th role="columnheader">¿Quien superviso?</th>
-            </tr>
-          </thead>
-          <tbody role="rowgroup">
-            <tr role="row" *ngFor="let estacion of semanales | filter:term">
-              <td role="cell">{{estacion.Estacion}}</td>
-              <td role="cell">{{estacion.Fecha_Limpieza | date:'dd/mm/yyyy' }}</td>
-              <td role="cell">{{estacion.LimpiezaPiso}}</td>
-              <td role="cell">{{estacion.LimpiezaVidrio}}</td>
-              <td role="cell">{{estacion.LimpiezaAreaServicios}}</td>
-              <td role="cell">{{estacion.LimpiezaAreaEstructura}}</td>
-              <td role="cell">{{estacion.LimpiezaTorniquetes}}</td>
-              <td role="cell">{{estacion.LimpiezaSanitarios}}</td>
-              <td role="cell">{{estacion.Observaciones}}</td>
-              <td role="cell">{{estacion.Usuario}}</td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
+<form id="limpiezaPasados">
+  <div class="container justify-content-center">
+    <hr>
+    <table role="table" class="table table-dark table-borderless">
+        <thead role="rowgroup" style="text-align: center;">
+          <tr role="row">
+            <th role="columnheader">Estacion</th>
+            <th role="columnheader">Fecha</th>
+            <th role="columnheader">Limpieza de piso</th>
+            <th role="columnheader">impieza de vidrio</th>
+            <th role="columnheader">Limpieza de area de servicio</th>
+            <th role="columnheader">Limpieza de estructura</th>
+            <th role="columnheader">Limpieza de torniquete en 
+              espacios de venta y recarga
+              de tarjeta</th>
+            <th role="columnheader">Limpieza de sanitarios</th>
+            <th role="columnheader">Observciones</th>
+            <!--<th role="columnheader">¿Quien superviso?</th>-->
+          </tr>
+        </thead>
+        <tbody role="rowgroup">
+          <tr role="row" *ngFor="let estacion of semanales | filter:term">
+            <td role="cell">{{estacion.Estacion}}</td>
+            <td role="cell">{{estacion.Fecha_Limpieza | date:'dd/mm/yyyy' }}</td>
+            <td role="cell">{{estacion.LimpiezaPiso}}</td>
+            <td role="cell">{{estacion.LimpiezaVidrio}}</td>
+            <td role="cell">{{estacion.LimpiezaAreaServicios}}</td>
+            <td role="cell">{{estacion.LimpiezaAreaEstructura}}</td>
+            <td role="cell">{{estacion.LimpiezaTorniquetes}}</td>
+            <td role="cell">{{estacion.LimpiezaSanitarios}}</td>
+            <td role="cell">{{estacion.Observaciones}}</td>
+            <td role="cell">{{estacion.Usuario}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</form>
+    

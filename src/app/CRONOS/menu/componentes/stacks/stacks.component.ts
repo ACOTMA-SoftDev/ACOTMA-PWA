@@ -19,6 +19,8 @@ export class StacksComponent implements OnInit{
    })
    }   
   ngOnInit(): void {
+    setInterval(() => {
       this.getPublicacion();
+    }, 1000)
   }
 }

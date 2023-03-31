@@ -27,7 +27,9 @@ export class CardIncidenciasComponent {
     })
     }   
    ngOnInit(): void {
+    setInterval(() => {
        this.getAccidenteAHT();
+      },1000)
    }
 
 

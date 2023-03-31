@@ -46,17 +46,17 @@
     <div class="container text-center">
       <h4>SITMAH</h4>
     </div>
-    <table role="table" class="table table-bordered table-fixed">
+    <table role="table" class="table table-dark table-fixed">
         <thead role="rowgroup">
           <tr role="row">
-            <th role="columnheader">Fecha de Incidencia</th>
-            <th role="columnheader">Servicio</th>
-            <th role="columnheader">Vehiculo(ECO)</th>
-            <th role="columnheader">Equipo afectado</th>
-            <th role="columnheader">Id equipo afectado</th>
-            <th role="columnheader">Falla</th>
-            <th role="columnheader">Estado</th>
-            <th role="columnheader">TITAN/ANALISTA QUE REPORTA</th>
+            <th role="columnheader">FECHA_INCIDENCIA</th>
+            <th role="columnheader">SERVICIO</th>
+            <th role="columnheader">(ECO)</th>
+            <th role="columnheader">EQUIPO AFECTADO</th>
+            <th role="columnheader">ID EQUIPO AFECTADO</th>
+            <th role="columnheader">FALLA</th>
+            <!--<th role="columnheader">Estado</th>-->
+            <!--<th role="columnheader">TITAN/ANALISTA QUE REPORTA</th>-->
           </tr>
         </thead>
         <tbody role="rowgroup">
@@ -67,8 +67,8 @@
             <td role="cell">{{Incidencia.Equipo_afectado}}</td>
             <td role="cell">{{Incidencia.Id_equipo_afectado}}</td>
             <td role="cell">{{Incidencia.Falla }}</td>
-            <td role="cell">{{Incidencia.Estado}}</td>
-            <td role="cell">{{Incidencia.usuario}}</td>
+            <!--<td role="cell">{{Incidencia.Estado}}</td>-->
+            <!--<td role="cell">{{Incidencia.usuario}}</td>-->
           </tr>
         </tbody>
       </table>

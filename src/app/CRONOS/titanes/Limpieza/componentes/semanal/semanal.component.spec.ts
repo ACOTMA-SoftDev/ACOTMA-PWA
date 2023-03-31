@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { beforeEach } from '@jest/globals';
+import { describe } from '@jest/globals';
+import { it } from '@jest/globals';
+import { expect } from '@jest/globals';
 import { SemanalComponent } from './semanal.component';
 
 describe('SemanalComponent', () => {
