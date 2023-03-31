@@ -16,3 +16,19 @@
     font-size: 16px; /* Cambiar el tamaño de la tipografia */
     border-radius: 20px; /* Borde del boton */
 }
+
+.stack{
+	border-radius: 50px;
+	background-color: #9C223C;
+	font-size: medium;
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+}
+
+.titulo_A{
+	font-size: x-large;
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+}

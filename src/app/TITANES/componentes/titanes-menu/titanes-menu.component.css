@@ -127,6 +127,10 @@ hr.h-color{
     float: right;
   }
 
-  body{
-    background-color:#f5f5f5;
-  }
+  body {
+    background-image: url("../../../../assets/Estacion.jpeg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    }
+  
