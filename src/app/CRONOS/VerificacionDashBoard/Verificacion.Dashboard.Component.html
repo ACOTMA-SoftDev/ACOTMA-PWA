@@ -78,6 +78,35 @@
               </div>
 
 </div>
+<br>
+<div class="container">
+  <h3 style="color: aliceblue;" class="text-center">Perdida de Ciclos</h3>
+
+  <br>
+
+  <div class="ex1">
+  <table class="table table-dark border" >
+
+                <thead>
+                  <tr>
+                    <th scope="col">Economico</th>
+                    <th scope="col">Ruta</th>
+                    <th scope="col">Corrida</th>
+                    <th scope="col">Ciclos Perdidos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ciclos of dataCiclosPerdidos">
+                    <th>{{ciclos.economico}}</th>
+                    <td>{{ciclos.ruta}}</td>
+                    <td>{{ciclos.corrida}}</td>
+                    <td>{{ciclos.ciclosPerdidos}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+</div>
 
   <br>
   <br>

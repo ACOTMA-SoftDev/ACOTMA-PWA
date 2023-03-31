@@ -18,6 +18,7 @@ export class VerificacionDashboardComponent implements OnInit {
   lista1: any=[];
   lista2: any=[];
   resultado: any=[];
+  dataCiclosPerdidos:any
   constructor(private http: HttpClient) {
   }
   filterItems(dato:any,filtro:string){
@@ -44,11 +45,10 @@ export class VerificacionDashboardComponent implements OnInit {
       });
     });
   }
-
-  getUnidadesAsignadas() {
-
-  }
-  getUnidadesLiberadas() {
+  GetCiclosPerdidos(){
+    this.http.get("https://prueba252.somee.com/api/CentroControl/GetCiclos").subscribe(ciclos=>{
+      this.dataCiclosPerdidos=ciclos
+    })
 
   }
   ngOnInit(): void {
@@ -57,6 +57,6 @@ export class VerificacionDashboardComponent implements OnInit {
     }, 1000)
     setInterval(() => {
       this.GetServiciosIniciados()
-    }, 500)
+    }, 1000)
   }
 }
