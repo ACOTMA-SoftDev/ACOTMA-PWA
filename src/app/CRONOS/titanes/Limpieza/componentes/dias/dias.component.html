@@ -8,14 +8,14 @@
     <div class="container-fluid">
       <a class="navbar-brand">INFORME DEL DIA</a>
   
-<div class="row">
+<!--<div class="row">
   <div class="col-xs-12 col-12 col-md-12 form-group mb-6">
     <input type="text"
            placeholder="Daterangepicker"
            class="form-control"
            bsDaterangepicker>
   </div>
-</div>
+</div>-->
 
       <div class=" d-flex">
         <div class="form-group">
@@ -38,9 +38,9 @@
 <hr>
     <div class="container justify-content-center" >
       <hr>
-      <table #content role="table" class="table table-bordered table-fixed">
+      <table #content role="table" class="table table-dark table-borderless">
           <thead role="rowgroup">
-            <tr role="row">
+            <tr role="row" style="text-align: center;">
               <th role="columnheader">Estacion</th>
               <th role="columnheader">Fecha</th>
               <th role="columnheader">Limpieza de piso</th>
@@ -52,13 +52,13 @@
                 de tarjeta</th>
               <th role="columnheader">Limpieza de sanitarios</th>
               <th role="columnheader">Observciones</th>
-              <th role="columnheader">¿Quien superviso?</th>
+              <!--<th role="columnheader">¿Quien superviso?</th>-->
             </tr>
           </thead>
           <tbody role="rowgroup">
             <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
               <td role="cell">{{ejemplo.Estacion}}</td>
-              <td role="cell">{{ejemplo.Fecha_Limpieza }}</td>
+              <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/mm/yyyy'}}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
               <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
               <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>
@@ -66,7 +66,7 @@
               <td role="cell">{{ejemplo.LimpiezaTorniquetes}}</td>
               <td role="cell">{{ejemplo.LimpiezaSanitarios}}</td>
               <td role="cell">{{ejemplo.Observaciones}}</td>
-              <td role="cell">{{ejemplo.Usuario}}</td>
+            <!--<td role="cell">{{ejemplo.Usuario}}</td>-->
             </tr>
           </tbody>
         </table>

@@ -18,16 +18,18 @@ export class RegistroRadiosComponent implements OnInit{
    //creamos un contrucutor
    title = 'Registro de usuarios';
 
-   GetAsignacionRadios(){
 
+  GetAsignacionRadios(){
     this.http.get('https://prueba252.somee.com/api/ver_Registro_de_Asignacion_de_Radios').subscribe(data=>{
-      console.log(data)
-      this.asignaciones=data
-    })
-  }
-
-  ngOnInit(): void {
-    this.GetAsignacionRadios();
-  }
+       console.log(data)
+       this.asignaciones=data
+     })
+   }
+ 
+   ngOnInit(): void {
+     setInterval(() => {
+     this.GetAsignacionRadios();
+   }, 500)
+   }
   
 }

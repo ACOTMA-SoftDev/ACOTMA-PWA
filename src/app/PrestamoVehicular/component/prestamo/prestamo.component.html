@@ -16,66 +16,84 @@
     </nav>
   </header>
 
-  <div class="container">
+  <form (submit)="enviarInformeLimpieza()" style="margin: 20px;">
+    <div class="well well-sm"> 
+
+    <p class="fw-normal">
+      <legend class="text-center header fw-bold">Prestamo Vehicular</legend>
+    </p> 
+
+    <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="well well-sm">
-                        <p class="fw-normal">
-                            <legend class="text-center header fw-bold">Prestamo Vehicular</legend>
-                        </p>             
-
-     <div class="col-12">
+          <div class="col-12">
             <div class="col-12">
               <label for="validationDefault03" class="form-label">Nombre del solicitante</label>
-              <input class="form-control" list="datalistOptions"  placeholder="">
+              <input class="form-control" list="datalistOptions" [(ngModel)]="Nombre_solicitante" name="Nombre_solicitante">
             </div>
         <div class="col-12">
-              <label for="validationDefault03" class="form-label">Marca del vehiculo</label>
-              <input type="text" class="form-control" placeholder="">
+              <label for="validationDefault03" class="form-label" >Marca del vehiculo</label>
+              <input type="text" class="form-control" [(ngModel)]="Marca_vehiculo" name="Marca_vehiculo">
         </div>
       </div>
-
+      
         <hr style="border: 2px solid transparent;">
-
+      
         <div class="col-12">
             <div class="col-12">
               <label for="validationDefault03" class="form-label">Submarca del vehiculo</label>
-          <input class="form-control" list="datalistOptions"  placeholder="">
+          <input class="form-control" list="datalistOptions" [(ngModel)]="Submarca" name="Submarca">
             </div>
             <div class="col-12">
               <label for="validationDefault03" class="form-label">Placas</label>
-              <input type="text" class="form-control" placeholder="">
+              <input type="text" class="form-control" [(ngModel)]="Placa" name="Placa">
             </div>
           </div>
+      
+                     
+      
+      <hr style="border: 2px solid transparent;">
+      
+      <div class="col-12">
+      <div class="col-12">
+      <label for="validationDefault03" class="form-label">Tiempo</label>
+      <input class="form-control" list="datalistOptions" [(ngModel)]="Tiempo" name="Tiempo">
+      </div>
+      <div class="col-12">
+      <label for="validationDefault03" class="form-label">Área solicitante</label>
+      <input type="text" class="form-control" [(ngModel)]="Area_solicitante" name="Area_solicitante">
+      </div>
+      </div>
+      
+      <hr style="border: 2px solid transparent;">
+      
+      <div class="col-12">
+      <div class="col-12">
+      <label for="validationDefault03" class="form-label">Actividades a realizar</label>
+      <input class="form-control" list="datalistOptions" [(ngModel)]="Actividades_a_realizar" name="Actividades_a_realizar">
+      </div>
+      <div class="col-12">
+      <label for="validationDefault03" class="form-label">Registro de kilometraje</label>
+      <input type="text" class="form-control" [(ngModel)]="Registro_de_kilometraje" name="Registro_de_kilometraje">
+      </div>
+      </div>
+      
+      <hr style="border: 2px solid transparent;">
+      
+      <div class="modal-footer" style="text-align: center;">
+      <button type="submit"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btng">Guardar</button>
+      </div>
 
-        <hr style="border: 2px solid transparent;">
+      </div>
 
-        <div class="col-12">
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Tiempo</label>
-          <input class="form-control" list="datalistOptions"  placeholder="">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Área solicitante</label>
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
+        </div>
 
-        <hr style="border: 2px solid transparent;">
+      </div>
 
-        <div class="col-12">
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Actividades a realizar</label>
-          <input class="form-control" list="datalistOptions"  placeholder="">
-            </div>
-            <div class="col-12">
-              <label for="validationDefault03" class="form-label">Registro de kilometraje</label>
-              <input type="text" class="form-control" placeholder="">
-            </div>
-          </div>
+    </div>
 
-          <hr style="border: 2px solid transparent;">
+  </form>
 
-          <div class="modal-footer">
-            <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btng">Guardar</button>
-          </div>
+  
+
+      

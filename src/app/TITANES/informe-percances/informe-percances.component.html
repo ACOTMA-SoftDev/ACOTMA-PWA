@@ -21,7 +21,7 @@
     </button>
   </a>
 
-  <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post"><!--aqui inicia el form-->
+  <form (submit)="enviarInformeAccidente()" class="form-horizontal" method="post" style="margin: 40px;"><!--aqui inicia el form-->
 
     <p class="fw-normal">
       <legend class="text-center header fw-bold">Informe del percance</legend>
@@ -144,28 +144,12 @@
                 <input type="text" class="form-control" [(ngModel)]="Supervisor" name="Supervisor">
               </div>
 
-              <hr style="border: 2px solid transparent;"><!--Sexta Parte-->
-
-              <p class="text-decoration-underline fw-bold text-center" >FOTOS DEL PERCANCE</p>
-
-              <div class="mb-3">
-                <label class="form-label">Fotos del ECO</label>
-                <input type="file" (change)="onFileChanged1($event)" ><!--aqui se selecciona la imagen-->
-              </div>
-              <div class="mb-3">
-                <label  class="form-label">Fotos del carro particular</label>
-                <input type="file" (change)="onFileChanged2($event)" >
-              </div>     
-              <div class="mb-3">
-                <label  class="form-label">Fotos del tarjetón</label>
-                <input type="file" (change)="onFileChanged3($event)" >
-              </div>
-
-              <hr style="border: 1px solid transparent;">
+              <hr style="border: 12px solid transparent;"><!--Sexta Parte-->
 
               <div style="text-align: right;">
                 <button type="submit" class="btn btn-outline-secondary subir">Guardar</button>
               </div>
+              <hr style="border: 1px solid transparent;">
   </form>
 
 

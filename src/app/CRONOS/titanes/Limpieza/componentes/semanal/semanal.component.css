@@ -46,7 +46,7 @@
     }
       
     tr:nth-child(odd) {
-      background: #ccc;
+      background: #000000;
     }
     
     td {

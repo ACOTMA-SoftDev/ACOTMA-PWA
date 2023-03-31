@@ -7,7 +7,6 @@ import { MenuTitanesComponent } from './CRONOS/titanes/componentes/menu-titanes/
 import { CronosRouting } from './ROUTING/app.CronosRouting';
 import { InfTecnologicosComponent } from './CRONOS/titanes/componentes/inf-tecnologicos/inf-tecnologicos.component';
 import { NavBarComponent } from './CRONOS/titanes/componentes/nav-bar/nav-bar.component';
-import { B8Component } from './CRONOS/titanes/inf-incidencias/componentes/b8/b8.component';
 import { DiasComponent } from './CRONOS/titanes/Limpieza/componentes/dias/dias.component';
 import { SemanalComponent } from './CRONOS/titanes/Limpieza/componentes/semanal/semanal.component';
 import { HeaderComponent } from './CRONOS/titanes/Limpieza/componentes/header/header.component';
@@ -68,7 +67,6 @@ import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/V
     MenuTitanesComponent,
     InfTecnologicosComponent,
     NavBarComponent,
-    B8Component,
     LimpiezaComponent,
     TitanesMenuComponent,
     IncidenciasTecComponent,
