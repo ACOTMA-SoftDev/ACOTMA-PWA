@@ -1,13 +1,15 @@
 <div class="container" style="background-color: rgb(248, 248, 248);">
   
-  <div class="card" *ngFor="let accidente of accidentes" style="margin: 20px; border-radius: 30px;">
+  <div class="card" *ngFor="let accidente of accidentes.reverse()" style="margin: 20px; border-radius: 30px;">
     <div>
     
       <div class="container">
-        <div class="container">
-          <nav class="navbar navbar-light">
+        <div class="container stack">
+          <nav class="navbar navbar-light" >
             <div class="container-fluid">
-              <a class="navbar-brand">ACCIDENTE AUTOMOVILISTICO</a>
+              <a class="navbar-brand">
+                <p class="titulo_A">ACCIDENTE AUTOMOVILISTICO EN</p>
+              </a>
               <div class=" d-flex">
                 <div class="form-group" style="margin: 25px;">
                   <span style="font-size: 23px;">{{accidente.Ubicacion}}</span>
@@ -20,7 +22,7 @@
                 </div>
               </div>
               <button class="btn" type="submit" style="font-size: 25px; margin: 10px;">
-                <i class="bi bi-download"></i>
+                <i class="bi bi-download" style="color: white;"></i>
               </button>
             </div>
           </nav>

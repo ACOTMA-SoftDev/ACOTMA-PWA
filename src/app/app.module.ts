@@ -59,6 +59,7 @@ import { PublicacionesComponent } from './TITANES/publicaciones/publicaciones.co
 import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.component';
 import { CargarImagenUnidadComponent } from './CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
 import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
+import { AllAccidentesComponent } from './CRONOS/titanes/inf-incidencias/componentes/all-accidentes/all-accidentes.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/V
     PublicacionesComponent,
     InicioTitanesComponent,
     CargarImagenUnidadComponent,
-    VerificacionDashboardComponent
+    VerificacionDashboardComponent,
+    AllAccidentesComponent
 
   ],
   imports: [

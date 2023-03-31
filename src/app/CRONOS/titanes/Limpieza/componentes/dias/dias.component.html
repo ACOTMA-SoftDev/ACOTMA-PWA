@@ -56,7 +56,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
+            <tr role="row" *ngFor="let ejemplo of ejemplos.reverse() | filter:term">
               <td role="cell">{{ejemplo.Estacion}}</td>
               <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/mm/yyyy'}}</td>
               <td role="cell">{{ejemplo.LimpiezaPiso}}</td>

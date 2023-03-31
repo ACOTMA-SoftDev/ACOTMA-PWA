@@ -74,3 +74,8 @@ hr.h-color{
 .tamano{
 	width: 500px;;
 }
+
+.back-c{
+	background-image: linear-gradient(to left,rgb(255, 255, 255),rgb(197, 28, 51));
+	background-size:cover;
+}
