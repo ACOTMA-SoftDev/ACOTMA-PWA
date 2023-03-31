@@ -45,28 +45,17 @@
             <th role="columnheader">REGISTRO DE KILOMETRAJE</th>
           </tr>
         </thead>
-        <tbody role="rowgroup">
+        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular">
           <tr role="row">
-            <td role="cell">01/03/23</td>
-            <td role="cell">aldo william hdz m</td>
-            <td role="cell">gtr</td>
-            <td role="cell">nissan</td>
-            <td role="cell">8273633</td>
-            <td role="cell">10 horas</td>
-            <td role="cell">direccion de planeacion y desarrollo</td>
-            <td role="cell">ir a valle</td>
-            <td role="cell">50km</td>
-          </tr>
-          <tr role="row">
-            <td role="cell">01/03/23</td>
-            <td role="cell">aldo william hdz m</td>
-            <td role="cell">gtr</td>
-            <td role="cell">nissan</td>
-            <td role="cell">8273633</td>
-            <td role="cell">10 horas</td>
-            <td role="cell">direccion de planeacion y desarrollo</td>
-            <td role="cell">ir a valle</td>
-            <td role="cell">50km</td>
+            <td role="cell">{{registro.Fecha | date:'dd/mm/yyyy'}}</td>
+            <td role="cell">{{registro.Nombre_solicitante }}</td>
+            <td role="cell">{{registro.Marca_vehiculo  }}</td>
+            <td role="cell">{{registro.Submarca  }}</td>
+            <td role="cell">{{registro.Placa  }}</td>
+            <td role="cell">{{registro.Tiempo  }}</td>
+            <td role="cell">{{registro.Area_solicitante  }}</td>
+            <td role="cell">{{registro.Actividades_a_realizar  }}</td>
+            <td role="cell">{{registro.Registro_de_kilometraje  }}</td>
           </tr>
         </tbody>
       </table>

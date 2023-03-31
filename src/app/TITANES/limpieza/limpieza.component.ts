@@ -13,6 +13,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./limpieza.component.css']
 })
 export class LimpiezaComponent {
+  
   Estacion!:string;
   LimpiezaPiso=false;
   LimpiezaVidrio= false;

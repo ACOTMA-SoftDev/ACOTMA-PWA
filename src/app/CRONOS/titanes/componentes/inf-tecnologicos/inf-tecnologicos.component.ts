@@ -12,7 +12,7 @@ export class InfTecnologicosComponent implements OnInit{
 
 	constructor(private http:HttpClient) {}
    //creamos un contrucutor
-   title = 'Informe de accidentes';
+   title = 'Informeincidencias tecnologia';
 
    getAllEstacionesToday(){
     this.http.get('https://prueba252.somee.com/api/Informe_de_incidencias_tecnologicas_de_hoy').subscribe(data=>{
