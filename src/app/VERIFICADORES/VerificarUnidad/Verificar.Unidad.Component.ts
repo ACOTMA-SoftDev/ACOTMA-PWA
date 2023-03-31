@@ -15,6 +15,7 @@ export class VerificarUnidadesComponent implements OnInit {
   dataAsignacion: any
   icongif = 'assets/iconBlackAcotma.gif'
   horaLlegada:any
+  ciclosPerdidos:any
   constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) {
   }
   ngOnInit(): void {
@@ -49,7 +50,8 @@ export class VerificarUnidadesComponent implements OnInit {
       estado:"Verificado",
       observaciones:this.Observaciones,
       horaSalida:this.horaLlegada,
-      fkAsignacion:fkAsignacion
+      fkAsignacion:fkAsignacion,
+      CiclosPerdidos:this.ciclosPerdidos
     }
     let urlV="https://prueba252.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
@@ -58,7 +60,7 @@ export class VerificarUnidadesComponent implements OnInit {
       }
     })
   }
-  goReportarUnidad(corrida:any,fecha:any) {
+  goReportarUnidad(corrida:any,fecha:any,fkAsignacion:any) {
     const fechas = new Date()
     const hora = fechas.getHours()
     const minutes = fechas.getMinutes()
@@ -72,6 +74,19 @@ export class VerificarUnidadesComponent implements OnInit {
     this.http.post(url, datosSen).toPromise().then(Response => {
       if (Response === true) {
         this.router.navigate(['Verificadores/ConsultaServicio'])
+      }
+    })
+    const Verificadores={
+      estado:"Verificado",
+      observaciones:this.Observaciones,
+      horaSalida:this.horaLlegada,
+      fkAsignacion:fkAsignacion,
+      CiclosPerdidos:this.ciclosPerdidos
+    }
+    let urlV="https://prueba252.somee.com/api/addverificacion"
+    this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
+      if (Response2 === true) {
+        console.log("checale  ")
       }
     })
   }

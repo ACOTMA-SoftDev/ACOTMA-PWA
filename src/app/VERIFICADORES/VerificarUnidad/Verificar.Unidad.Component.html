@@ -1,4 +1,4 @@
-<div style="background-color: #9c223c; height:115vh; width:auto;">
+<div style="background-color: #9c223c; height:auto; width:auto;">
   <nav class="navbar navbar-dark bg-dark fixed-top" >
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -40,27 +40,32 @@
       <div *ngFor="let data of dataAsignacion" class="row">
         <div class="form-group ">
           <label for="exampleFormControlInput" class="colorwhite">No.Unidad</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.economico}}" [disabled]="isDisable">
+          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.economico}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">No.Tarjeton</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [disabled]="isDisable">
+          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Ruta</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}" [disabled]="isDisable">
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}" readonly>
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Corrida</label>
-          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}"  name="corrida" [disabled]="isDisable">
+          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}"  name="corrida" readonly>
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Hora de Acople</label>
-          <input type="email" class="form-control" id="horarioSalida" value="{{data.horarioSalida}}" [(ngModel)]="data.horarioSalida" [disabled]="isDisable">
+          <input type="time" class="form-control" id="horarioSalida" value="{{data.horarioSalida}}" [(ngModel)]="data.horarioSalida" [disabled]="isDisable">
+        </div>
+        <br><br><br>
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="colorwhite">Ciclos Peridos</label>
+          <input type="number" class="form-control" id="ciclosPerdidos"  [(ngModel)]="ciclosPerdidos">
         </div>
         <br><br><br>
         <div class="form-group">
@@ -77,7 +82,7 @@
       <br>
       <br>
       <div align="center">
-        <button type="submit" class="btn btn-danger text-center col-12" >Reportar</button>
+        <button type="submit" class="btn btn-danger text-center col-12" (click)="goReportarUnidad(data.corrida,data.fecha,data.idAsignacion)">Reportar</button>
       </div>
     </div>
 
