@@ -54,7 +54,7 @@
             <th role="columnheader">REGISTRO DE KILOMETRAJE</th>
           </tr>
         </thead>
-        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular.reverse()">
+        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular">
           <tr role="row">
             <td role="cell">{{registro.Fecha | date:'dd/mm/yyyy'}}</td>
             <td role="cell">{{registro.Nombre_solicitante }}</td>
