@@ -58,5 +58,11 @@ export class VerificacionDashboardComponent implements OnInit {
     setInterval(() => {
       this.GetServiciosIniciados()
     }, 1000)
+
+    setInterval(() => {
+      this.GetCiclosPerdidos()
+    }, 1000)
   }
+  
 }
+

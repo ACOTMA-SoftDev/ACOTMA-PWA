@@ -60,6 +60,10 @@ import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.
 import { CargarImagenUnidadComponent } from './CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
 import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
 import { AllAccidentesComponent } from './CRONOS/titanes/inf-incidencias/componentes/all-accidentes/all-accidentes.component';
+import { AllInformesTecnologicosComponent } from './CRONOS/titanes/componentes/all-informes-tecnologicos/all-informes-tecnologicos.component';
+import { CreateInformesTecnologicosComponent } from './CRONOS/titanes/componentes/create-informes-tecnologicos/create-informes-tecnologicos.component';
+import { PedirVehiculoComponent } from './TITANES/componentes/pedir-vehiculo/pedir-vehiculo.component';
+import { ExportAsModule } from 'ngx-export-as';
 
 @NgModule({
   declarations: [
@@ -108,7 +112,10 @@ import { AllAccidentesComponent } from './CRONOS/titanes/inf-incidencias/compone
     InicioTitanesComponent,
     CargarImagenUnidadComponent,
     VerificacionDashboardComponent,
-    AllAccidentesComponent
+    AllAccidentesComponent,
+    AllInformesTecnologicosComponent,
+    CreateInformesTecnologicosComponent,
+    PedirVehiculoComponent,
 
   ],
   imports: [
@@ -128,7 +135,8 @@ import { AllAccidentesComponent } from './CRONOS/titanes/inf-incidencias/compone
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule,
     NgChartsModule,
-    MapsModule
+    MapsModule,
+    ExportAsModule
   ],
   exports: [
     Stacks2Component //LO EXPORTAMOS AQUI

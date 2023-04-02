@@ -1,1 +1,78 @@
-<p>all-accidentes works!</p>
+<app-header-incidencias></app-header-incidencias>
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <nav>
+        <div class="navbar navbar-light">
+            <li class="item-5 deeper parent" style="list-style-type: none; width: 100px;"><!-- de esta forma le quitamos el puntito de li-->
+                <button class="btn btn-outline-light text2" type="button">
+                <a class="navbar-brand" href="incidencias_inicio" style="font-size: 40px; color: rgb(0, 0, 0);">
+                  <i class="bi bi-arrow-90deg-left"></i>
+                </a>
+                </button>
+                </li>
+                <li class="item-5 deeper parent" style="list-style-type: none;">
+          
+                      <button (click)="downloadPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px; color: black;">
+                        <i class="bi bi-download" style="color: rgb(0, 0, 0);"></i>
+                      </button>
+          
+                </li>
+                
+        </div>
+
+    </nav>
+</div>
+
+<div class="container"> <h4>ACCDENTES REGISTRADOS</h4> </div>
+
+
+<div class="card" *ngFor="let accidente of accidentes" style="margin: 20px; border-radius: 30px;">
+    <div>
+    
+      <div class="container" id="content" #content>
+        <hr style="border: 20px solid transparent;"><!--Sexta Parte--> <!-- contiene los datos del vehiculo SITMAH -->
+        <div class="container" id="vehiculo_sitmah">
+            <div class="table-responsive" style="text-align: center;">
+                <table class="table table-bordered table-fixed">
+                    <thead>
+                      <tr>
+                        <th scope="col">FECHA</th>
+                        <th scope="col">TIPO DE UNIDAD</th>
+                        <th scope="col">ECO</th>
+                        <th scope="col">CREDENCIAL DEL CHOFER</th>
+                        <th scope="col">UBICACIÓN</th>
+                        <th scope="col">MARCA DEL VEHICULO PARTICULAR</th>
+                        <th scope="col">PLACAS DEL VEHICULO</th>
+                        <th scope="col">LESIONADOS</th>
+                        <th scope="col">AMBULANCIA</th>
+                        <th scope="col">PATRULLA</th>
+                      </tr>     
+                    </thead>
+                    <tbody>
+                      <tr role="row">
+                        <td role="cell">{{accidente.Fecha_Percance | date:'dd/MM/yyyy'}}</td>
+                        <td role="cell">{{accidente.TipoUnidad}}</td>
+                        <td role="cell">{{accidente.NoEconomico  }}</td>
+                        <td role="cell">{{accidente.Credencial}}</td>           
+                        <td role="cell">{{accidente.Ubicacion}}</td>
+                        <td role="cell">{{accidente.Marca}}</td>
+                        <td role="cell">{{accidente.Placas}}</td>
+                        <td role="cell">{{accidente.Lesionados}}</td>
+                        <td role="cell">{{accidente.Ambulancia}}</td>
+                        <td role="cell">{{accidente.PatrullaNumero}}</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+        </div>
+        <!-- contiene los datos del vehiculo particular -->
+        <hr>
+
+    </div>
+    </div>
+    </div>
+  
+    <div>
+    </div>
+  
+  </div>

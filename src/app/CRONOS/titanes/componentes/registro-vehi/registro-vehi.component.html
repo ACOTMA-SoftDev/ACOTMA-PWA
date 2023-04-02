@@ -16,22 +16,39 @@
     </nav>
   </header>
 
-  <app-nav-bar> </app-nav-bar> <!--- MANDAMOS A LLAMAR EL NAV-BAR DONDE SE ENCUENTRA EL BOTON PARA IR AL MENU DE CRONOS/TITANES-->
-
+  <app-nav-bar> </app-nav-bar> 
+  
   <div class="container">
+    <nav>
+      <div>
+        <li class="item-5 deeper parent" style="list-style-type: none; width: 60px;"><!-- de esta forma le quitamos el puntito de li-->
+          <button class="btn btn-outline-light" type="button">
+          <a class="navbar-brand" href="menu/cronos" style="font-size: 40px; color: rgb(0, 0, 0);">
+            <i class="bi bi-arrow-90deg-left"></i>
+          </a>
+          </button>
+          </li>
+      </div>
+        
+    </nav><!--- MANDAMOS A LLAMAR-->
     <div class="d-flex">
-      <div class="col-10" style="text-align: center; justify-content: center;">
+      <div class="col-7" style="text-align: center; justify-content: center;">
       <h2>Informe de solicitud de prestamo de vehiculo</h2>
       </div>
+      <div class="col-3">
+        <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar Nombre">
+      </div>
       <div class="col-2" style="text-align: end; font-size: 40px;">
-        <i class="bi bi-download"></i>
+        <BUtton (click)="downloadPDF()" type="button" class="btn btn-outline-dark">
+          <i class="bi bi-download"></i>
+        </BUtton>
       </div>
     </div>
     <hr>
     <div class="container text-center">
       <h4>SITMAH</h4>
     </div>
-    <table role="table" class="table table-bordered table-fixed">
+    <table role="table" class="table table-bordered table-fixed" id="content" #content>
         <thead role="rowgroup">
           <tr role="row">
             <th role="columnheader">FECHA</th>
@@ -45,9 +62,9 @@
             <th role="columnheader">REGISTRO DE KILOMETRAJE</th>
           </tr>
         </thead>
-        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular.reverse()">
+        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular">
           <tr role="row">
-            <td role="cell">{{registro.Fecha | date:'dd/mm/yyyy'}}</td>
+            <td role="cell">{{registro.Fecha | date:'dd/MM/yyyy'}}</td>
             <td role="cell">{{registro.Nombre_solicitante }}</td>
             <td role="cell">{{registro.Marca_vehiculo  }}</td>
             <td role="cell">{{registro.Submarca  }}</td>

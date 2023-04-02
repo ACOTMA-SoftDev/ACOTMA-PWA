@@ -1,7 +1,7 @@
 <div>
-  <div class="card" *ngFor="let Mensaje of Mensajes.reverse()" style="margin: 40px; border-radius: 20px;">
+  <div class="card" *ngFor="let Mensaje of Mensajes" style="margin: 40px; border-radius: 20px;">
       <div class="card-header stack">
-        {{Mensaje .Fecha_Pub | date:'dd/mm/yyyy'}}
+        {{Mensaje .Fecha_Pub | date:'dd/MM/yyyy'}}
       </div>
       <div class="card-body">
         <h5 class="card-title">{{Mensaje.Titulo_Pub}}</h5>

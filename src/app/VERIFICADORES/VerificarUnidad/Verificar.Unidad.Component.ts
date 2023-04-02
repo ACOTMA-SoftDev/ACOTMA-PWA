@@ -51,7 +51,7 @@ export class VerificarUnidadesComponent implements OnInit {
       observaciones:this.Observaciones,
       horaSalida:this.horaLlegada,
       fkAsignacion:fkAsignacion,
-      CiclosPerdidos:this.ciclosPerdidos
+      ciclosPerdidos:this.ciclosPerdidos
     }
     let urlV="https://prueba252.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
@@ -81,7 +81,7 @@ export class VerificarUnidadesComponent implements OnInit {
       observaciones:this.Observaciones,
       horaSalida:this.horaLlegada,
       fkAsignacion:fkAsignacion,
-      CiclosPerdidos:this.ciclosPerdidos
+      ciclosPerdidos:this.ciclosPerdidos
     }
     let urlV="https://prueba252.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {

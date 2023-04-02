@@ -2,8 +2,9 @@ import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { InformeLimpiezaCrudService } from 'src/app/Servicios/informe-limpieza-crud.service';
 import { HttpClient } from '@angular/common/http';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import  * as jsPDF  from 'jspdf'
-import autoTable from 'jspdf-autoTable'
+import jsPDF  from 'jspdf';
+import { style } from '@angular/animations';
+
 
 
 @Component({
@@ -11,37 +12,23 @@ import autoTable from 'jspdf-autoTable'
   templateUrl: './semanal.component.html',
   styleUrls: ['./semanal.component.css']
 })
+
 export class SemanalComponent implements OnInit{
   fechahoy:Date=new Date()
 
-  @ViewChild ('content') content!:ElementRef
-  gettable(){
-    const rows=[]
-    const table=this.content.nativeElement
-    const trs=table.querySelectorAll('tr')
-    for (let index = 0; index < trs.length; index++) {
-      const  row = []
-      const tds=trs[index].querySelectorAll("td,th")
-      for (let j = 0; j < tds.length; j++) {
-        row.push(tds[j].textContent.trim())        
-      } 
-      rows.push(row)    
-    }
-    return rows
-  };
+  @ViewChild('content', {static:false}) el!:ElementRef;
 
-  descargarPDF(){
-    const doc=new jsPDF.default()
-    const tabledata=this.gettable()
-    autoTable( doc,{
-      head:[tabledata[0]],
-      body:tabledata.slice(1),
-      styles:{
-        
+  downloadPDF(){
+    let pdf = new jsPDF('p','pt','a2');
+    pdf.html(this.el.nativeElement,{
+      callback:(pdf)=>{
+        pdf.addImage("../../../../../assets/logo_sitmah.jpeg", "JPEG", 50, 50, 50, 50);
+        pdf.setFontSize(25);
+        pdf.text('INFORME DE LIMPIEZA',50,30)
+        pdf.save('Informe-pasado'+ (this.fechahoy) + '.pdf');
       }
     })
-    doc.save("Limpieza Semanal"+ this.fechahoy)
-
+    
   }
 
   term: any;

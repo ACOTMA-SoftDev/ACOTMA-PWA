@@ -18,7 +18,7 @@
   <div class="container">
     <li class="item-5 deeper parent" style="list-style-type: none; width: 100px;text-align: center;"><!-- de esta forma le quitamos el puntito de li-->
       <button class="btn btn-outline-light text2" type="button">
-      <a class="navbar-brand" href="inicio" style="font-size: 40px; color: rgb(0, 0, 0);">
+      <a class="navbar-brand" href="inicio_titanes" style="font-size: 40px; color: rgb(0, 0, 0);">
         <i class="bi bi-arrow-90deg-left"></i>
       </a>
       </button>
@@ -64,31 +64,16 @@
       <hr style="border: 2px solid transparent;">
       
       <div class="col-12">
-        <label for="validationDefault03" class="form-label">Tiempo</label>
-      <input class="form-control mb-5" list="datalistOptions"  placeholder="Tiempo" style="width: 300px" [(ngModel)]="Tiempo" name="Tiempo" required>
-                        <datalist id="datalistOptions" required>
-                            <option value="1-2 Horas">
-                            <option value="2-5 Horas">
-                            <option value="24 Horas">
-                            <option value="1 Día">
-                            <option value="Más de 1 día">
-                            </datalist>
-
+      <div class="col-12">
+      <label for="validationDefault03" class="form-label">Tiempo</label>
+      <input class="form-control" list="datalistOptions" [(ngModel)]="Tiempo" name="Tiempo">
+      </div>
       <div class="col-12">
       <label for="validationDefault03" class="form-label">Área solicitante</label>
-      <input class="form-control mb-5" list="datalistOptions1"  placeholder="Área solicitante" style="width: 300px" [(ngModel)]="Area_solicitante" name="Area_solicitante" required>
-                        <datalist id="datalistOptions1" required>
-                            <option value="1. Dirección General">
-                            <option value="2. Dirección de Operación">
-                            <option value="3. Subdirección de Verificación">
-                            <option value="4. Dirección de Planeación y Desarrollo">
-                            <option value="5. Dirección Jurídica">
-                            <option value="6. Dirección de Administración y Finanzas">
-                            <option value="7. STCH">
-                            <option value="8. SEMOT">
-                            </datalist>
-                          </div>
-                          
+      <input type="text" class="form-control" [(ngModel)]="Area_solicitante" name="Area_solicitante">
+      </div>
+      </div>
+      
       <hr style="border: 2px solid transparent;">
       
       <div class="col-12">
@@ -116,6 +101,4 @@
 
     </div>
 
-  
-
-      
+  </form>

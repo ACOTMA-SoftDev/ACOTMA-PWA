@@ -15,6 +15,9 @@ import { CargarImagenUnidadComponent } from '../CRONOS/CargarImagenUnidad/Cargar
 import { ConsultarServicioComponent } from '../VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
 import { InicioTitanesComponent } from '../TITANES/inicio-titanes/inicio-titanes.component';
 import { InicioAdminComponent } from '../JEFE_TURNO/componentes/inicio-admin/inicio-admin.component';
+import { AllInformesTecnologicosComponent } from '../CRONOS/titanes/componentes/all-informes-tecnologicos/all-informes-tecnologicos.component';
+import { CreateInformesTecnologicosComponent } from '../CRONOS/titanes/componentes/create-informes-tecnologicos/create-informes-tecnologicos.component';
+import { AllAccidentesComponent } from '../CRONOS/titanes/inf-incidencias/componentes/all-accidentes/all-accidentes.component';
 
 
 const appCronosRoutes: Routes = [
@@ -32,9 +35,12 @@ const appCronosRoutes: Routes = [
     {path: 'PrestamoVehicular', component: PrestamoComponent},
     {path:'Verificacion/Inicio',component:VerificacionDashboardComponent},
     {path:'Verificacion/CargarImagen',component:CargarImagenUnidadComponent},
-    {path:'Verificadores/ConsultaServicio',component:ConsultarServicioComponent},
     {path: 'inicio_titanes',component: InicioTitanesComponent},
     {path: 'inicio-admin', component: InicioAdminComponent},
+    {path: 'all/informes/tecnologicos', component: AllInformesTecnologicosComponent},
+    {path: 'create/informes/tecnologicos', component: CreateInformesTecnologicosComponent},
+    {path: 'ver/todos-los-acciedntes',component:AllAccidentesComponent}
+
 
   ];
 

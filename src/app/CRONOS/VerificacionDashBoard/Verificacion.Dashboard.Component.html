@@ -30,7 +30,7 @@
     <div class="container text-center col-3" *ngFor="let data of resultado">
       <div class="col-2">
         <div class="card" style="width: 18rem;">
-          <img src="{{data.ImagenUnidad}}" class="card-img-top" width="290" height="100">
+          <img src="{{data.ImagenUnidad}}" class="card-img-top" width="290" height="250">
           <div>
             <div class="card-body">
               <h5 class="card-title">{{data.tipoUnidad}}</h5>
@@ -93,6 +93,7 @@
                     <th scope="col">Ruta</th>
                     <th scope="col">Corrida</th>
                     <th scope="col">Ciclos Perdidos</th>
+                    <th scope="col">Descripcion</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -101,6 +102,7 @@
                     <td>{{ciclos.ruta}}</td>
                     <td>{{ciclos.corrida}}</td>
                     <td>{{ciclos.ciclosPerdidos}}</td>
+                    <td>{{ciclos.observaciones}}</td>
                   </tr>
                 </tbody>
               </table>
