@@ -120,7 +120,9 @@
             <td>{{data.fecha | date:'dd/MM/yyyy'}}</td>
             <td>
               <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i
-                  class="bi bi-pencil-square"></i></button>
+                class="bi bi-pencil-square"></i></button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              (click)="btnDeleteHorario(data.fecha,data.ruta)"><i class="bi bi-trash3-fill"></i></button>
             </td>
           </tr>
 
@@ -134,3 +136,21 @@
   </div>
 </div>
 <img *ngIf="mostrarImagen" src="{{loading}}" id="imagen-superior">
+<img *ngIf="mostrarImagen" src="{{loading}}" id="imagen-superior">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" #myModal>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CANCELAR LIBERACION</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Estas a punto de cancelar la liberacion
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+        <button type="button" class="btn btn-primary" (click)="btnConfirmDeleteHorario()" data-bs-dismiss="modal">ACEPTAR</button>
+      </div>
+    </div>
+  </div>
+</div>

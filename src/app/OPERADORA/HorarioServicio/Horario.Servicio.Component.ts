@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit,ViewChild,ElementRef } from "@angular/core";
 import { Router } from '@angular/router'
-import { map } from "rxjs";
 
 
 @Component({
@@ -22,6 +21,9 @@ export class HorarioComponent implements OnInit {
   horarioToday: any
   filtro !: any
   filtro2 !: any
+  getFecha:any
+  getRuta:any
+  modal:any
   public mostrarImagen: boolean = false;
   constructor(private router: Router, private http: HttpClient) {
   }
@@ -42,9 +44,8 @@ export class HorarioComponent implements OnInit {
       corridaFinal: this.corridaFinal,
       primeraSalida:this.primeraSalida
 
-
     }
-    let url="http://pruebaacotma2.somee.com/api/HorarioServicio"
+    let url="https://prueba252.somee.com/api/HorarioServicio"
     this.http.post(url,datosSen).toPromise().then(data=>{
       if(data===true){
         this.mostrarImagen =false;
@@ -53,10 +54,24 @@ export class HorarioComponent implements OnInit {
   }
 
   getHorarioToday() {
-    this.http.get<any>("http://pruebaacotma2.somee.com/api/GetHorarios/Today/Id").
+    this.http.get<any>("https://prueba252.somee.com/api/GetHorarios/Today/Id").
       subscribe(data => {
         this.horarioToday = data
       })
+  }
+  btnDeleteHorario(sendFecha:any,sendRuta:any){
+    this.getFecha=sendFecha
+    this.getRuta=sendRuta
+  }
+  btnConfirmDeleteHorario(){
+    const sendData={
+      fechaDelete:this.getFecha,
+      rutaDelete:this.getRuta
+    }
+    this.http.post("https://prueba252.somee.com/api/DeleteHorarioServicio",sendData).toPromise().then(response=>{
+      console.log(response)
+    })
+
   }
 
   ngOnInit(): void {

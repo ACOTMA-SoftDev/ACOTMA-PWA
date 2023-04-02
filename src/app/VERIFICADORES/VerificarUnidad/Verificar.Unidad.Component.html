@@ -40,22 +40,22 @@
       <div *ngFor="let data of dataAsignacion" class="row">
         <div class="form-group ">
           <label for="exampleFormControlInput" class="colorwhite">No.Unidad</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.economico}}" [disabled]="isDisable">
+          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.economico}}" [(ngModel)]="data.economico" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">No.Tarjeton</label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [disabled]="isDisable">
+          <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [(ngModel)]="data.tarjeton" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Ruta</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}"  [(ngModel)]="data.ruta" readonly>
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Corrida</label>
-          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}"  name="corrida" readonly>
+          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}" [(ngModel)]="data.corrida" name="corrida" readonly>
         </div>
         <br><br><br>
         <div class="form-group">
@@ -77,11 +77,11 @@
       <br>
 
       <div align="center">
+        <br>
         <button type="submit" class="btn btn-success text-center col-12" (click)="goLiberarUnidad(data.corrida,data.fecha,data.idAsignacion)">Liberar</button>
       </div>
-      <br>
-      <br>
       <div align="center">
+        <br>
         <button type="submit" class="btn btn-danger text-center col-12" (click)="goReportarUnidad(data.corrida,data.fecha,data.idAsignacion)">Reportar</button>
       </div>
     </div>

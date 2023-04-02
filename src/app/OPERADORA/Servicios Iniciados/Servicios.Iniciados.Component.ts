@@ -20,6 +20,12 @@ export class ServiciosIniciadosComponent implements OnInit{
       this.dataAsignacion=data
     })
   }
+  btnDeleteAsignacion(){
+    this.http.get("https://prueba252.somee.com/api/Delete/Asignacion").subscribe(response=>{
+      console.log(response)
+    })
+  }
+
   ngOnInit(): void {
     setInterval(() => {
     this.GetServiciosIniciados()

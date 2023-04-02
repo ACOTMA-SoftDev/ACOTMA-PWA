@@ -7,12 +7,14 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['Agregar.Servicio.Component.scss']
 })
 export class AgregarSerevicioComponent implements OnInit {
+  public mostrarImagen: boolean = false;
+  loading = 'assets/loading.gif'
   icongif = 'assets/iconBlackAcotma.gif'
   ExcelData: any;
-  respuesta:any
-  estado:any=[]
-  estadodiv:any
-  constructor(private router: Router,private http:HttpClient) {
+  respuesta: any
+  estado: any = []
+  estadodiv: any
+  constructor(private router: Router, private http: HttpClient) {
   }
   fileUpload(event: any) {
     const selectedFile = event.target.files[0];
@@ -25,22 +27,27 @@ export class AgregarSerevicioComponent implements OnInit {
       console.log(this.ExcelData);
     }
   }
-  sendAsignacion(){
-    this.http.post("https://prueba252.somee.com/api/Agregar/Servicio",this.ExcelData).
-    toPromise().then((response:any)=>{
-      this.respuesta=response
-    })
+  sendAsignacion() {
+    this.mostrarImagen = true;
+    this.http.post("https://prueba252.somee.com/api/Agregar/Servicio", this.ExcelData).
+      toPromise().then((response: any) => {
+        if (response) {
+          this.mostrarImagen = false
+        }
+        this.respuesta = response
+
+      })
   }
-  obtenerAsignacion(){
+  obtenerAsignacion() {
     this.http.get<any[]>("https://prueba252.somee.com/api/consultarAsignacionDay").
-    subscribe(data=>{
-      this.estado=data
-      if(Array.isArray(this.estado)&&this.estado.length===0){
-      }
-      else{
-        this.estadodiv="hey"
-      }
-    })
+      subscribe(data => {
+        this.estado = data
+        if (Array.isArray(this.estado) && this.estado.length === 0) {
+        }
+        else {
+          this.estadodiv = "hey"
+        }
+      })
   }
   ngOnInit(): void {
     this.obtenerAsignacion()

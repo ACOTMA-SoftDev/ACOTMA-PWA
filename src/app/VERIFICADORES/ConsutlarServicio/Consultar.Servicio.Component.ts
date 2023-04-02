@@ -34,9 +34,7 @@ export class ConsultarServicioComponent implements OnInit {
     })
 
   }
-  cerrarModal(){
-    location.reload()
-  }
+
 
   btnCancelarVerificacion(corridabtn:any,idAsignacionbtn:any){
     this.corrida=corridabtn
@@ -49,9 +47,6 @@ export class ConsultarServicioComponent implements OnInit {
     }
     let url="https://prueba252.somee.com/api/EliminarVerificacion"
     this.http.post(url,datos).toPromise().then(data=>{
-      if(data){
-        this.cerrarModal()
-      }
     })
 
   }

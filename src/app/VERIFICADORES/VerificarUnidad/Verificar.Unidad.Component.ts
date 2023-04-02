@@ -39,13 +39,6 @@ export class VerificarUnidadesComponent implements OnInit {
       fecha:fecha,
       horaLlegada:this.horaLlegada
     }
-    let url = "https://prueba252.somee.com/api/Liberar/Unidades"
-    this.http.post(url, datosSen).toPromise().then(Response => {
-      if (Response === true) {
-        this.router.navigate(['Verificadores/ConsultaServicio'])
-      }
-    })
-
     const Verificadores={
       estado:"Verificado",
       observaciones:this.Observaciones,
@@ -53,12 +46,23 @@ export class VerificarUnidadesComponent implements OnInit {
       fkAsignacion:fkAsignacion,
       ciclosPerdidos:this.ciclosPerdidos
     }
+    if(this.isDisable===false){
+    let url = "https://prueba252.somee.com/api/Liberar/Unidades"
+    this.http.post(url, datosSen).toPromise().then(Response => {
+      if (Response === true) {
+        this.router.navigate(['Verificadores/ConsultaServicio'])
+      }
+    })
     let urlV="https://prueba252.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
       if (Response2 === true) {
         console.log("checale  ")
       }
     })
+  }
+  else{
+
+  }
   }
   goReportarUnidad(corrida:any,fecha:any,fkAsignacion:any) {
     const fechas = new Date()
