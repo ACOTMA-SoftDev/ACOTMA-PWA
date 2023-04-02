@@ -29,7 +29,7 @@
                         <!--<button class="btn btn-outline-dark" type="button" style="background-color: #D118BE;">
                             <i class="bi bi-pencil-square"></i>
                         </button>-->
-                        <button  (click)="btnCancelarAsignacion(asignado.Id_asignacionRadio)" data-bs-toggle="modal" class="btn btn-outline-dark" type="button" style="background-color: red;">
+                        <button  (click)="btnCancelarAsignacion(asignado.Id_asignacionRadio)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-dark" type="button" style="background-color: red;">
                             <i class="bi bi-trash3-fill"></i>
                         </button>
                       </div>
@@ -37,5 +37,22 @@
               </tr>
             </tbody>
           </table>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" #myModal>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">CANCELAR LIBERACION</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Estas a punto de eliminar la asignacion
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+                  <button type="button" class="btn btn-primary" (click)="btnAccept()" >ACEPTAR</button>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
 </div>
