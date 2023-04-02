@@ -94,3 +94,8 @@ Etiquetar los datos
 	    color: #ffffff; /* Color del texto */
         background-color: black;
     }
+
+	#content{
+		width: auto;
+		height:auto;
+	  }

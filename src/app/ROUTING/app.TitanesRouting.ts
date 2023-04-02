@@ -8,6 +8,7 @@ import { IncidenciasTecComponent } from '../TITANES/componentes/incidencias-tec/
 import { Stacks2Component } from '../TITANES/componentes/stacks2/stacks2.component';
 import { PublicacionesComponent } from '../TITANES/publicaciones/publicaciones.component';
 import { InicioTitanesComponent } from '../TITANES/inicio-titanes/inicio-titanes.component';
+import { PedirVehiculoComponent } from '../TITANES/componentes/pedir-vehiculo/pedir-vehiculo.component';
 
 const appTitanesRoutes: Routes = [
     {path: 'limpieza', component: LimpiezaComponent},
@@ -17,7 +18,10 @@ const appTitanesRoutes: Routes = [
     {path: 'incidencias-tec', component: IncidenciasTecComponent},
     {path: 'inicio_titanes',component: InicioTitanesComponent},
     {path: 'stack2',component: Stacks2Component},
-    {path: 'Publicaciones',component: PublicacionesComponent}
+    {path: 'Publicaciones',component: PublicacionesComponent},
+    {path: 'Uso-de-vehiculo-sitmah',component:PedirVehiculoComponent}
+
+    
 ]
 
 @NgModule({

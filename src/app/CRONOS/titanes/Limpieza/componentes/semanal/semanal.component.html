@@ -25,14 +25,14 @@
 
         </div>
       </div>
-      <button (click)="descargarPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
+      <button (click)="downloadPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
         <i class="bi bi-download"></i>
       </button>
     </div>
   </nav>
 </div>
-<form id="limpiezaPasados">
-  <div class="container justify-content-center">
+<form id="limpiezaSemanal">
+  <div class="container justify-content-center" id="content" #content>
     <hr>
     <table role="table" class="table table-dark table-borderless">
         <thead role="rowgroup" style="text-align: center;">

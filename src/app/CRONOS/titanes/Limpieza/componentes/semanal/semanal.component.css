@@ -84,4 +84,8 @@
     td:nth-of-type(8):before { content: "DOMINGO"; }
     td:nth-of-type(9):before { content: "OBSERVACIONES"; }
   }
-  
+
+  #content{
+    width: auto;
+    height:auto;
+  }

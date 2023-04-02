@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { InformeLimpiezaCrudService } from 'src/app/Servicios/informe-limpieza-crud.service';
 import { HttpClient } from '@angular/common/http';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import jsPDF  from 'jspdf';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-all-informes-tecnologicos',
@@ -7,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./all-informes-tecnologicos.component.css']
 })
 export class AllInformesTecnologicosComponent {
+
+  
   term:any;
   InformeIncidenciasTec:any=[];//recolectamos todos los datos para luego mostrarlos
 
@@ -24,7 +30,7 @@ export class AllInformesTecnologicosComponent {
   ngOnInit(): void {
     setInterval(() => {
     this.getAllEstacionesToday();
-  }, 500)
+  }, 1000)
   }
 
 }
