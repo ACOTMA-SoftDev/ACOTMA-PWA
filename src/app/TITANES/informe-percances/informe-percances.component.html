@@ -140,18 +140,37 @@
                 <input type="text" class="form-control"  [(ngModel)]="Seguro" name="Seguro">
               </div>
               <div class="col-12">
-                <label for="validationDefault21" class="form-label">Supervisor que atiende</label>
+                <label for="validationDefault21" class="form-label">AJUSTADOR</label>
                 <input type="text" class="form-control" [(ngModel)]="Supervisor" name="Supervisor">
               </div>
 
               <hr style="border: 12px solid transparent;"><!--Sexta Parte-->
 
               <div style="text-align: right;">
-                <a href="https://web.whatsapp.com/">
-                  <button type="submit" class="btn btn-outline-secondary subir">Guardar</button>
-                </a>
+                  <button type="button" class="btn btn-outline-secondary subir" data-bs-toggle="modal" data-bs-target="#exampleModal">Guardar</button>
               </div>
               <hr style="border: 1px solid transparent;">
+
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">SEGURO QUE DESEA GUADAR LOS CAMBIOS</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      una vez que se guarde el informe no se podran editar los datos..
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <a href="https://web.whatsapp.com/">
+                        <button type="submit" class="btn btn-primary" class="btn-limpieza">Guardar informe</button>
+                      </a>
+    
+                    </div>
+                  </div>
+                </div>
+              </div>
   </form>
 
 
