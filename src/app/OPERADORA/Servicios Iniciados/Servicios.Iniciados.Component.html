@@ -2,35 +2,40 @@
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="{{icongif}}"
-                    style="width: 90px;" alt="logo">
+        <img src="{{icongif}}" style="width: 90px;" alt="logo">
       </a>
       <a class="navbar-brand" href="#">Servicios Iniciados</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <button class="btn btn-outline-success" aria-current="page" (click)="goApertura()"><i class="bi bi-person-fill-gear"></i> Apertura de Servicios</button>
+              <button class="btn btn-outline-success" aria-current="page" (click)="goApertura()"><i
+                  class="bi bi-building-fill-add"></i> Apertura de Servicios</button>
             </li>
             <br>
             <li class="nav-item">
-              <button class="btn btn-outline-success" aria-current="page" (click)="goHorarioServicio()"><i class="bi bi-clock"></i> Horarios de Servicio</button>
+              <button class="btn btn-outline-success" aria-current="page" (click)="goHorarioServicio()"><i
+                  class="bi bi-clock"></i> Horarios de Servicio</button>
             </li>
             <br>
             <li class="nav-item">
-              <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
+              <button class="btn btn-outline-danger" aria-current="page" (click)="goCerrar()"><i
+                  class="bi bi-box-arrow-left"></i> Cerrrar Sesion</button>
             </li>
-            </ul>
+          </ul>
         </div>
       </div>
-      </div>
+    </div>
   </nav>
   <br>
   <br>
@@ -41,47 +46,49 @@
   <div class="container">
     <div class="input-group flex-nowrap">
       <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
-      <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="addon-wrapping" [(ngModel)]="filtro">
+      <input type="text" class="form-control" placeholder="Buscar" aria-label="Username"
+        aria-describedby="addon-wrapping" [(ngModel)]="filtro">
     </div>
     <br>
 
     <div class="ex1">
-    <table class="table table-dark border" >
+      <table class="table table-dark border">
 
-                  <thead>
-                    <tr>
-                      <th scope="col">Unidad</th>
-                      <th scope="col">Ruta</th>
-                      <th scope="col">Economico</th>
-                      <th scope="col">Tarjeton</th>
-                      <th scope="col">Nombre</th>
-                      <th>Accion</th>
+        <thead>
+          <tr>
+            <th scope="col">Unidad</th>
+            <th scope="col">Ruta</th>
+            <th scope="col">Economico</th>
+            <th scope="col">Tarjeton</th>
+            <th scope="col">Nombre</th>
+            <th>Accion</th>
 
 
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let data of dataAsignacion | filter:filtro">
-                      <th>{{data.tipoUnidad}}</th>
-                      <td>{{data.ruta}}</td>
-                      <td>{{data.economico}}</td>
-                      <td>{{data.tarjeton}}</td>
-                      <td>{{data.nomChofer}}</td>
-                      <td>
-                        <button type="button" class="btn btn-outline-warning" (click)="goEditarServicio(data.idAsignacion)"><i class="bi bi-pencil-square"></i></button>
-                        </td>
-                    </tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataAsignacion | filter:filtro">
+            <th>{{data.tipoUnidad}}</th>
+            <td>{{data.ruta}}</td>
+            <td>{{data.economico}}</td>
+            <td>{{data.tarjeton}}</td>
+            <td>{{data.nomChofer}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-warning" (click)="goEditarServicio(data.idAsignacion)"><i
+                  class="bi bi-pencil-square"></i></button>
+            </td>
+          </tr>
 
-                  </tbody>
-                </table>
-              </div>
-              <div align="center">
-                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" >Eliminar Asignacion</button>
-              </div>
-              <div class="text-center">
-                <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 400px;">
-              </div>
-</div>
+        </tbody>
+      </table>
+    </div>
+    <div align="center">
+      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar Asignacion</button>
+    </div>
+    <div class="text-center">
+      <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 400px;">
+    </div>
+  </div>
 
 </div>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" #myModal>
@@ -96,7 +103,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
-        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal" (click)="btnDeleteAsignacion()">ACEPTAR</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+          (click)="btnDeleteAsignacion()">ACEPTAR</button>
       </div>
     </div>
   </div>

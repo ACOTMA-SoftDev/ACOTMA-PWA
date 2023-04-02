@@ -9,7 +9,10 @@ import { EditarVerificadorComponent } from "../OPERADORA/EditarVerificadores/Edi
 import { AgregarVerificadores } from "../OPERADORA/AgregarVerificador/Agregar.Verificador.Component";
 import { AdministrarVerificadores } from "../OPERADORA/AdministrarVerificador/Administrar.Verificador.Component";
 import { AgregarSerevicioComponent } from "../OPERADORA/AgregarServicio/Agregar.Servicio.Component";
+import { InicioOperadoraComponent } from "../OPERADORA/Inicio/Inicio.Operadora.Component";
 const appOperadoraRouting:Routes=[
+  {path:'Operadora',redirectTo:'Operadora/Inicio'},
+  {path:'Operadora/Inicio',component:InicioOperadoraComponent},
   {path:'Operadora/Agregar/Servicio', component:AgregarSerevicioComponent},
   {path: 'Operadora/ServiciosIniciados',component:ServiciosIniciadosComponent},
   {path: 'Operadora/HorarioServicio',component:HorarioComponent},
