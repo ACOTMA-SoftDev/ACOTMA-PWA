@@ -41,7 +41,7 @@ export class AllAccidentesComponent {
   };
 
   getAccidenteAHT(){
-    this.http.get('https://prueba252.somee.com/api/Informe_de_Accidente_de_hoy').subscribe(response=>{
+    this.http.get('https://prueba252.somee.com/api/ver_Registro_de_accidentes').subscribe(response=>{
      this.accidentes=response
      console.log(this.accidentes)
      
