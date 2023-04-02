@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import jsPDF  from 'jspdf';
 import { style } from '@angular/animations';
+import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
+
 
 @Component({
   selector: 'app-all-informes-tecnologicos',
@@ -12,11 +14,29 @@ import { style } from '@angular/animations';
 })
 export class AllInformesTecnologicosComponent {
 
+  fechahoy:Date=new Date()
+
+  exportAsConfig: ExportAsConfig = {
+    type: 'xlsx', // Tipo de archivo a exportar (en este caso, Excel)
+    elementIdOrContent: 'tableToExport',// ID de la tabla a exportar
+  };
+
+	constructor(private http:HttpClient,private exportAsService: ExportAsService) {}
+
+  exportTable() {
+    // download the file using old school javascript method
+    this.exportAsService.save(this.exportAsConfig, ' Registro incidencias tecnologicas ').subscribe(() => {
+      // save started
+    });
+    // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
+    //this.exportAsService.get(this.config).subscribe(content => {
+      //console.log(content);
+  //  });
+  }
+
   
   term:any;
   InformeIncidenciasTec:any=[];//recolectamos todos los datos para luego mostrarlos
-
-	constructor(private http:HttpClient) {}
    //creamos un contrucutor
    title = 'Informeincidencias tecnologia';
 

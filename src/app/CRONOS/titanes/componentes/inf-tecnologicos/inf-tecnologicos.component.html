@@ -41,7 +41,7 @@
       </li>
       <div class=" d-flex">
         <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar Informe">
-        <button (click)="downloadPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
+        <button (click)="exportTable()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
           <i class="bi bi-download"></i>
         </button>
       </div>
@@ -62,7 +62,7 @@
     <div class="container text-center">
       <h4>SITMAH</h4>
     </div>
-    <table role="table" class="table table-dark table-fixed" id="miTala">
+    <table role="table" class="table table-dark table-fixed" id="tableToExport">
         <thead role="rowgroup">
           <tr role="row">
             <th role="columnheader">FECHA_INCIDENCIA</th>
@@ -71,20 +71,27 @@
             <th role="columnheader">EQUIPO AFECTADO</th>
             <th role="columnheader">ID EQUIPO AFECTADO</th>
             <th role="columnheader">FALLA</th>
-            <!--<th role="columnheader">Estado</th>-->
+            <th role="columnheader">HORA REGISTRO</th>
+            <th role="columnheader">HORA CIERRE</th>
+            <th role="columnheader">ACCION NO NECESARIA (SI/NO)</th>
+            <th role="columnheader">INSPECTOR QUE REPORTA</th>
+            <th role="columnheader">BEA MESA DE CONTROL (PERSONA QUE ATIENDE)</th>
             <!--<th role="columnheader">TITAN/ANALISTA QUE REPORTA</th>-->
           </tr>
         </thead>
         <tbody role="rowgroup">
           <tr role="row" *ngFor="let Incidencia of InformeIncidenciasTec | filter:term">
-            <td role="cell">{{Incidencia.Fecha_incidencia | date:'dd/mm/yyyy'}}</td>
+            <td role="cell">{{Incidencia.Fecha_incidencia | date:'dd/MM/yyyy'}}</td>
             <td role="cell">{{Incidencia.Servicio }}</td>
             <td role="cell">{{Incidencia.VehiculoECO}}</td>
             <td role="cell">{{Incidencia.Equipo_afectado}}</td>
             <td role="cell">{{Incidencia.Id_equipo_afectado}}</td>
             <td role="cell">{{Incidencia.Falla }}</td>
-            <!--<td role="cell">{{Incidencia.Estado}}</td>-->
-            <!--<td role="cell">{{Incidencia.usuario}}</td>-->
+            <td role="cell"></td>
+            <td role="cell"></td>
+            <td role="cell"></td>
+            <td role="cell">{{Incidencia.usuario}}</td>
+            <td role="cell"></td>
           </tr>
         </tbody>
       </table>

@@ -80,6 +80,12 @@ Etiquetar los datos
 		td:nth-of-type(4):before { content: "VEHICULO(ECO)"; }
 		td:nth-of-type(5):before { content: "EQUIPO AFECTADO"; }
 		td:nth-of-type(6):before { content: "FALLA"; }
+		td:nth-of-type(7):before { content: "HORA REGISTRO"; }
+		td:nth-of-type(8):before { content: "HORA CIERRE"; }
+		td:nth-of-type(9):before { content: "ACCION NO NECESARIA (SI/NO)"; }
+		td:nth-of-type(10):before { content: "INSPECTOR QUE REPORTA"; }
+		td:nth-of-type(11):before { content: "BEA MESA DE CONTROL (PERSONA QUE ATIENDE)"; }
+		
 	}
 
 	thead tr th { 
@@ -148,8 +154,8 @@ Etiquetar los datos
 	}
 
 	#content{
-		width: 595px;
-		height: 842px;
+		width: auto;
+		height: auto;
 	}
 
 	

@@ -1,7 +1,7 @@
 
   <div class="card" *ngFor="let publicacion of publicaciones" style="margin: 40px; border-radius: 20px;">
       <div class="card-header stack"  >
-        {{publicacion.Fecha_Pub | date:'dd/mm/yyyy'}} 
+        {{publicacion.Fecha_Pub | date:'dd/MM/yyyy'}} 
       </div> 
       <div class="card-body">
         <h5 class="card-title" style="font-size: x-large;">{{publicacion.Titulo_Pub}}</h5>

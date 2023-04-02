@@ -1,30 +1,37 @@
 import { Component, ElementRef, OnInit, ViewChild,AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import jsPDF from 'jspdf';
-
-
+import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
 
 @Component({
   selector: 'app-inf-tecnologicos',
   templateUrl: './inf-tecnologicos.component.html',
   styleUrls: ['./inf-tecnologicos.component.css']
 })
+
 export class InfTecnologicosComponent implements OnInit{
+  fechahoy:Date=new Date()
 
-  
-	constructor(private http:HttpClient) {}
+  exportAsConfig: ExportAsConfig = {
+    type: 'xlsx', // Tipo de archivo a exportar (en este caso, Excel)
+    elementIdOrContent: 'tableToExport',// ID de la tabla a exportar
+  };
 
-  @ViewChild('content', {static:false}) el!:ElementRef;
+	constructor(private http:HttpClient,private exportAsService: ExportAsService) {}
 
-  downloadPDF(){
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.html(this.el.nativeElement,{
-      callback:(pdf)=>{
-        pdf.save('Informe.pdf');
-      }
-    })
-    
+  exportTable() {
+    // download the file using old school javascript method
+    this.exportAsService.save(this.exportAsConfig, 'incidencias tecnologicas').subscribe(() => {
+      // save started
+    });
+    // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
+    //this.exportAsService.get(this.config).subscribe(content => {
+      //console.log(content);
+  //  });
   }
+
+  //exportTable() {
+    //this.exportAsService.save(this.exportAsConfig, 'REPORTE-DE-INCIDENCIA'); // Nombre que se le dará al archivo
+  //}
 
 
   term:any;
