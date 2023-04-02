@@ -62,7 +62,7 @@
             <th role="columnheader">REGISTRO DE KILOMETRAJE</th>
           </tr>
         </thead>
-        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular">
+        <tbody role="rowgroup" *ngFor="let registro of RegistroVehicular | filter:term">
           <tr role="row">
             <td role="cell">{{registro.Fecha | date:'dd/MM/yyyy'}}</td>
             <td role="cell">{{registro.Nombre_solicitante }}</td>
