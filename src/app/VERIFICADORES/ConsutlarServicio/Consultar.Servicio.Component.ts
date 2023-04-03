@@ -56,11 +56,9 @@ export class ConsultarServicioComponent implements OnInit {
   }, 2000)
   setInterval(() => {
     this.getVerificados()
-    console.log(this.dataVerificados)
   }, 2000)
   }
   goValidar(idAsignado: any) {
-    console.log(idAsignado)
     this.router.navigate(['Verificadores/VerificarUnidad',idAsignado])
   }
   goReportar() {

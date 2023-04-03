@@ -48,55 +48,61 @@
       <div class="row">
         <div class="col">
           <label for="">Ruta
-          <input type="text" class="form-control" placeholder="Introduce la Ruta" [(ngModel)]="ruta" id="ruta" name="ruta">
-        </label>
+            <input type="text" class="form-control" placeholder="Introduce la Ruta" [(ngModel)]="ruta" id="ruta"
+              name="ruta">
+          </label>
         </div>
         <div class="col">
           <label for="">Intervalo
-          <input type="text" class="form-control" placeholder="Introduce el Intervalo" [(ngModel)]="intervalo" name="intervalo">
-        </label>
+            <input type="text" class="form-control" placeholder="Introduce el Intervalo" [(ngModel)]="intervalo"
+              name="intervalo">
+          </label>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label for="">Corrida Inicial
-          <input type="text" class="form-control" placeholder="Introduce la primera corrida de patio Tellez" [(ngModel)]="corridaInicial" name="corridaInicial">
-        </label>
+            <input type="text" class="form-control" placeholder="Introduce la primera corrida de patio Tellez"
+              [(ngModel)]="corridaInicial" name="corridaInicial">
+          </label>
         </div>
         <div class="col">
           <label for="">Corrida Final
-          <input type="text" class="form-control" placeholder="Introduce la ultima corrida" [(ngModel)]="corridaFinal" name="corridaFinal">
-        </label>
+            <input type="text" class="form-control" placeholder="Introduce la ultima corrida" [(ngModel)]="corridaFinal"
+              name="corridaFinal">
+          </label>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label for="">Salida Inicial
-          <input type="time" class="form-control" placeholder="Introduce Salida de la primera Corrida" [(ngModel)]="primeraSalida" name="corridaInicial">
-        </label>
+            <input type="time" class="form-control" placeholder="Introduce Salida de la primera Corrida"
+              [(ngModel)]="primeraSalida" name="corridaInicial">
+          </label>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <label for="">Del:
-          <input type="date" class="form-control" [(ngModel)]="fechaInicio" name="fechaInicial" >
-        </label>
+            <input type="date" class="form-control" [(ngModel)]="fechaInicio" name="fechaInicial">
+          </label>
         </div>
         <div class="col">
           <label for="">Al:
-          <input type="date" class="form-control" placeholder="Introduce la Vigencia" [(ngModel)]="fechaFinal" name="fechaFinal">
-        </label>
+            <input type="date" class="form-control" placeholder="Introduce la Vigencia" [(ngModel)]="fechaFinal"
+              name="fechaFinal">
+          </label>
         </div>
       </div>
       <div class="row">
-      <br>
-    <br>
-    <p align="right">
-      <button type="button" class="btn btn-success col-2"
-        style="background-color: rgb(73, 167, 167); height: 40px;" (click)="sendHorarios()">SUBIR</button>
-    </p>
-    <br>
-  </div>
+        <br>
+        <br>
+        <p align="right">
+          <button type="button" class="btn btn-success col-2" style="background-color: rgb(73, 167, 167); height: 40px;"
+            (click)="sendHorarios()">SUBIR</button>
+        </p>
+        <br>
+      </div>
     </form>
     <div class="input-group">
       <div class="input-group-prepend">
@@ -119,17 +125,15 @@
             <td>{{data.ruta}}</td>
             <td>{{data.fecha | date:'dd/MM/yyyy'}}</td>
             <td>
-              <button type="button" class="btn btn-outline-warning" (click)="goButtonEditarTable()"><i
-                class="bi bi-pencil-square"></i></button>&nbsp;&nbsp;
-            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              (click)="btnDeleteHorario(data.fecha,data.ruta)"><i class="bi bi-trash3-fill"></i></button>
+              <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="btnDeleteHorario(data.fecha,data.ruta)"><i class="bi bi-trash3-fill"></i></button>
             </td>
           </tr>
 
         </tbody>
       </table>
 
-  </div>
+    </div>
     <div class="text-center">
       <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 700px;">
     </div>
@@ -141,15 +145,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">CANCELAR LIBERACION</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ELIMINAR HORARIO</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Estas a punto de cancelar la liberacion
+        Eliminar Horario
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
-        <button type="button" class="btn btn-primary" (click)="btnConfirmDeleteHorario()" data-bs-dismiss="modal">ACEPTAR</button>
+        <button type="button" class="btn btn-primary" (click)="btnConfirmDeleteHorario()"
+          data-bs-dismiss="modal">ACEPTAR</button>
       </div>
     </div>
   </div>

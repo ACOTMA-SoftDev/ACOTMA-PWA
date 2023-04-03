@@ -44,6 +44,11 @@
         </div>
         <br><br><br>
         <div class="form-group">
+          <label for="exampleFormControlInput1" class="colorwhite">Nombre Chofer</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" value="{{data.nomChofer}}" [(ngModel)]="data.nomChofer" [disabled]="isDisable">
+        </div>
+        <br><br><br>
+        <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">No.Tarjeton</label>
           <input type="number" class="form-control" id="exampleFormControlInput1" value="{{data.tarjeton}}" [(ngModel)]="data.tarjeton" [disabled]="isDisable">
         </div>
@@ -82,7 +87,7 @@
       </div>
       <div align="center">
         <br>
-        <button type="submit" class="btn btn-danger text-center col-12" (click)="goReportarUnidad(data.corrida,data.fecha,data.idAsignacion)">Reportar</button>
+        <button type="submit" class="btn btn-dark text-center col-12" (click)="goReportarUnidad(data.corrida,data.fecha,data.idAsignacion)">No Liberar</button>
       </div>
     </div>
 
