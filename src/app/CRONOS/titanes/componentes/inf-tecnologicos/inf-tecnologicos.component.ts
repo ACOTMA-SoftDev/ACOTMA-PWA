@@ -9,6 +9,7 @@ import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
 })
 
 export class InfTecnologicosComponent implements OnInit{
+  term:any;
   fechahoy:Date=new Date()
 
   exportAsConfig: ExportAsConfig = {
@@ -33,8 +34,6 @@ export class InfTecnologicosComponent implements OnInit{
     //this.exportAsService.save(this.exportAsConfig, 'REPORTE-DE-INCIDENCIA'); // Nombre que se le dará al archivo
   //}
 
-
-  term:any;
   InformeIncidenciasTec:any=[];//recolectamos todos los datos para luego mostrarlos
 
    //creamos un contrucutor
@@ -50,6 +49,6 @@ export class InfTecnologicosComponent implements OnInit{
   ngOnInit(): void {
     setInterval(() => {
     this.getAllEstacionesToday();
-  }, 500)
+  }, 1000)
   }
 }

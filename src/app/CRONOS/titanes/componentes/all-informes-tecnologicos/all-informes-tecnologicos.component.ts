@@ -13,7 +13,7 @@ import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
   styleUrls: ['./all-informes-tecnologicos.component.css']
 })
 export class AllInformesTecnologicosComponent {
-
+  term:any;
   fechahoy:Date=new Date()
 
   exportAsConfig: ExportAsConfig = {
@@ -25,7 +25,7 @@ export class AllInformesTecnologicosComponent {
 
   exportTable() {
     // download the file using old school javascript method
-    this.exportAsService.save(this.exportAsConfig, ' Registro incidencias tecnologicas ').subscribe(() => {
+    this.exportAsService.save(this.exportAsConfig, 'incidencias tecnologicas').subscribe(() => {
       // save started
     });
     // get the data as base64 or json object for json type - this will be helpful in ionic or SSR
@@ -34,8 +34,9 @@ export class AllInformesTecnologicosComponent {
   //  });
   }
 
+
   
-  term:any;
+
   InformeIncidenciasTec:any=[];//recolectamos todos los datos para luego mostrarlos
    //creamos un contrucutor
    title = 'Informeincidencias tecnologia';

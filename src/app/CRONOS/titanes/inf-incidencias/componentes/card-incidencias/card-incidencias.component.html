@@ -20,27 +20,35 @@
     </div> 
   </nav>
   
-  <div class="card" *ngFor="let accidente of accidentes" style="margin: 20px; border-radius: 10px;">
+  <div class="card" *ngFor="let accidente of accidentes" style="margin: 20px; border-radius: 5px;">
     <div id="content" #content>
-    
+
       <div class="container">
         <div class="container stack">
           <nav class="navbar navbar-light" >
             <div class="container-fluid">
-              <a class="navbar-brand">
-                <p class="titulo_A">ACCIDENTE--AUTOMOVILISTICO--EN</p>
-              </a>
-              <div class=" d-flex">
-                <div class="form-group" style="margin: 25px;">
-                  <span style="font-size: 23px;">{{accidente.Ubicacion}}</span>
+              <li style="list-style-type: none;">
+                  <img src="../../../../../../assets/Logo_S1TM4Hv2.png" width="240px" height="100px" class="d-inline-block align-text-top">
+              </li>
+              <li style="list-style-type: none;">
+                <a class="navbar-brand">
+                  <p class="titulo_A">ACCIDENTE_AUTOMOVILISTICO_EN</p>
+                </a>
+                <div class=" d-flex">
+                  <div class="form-group" style="margin: 20px;">
+                    <span style="font-size: 23px;">{{accidente.Ubicacion}}</span>
+                  </div>
+                  <div class="form-group" style="margin: 20px;">
+                    <span style="font-size: 23px;">{{accidente.TipoUnidad}}</span>
+                  </div>
+                  <div class="form-group" style="margin: 20px;">
+                    <span style="font-size: 23px;">{{accidente.Fecha_Percance | date:'dd/MM/yyyy'}}</span>
+                  </div>
                 </div>
-                <div class="form-group" style="margin: 25px;">
-                  <span style="font-size: 23px;">{{accidente.TipoUnidad}}</span>
-                </div>
-                <div class="form-group" style="margin: 25px;">
-                  <span style="font-size: 23px;">{{accidente.Fecha_Percance | date:'dd/MM/yyyy'}}</span>
-                </div>
-              </div>
+              </li>
+              <li style="list-style-type: none;">
+                <img src="../../../../../../assets/logo_hidalgo_NEW_v1.png">
+              </li>
               <button (click)="downloadPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
                 <i class="bi bi-download" style="color: white;"></i>
               </button>

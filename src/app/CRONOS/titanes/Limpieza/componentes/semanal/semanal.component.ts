@@ -19,16 +19,12 @@ export class SemanalComponent implements OnInit{
   @ViewChild('content', {static:false}) el!:ElementRef;
 
   downloadPDF(){
-    let pdf = new jsPDF('p','pt','a2');
+    let pdf = new jsPDF('p','pt','a1');
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
-        pdf.addImage("../../../../../assets/logo_sitmah.jpeg", "JPEG", 50, 50, 50, 50);
-        pdf.setFontSize(25);
-        pdf.text('INFORME DE LIMPIEZA',50,30)
         pdf.save('Informe-pasado'+ (this.fechahoy) + '.pdf');
       }
     })
-    
   }
 
   term: any;
@@ -48,7 +44,7 @@ export class SemanalComponent implements OnInit{
   ngOnInit(): void {
     setInterval(() => {
     this.getSemanal();
-  }, 500)
+  }, 1000)
   }
 
 

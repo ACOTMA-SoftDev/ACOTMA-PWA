@@ -90,3 +90,8 @@ Etiquetar los datos
         font-weight: bold; /* Fuente en negrita o bold */
         background-color: rgb(0, 0, 0);
     }
+
+	#content{
+		width: auto;
+		height:auto;
+	  }

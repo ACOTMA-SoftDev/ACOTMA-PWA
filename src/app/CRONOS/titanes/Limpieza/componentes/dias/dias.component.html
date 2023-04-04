@@ -28,48 +28,64 @@
 
         </div>
       </div>
-      <button (click)="descargarPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
+      <button (click)="downloadPDF()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
         <i class="bi bi-download"></i>
       </button>
     </div>
   </nav>
 </div>
-<form id="limpiezaDia">
-<hr>
-    <div class="container justify-content-center" >
-      <hr>
-      <table #content role="table" class="table table-dark table-borderless">
-          <thead role="rowgroup">
-            <tr role="row" style="text-align: center;">
-              <th role="columnheader">Estación</th>
-              <th role="columnheader">Fecha</th>
-              <th role="columnheader">Limpieza de piso</th>
-              <th role="columnheader">Limpieza de vidrio</th>
-              <th role="columnheader">Limpieza de area de servicio</th>
-              <th role="columnheader">Limpieza de estructura</th>
-              <th role="columnheader">Limpieza de torniquete en 
-                espacios de venta y recarga
-                de tarjeta</th>
-              <th role="columnheader">Limpieza de sanitarios</th>
-              <th role="columnheader">Observciones</th>
-              <!--<th role="columnheader">¿Quien superviso?</th>-->
-            </tr>
-          </thead>
-          <tbody role="rowgroup">
-            <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
-              <td role="cell">{{ejemplo.Estacion}}</td>
-              <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/MM/yyyy'}}</td>
-              <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
-              <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
-              <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>
-              <td role="cell">{{ejemplo.LimpiezaAreaEstructura}}</td>
-              <td role="cell">{{ejemplo.LimpiezaTorniquetes}}</td>
-              <td role="cell">{{ejemplo.LimpiezaSanitarios}}</td>
-              <td role="cell">{{ejemplo.Observaciones}}</td>
-            <!--<td role="cell">{{ejemplo.Usuario}}</td>-->
-            </tr>
-          </tbody>
-        </table>
-    </div>
+<form id="content" #content>
+  <div class="container"><!--encabezado-->
+    <nav class="navbar bg-body-tertiary" style="background-color: #9C223C;;">
+      <div class="container-fluid">
+        <li style="list-style-type: none;">
+          <p class="navbar-brand" style="font-size: 55px; text-align: center; color: white;">
+            <img src="../../../../../../assets/Logo_S1TM4Hv2.png" width="240px" height="100px" class="d-inline-block align-text-top">
+            INFORME_DEL_DIA
+          </p>
+        </li>
+        <li style="list-style-type: none;">
+          <img src="../../../../../../assets/logo_hidalgo_NEW_v1.png">
+        </li>
+      </div>
+    </nav>
+  <hr>
+      <div class="container justify-content-center" >
+        <hr>
+        <table #content role="table" class="table table-dark table-borderless">
+            <thead role="rowgroup">
+              <tr role="row" style="text-align: center;">
+                <th role="columnheader">Estación</th>
+                <th role="columnheader">Fecha</th>
+                <th role="columnheader">Limpieza de piso</th>
+                <th role="columnheader">Limpieza de vidrio</th>
+                <th role="columnheader">Limpieza de area de servicio</th>
+                <th role="columnheader">Limpieza de estructura</th>
+                <th role="columnheader">Limpieza de torniquete en 
+                  espacios de venta y recarga
+                  de tarjeta</th>
+                <th role="columnheader">Limpieza de sanitarios</th>
+                <th role="columnheader">Observciones</th>
+                <!--<th role="columnheader">¿Quien superviso?</th>-->
+              </tr>
+            </thead>
+            <tbody role="rowgroup">
+              <tr role="row" *ngFor="let ejemplo of ejemplos | filter:term">
+                <td role="cell">{{ejemplo.Estacion}}</td>
+                <td role="cell">{{ejemplo.Fecha_Limpieza | date:'dd/MM/yyyy'}}</td>
+                <td role="cell">{{ejemplo.LimpiezaPiso}}</td>
+                <td role="cell">{{ejemplo.LimpiezaVidrio}}</td>
+                <td role="cell">{{ejemplo.LimpiezaAreaServicios}}</td>
+                <td role="cell">{{ejemplo.LimpiezaAreaEstructura}}</td>
+                <td role="cell">{{ejemplo.LimpiezaTorniquetes}}</td>
+                <td role="cell">{{ejemplo.LimpiezaSanitarios}}</td>
+                <td role="cell">{{ejemplo.Observaciones}}</td>
+              <!--<td role="cell">{{ejemplo.Usuario}}</td>-->
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+  </div>
   </form>
 

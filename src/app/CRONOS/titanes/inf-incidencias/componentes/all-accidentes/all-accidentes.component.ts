@@ -26,9 +26,6 @@ export class AllAccidentesComponent {
     let pdf = new jsPDF('p','pt','a2');
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
-        pdf.addImage("../../../../../assets/logo_sitmah.jpeg", "JPEG",50, 50, 50, 50);
-        pdf.setFontSize(25);
-        pdf.text('REGISTRO DE ACCIDENTE',40,30);
         pdf.save('ACCIDENTES REGISTRADOS'+ (this.fechahoy) + '.pdf');
       }
     })
