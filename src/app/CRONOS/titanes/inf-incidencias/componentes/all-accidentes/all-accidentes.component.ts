@@ -23,7 +23,7 @@ export class AllAccidentesComponent {
   @ViewChild('content', {static:false}) el!:ElementRef;
 
   downloadPDF(){
-    let pdf = new jsPDF('p','pt','a2');
+    let pdf = new jsPDF('p','pt','a1');
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
         pdf.save('ACCIDENTES REGISTRADOS'+ (this.fechahoy) + '.pdf');
