@@ -64,14 +64,25 @@ export class HorarioComponent implements OnInit {
     this.getRuta=sendRuta
   }
   btnConfirmDeleteHorario(){
+    this.mostrarImagen = true;
     const sendData={
       fechaDelete:this.getFecha,
       rutaDelete:this.getRuta
     }
     this.http.post("https://prueba252.somee.com/api/DeleteHorarioServicio",sendData).toPromise().then(response=>{
-      console.log(response)
+      if(response){
+        this.mostrarImagen = false;
+      }
     })
 
+  }
+  btnConfirmarDeleteHorarios(){
+    this.mostrarImagen = true;
+    this.http.get("https://prueba252.somee.com/api/Delete/Horario").subscribe(data=>{
+      if(data){
+        this.mostrarImagen = false
+      }
+    })
   }
 
   ngOnInit(): void {

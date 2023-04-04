@@ -129,10 +129,15 @@
                 (click)="btnDeleteHorario(data.fecha,data.ruta)"><i class="bi bi-trash3-fill"></i></button>
             </td>
           </tr>
-
         </tbody>
       </table>
 
+
+    </div>
+    <div>
+      <br>
+      <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminarHorarios">Eliminar todos los
+        horarios</button>
     </div>
     <div class="text-center">
       <img src="https://i.ibb.co/WkMWkrt/image.png " style="width: 700px;">
@@ -149,11 +154,29 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Eliminar Horario
+        ¿Estas seguro?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
         <button type="button" class="btn btn-primary" (click)="btnConfirmDeleteHorario()"
+          data-bs-dismiss="modal">ACEPTAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalEliminarHorarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ELIMINAR HORARIOS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ¿Quieres eliminar todos los horarios?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+        <button type="button" class="btn btn-primary" (click)="btnConfirmarDeleteHorarios()"
           data-bs-dismiss="modal">ACEPTAR</button>
       </div>
     </div>
