@@ -68,7 +68,7 @@ export class VerificarUnidadesComponent implements OnInit {
   }
   else{
 
-    let url="https://localhost:44397/api/Update/Verificacion"
+    let url="https://prueba252.somee.com/api/Update/Verificacion"
     this.http.post(url,this.dataAsignacion[0]  ).toPromise().then(response=>{
       console.log(response);
     })
