@@ -32,3 +32,8 @@
 	font-weight: bold; /* Fuente en negrita o bold */
 	color: #ffffff; /* Color del texto */
 }
+
+#content{
+    width: auto;
+    height:auto;
+  }

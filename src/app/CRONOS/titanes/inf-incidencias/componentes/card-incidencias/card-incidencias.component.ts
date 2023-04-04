@@ -23,12 +23,10 @@ export class CardIncidenciasComponent {
   @ViewChild('content', {static:false}) el!:ElementRef;
 
   downloadPDF(){
-    let pdf = new jsPDF('p','pt','a1');
+    let pdf = new jsPDF('portrait','pt','a2');
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
-        //pdf.addImage("../../../../../assets/logo_sitmah.jpeg", "JPEG",50, 50, 50, 50);
         pdf.setFontSize(25);
-        //pdf.text('ACCIDENTE AUTOMOVILISTICO',40,30);
         pdf.save('ACCIDENTE DEL DIA'+ (this.fechahoy) + '.pdf');
       }
     })
