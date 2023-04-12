@@ -64,6 +64,7 @@ import { AllInformesTecnologicosComponent } from './CRONOS/titanes/componentes/a
 import { CreateInformesTecnologicosComponent } from './CRONOS/titanes/componentes/create-informes-tecnologicos/create-informes-tecnologicos.component';
 import { PedirVehiculoComponent } from './TITANES/componentes/pedir-vehiculo/pedir-vehiculo.component';
 import { ExportAsModule } from 'ngx-export-as';
+import { loginComponent } from './LOGIN/login.Component';
 
 @NgModule({
   declarations: [
@@ -116,6 +117,7 @@ import { ExportAsModule } from 'ngx-export-as';
     AllInformesTecnologicosComponent,
     CreateInformesTecnologicosComponent,
     PedirVehiculoComponent,
+    loginComponent,
 
   ],
   imports: [

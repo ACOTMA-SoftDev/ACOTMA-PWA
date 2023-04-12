@@ -52,7 +52,6 @@ export class VerificarUnidadesComponent implements OnInit {
       ciclosPerdidos:this.ciclosPerdidos
     }
     if(this.isDisable===true){
-      console.log('true')
     let url = "https://prueba252.somee.com/api/Liberar/Unidades"
     this.http.post(url, datosSen).toPromise().then(Response => {
       if (Response === true) {
@@ -62,7 +61,6 @@ export class VerificarUnidadesComponent implements OnInit {
     let urlV="https://prueba252.somee.com/api/addverificacion"
     this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
       if (Response2 === true) {
-        console.log("checale  ")
       }
     })
   }
@@ -70,7 +68,18 @@ export class VerificarUnidadesComponent implements OnInit {
 
     let url="https://prueba252.somee.com/api/Update/Verificacion"
     this.http.post(url,this.dataAsignacion[0]  ).toPromise().then(response=>{
-      console.log(response);
+      let url = "https://prueba252.somee.com/api/Liberar/Unidades"
+      this.http.post(url, datosSen).toPromise().then(Response => {
+        if (Response === true) {
+          this.router.navigate(['Verificadores/ConsultaServicio'])
+        }
+      })
+      let urlV="https://prueba252.somee.com/api/addverificacion"
+      this.http.post(urlV,Verificadores).toPromise().then(Response2 => {
+        if (Response2 === true) {
+          console.log("checale  ")
+        }
+      })
     })
   }
   }
@@ -120,5 +129,3 @@ export class VerificarUnidadesComponent implements OnInit {
   }
 
 }
-
-

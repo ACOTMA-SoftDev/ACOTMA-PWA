@@ -1,9 +1,6 @@
 <div style="background-color: #9c223c; height:auto; width:auto;">
   <nav class="navbar navbar-dark bg-dark fixed-top" >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="{{icongif}}" style="width: 90px;" alt="logo">
-      </a>
       <a class="navbar-brand" href="#">Verificar Unidad</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
@@ -55,12 +52,12 @@
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Ruta</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}"  [(ngModel)]="data.ruta" readonly>
+          <input type="email" class="form-control" id="exampleFormControlInput1" value="{{data.ruta}}"  [(ngModel)]="data.ruta" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">
           <label for="exampleFormControlInput1" class="colorwhite">Corrida</label>
-          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}" [(ngModel)]="data.corrida" name="corrida" readonly>
+          <input type="text" class="form-control" id="corrida" value="{{data.corrida}}" [(ngModel)]="data.corrida" name="corrida" [disabled]="isDisable">
         </div>
         <br><br><br>
         <div class="form-group">

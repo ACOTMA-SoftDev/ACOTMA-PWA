@@ -21,7 +21,7 @@ import { AllAccidentesComponent } from '../CRONOS/titanes/inf-incidencias/compon
 
 
 const appCronosRoutes: Routes = [
-    {path:'', redirectTo:'inicio',pathMatch:'full'},/* por default si no esxite ninguna ruta se ira a la pagia principal* */
+    //{path:'', redirectTo:'inicio',pathMatch:'full'},/* por default si no esxite ninguna ruta se ira a la pagia principal* */
     { path: 'inicio', component: InicioComponent },
     { path: 'titanes', component: MenuTitanesComponent },
     { path: 'informe_de_incidencias_tecnologicas', component: InfTecnologicosComponent},
