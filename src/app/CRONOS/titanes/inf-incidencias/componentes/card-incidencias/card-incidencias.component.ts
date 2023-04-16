@@ -9,7 +9,6 @@ import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { InformeLimpiezaCrudService } from 'src/app/Servicios/informe-limpieza-crud.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import jsPDF  from 'jspdf';
-import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-card-incidencias',
@@ -23,10 +22,13 @@ export class CardIncidenciasComponent {
   @ViewChild('content', {static:false}) el!:ElementRef;
 
   downloadPDF(){
-    let pdf = new jsPDF('portrait','pt','a2');
+    let pdf = new jsPDF('p','pt','a2');
+   
     pdf.html(this.el.nativeElement,{
       callback:(pdf)=>{
         pdf.setFontSize(25);
+        pdf.deletePage(2);
+        pdf.deletePage(3);
         pdf.save('ACCIDENTE DEL DIA'+ (this.fechahoy) + '.pdf');
       }
     })

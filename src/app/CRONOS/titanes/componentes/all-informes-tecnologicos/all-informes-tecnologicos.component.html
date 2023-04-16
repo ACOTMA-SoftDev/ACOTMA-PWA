@@ -1,7 +1,7 @@
-<header style="background-color: #9C223C;">
+<header style="background-color: #9C223C;"><!--cabeza de la pagina-->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid pading1">
-        <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
+        <p>SITMAH</p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,20 +9,20 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           </ul>
           <span class="navbar-text text1">
-            INCIDENCIAS TÉCNOLOGICAS
+            INCIDENCIAS TÉCNOLOGICAS<!--indica en donde nos ubicamos-->
           </span>
         </div>
       </div>
     </nav>
   </header>
   
-  <app-nav-bar></app-nav-bar>
+  <app-nav-bar></app-nav-bar><!--mandamos a llamar la abrra de navegacion que esta ubicado en otro componente-->
   
   <div class="container">
     <nav class="navbar navbar-light">
       <div class="container-fluid">
         <li class="item-5 deeper parent" style="list-style-type: none; width: 100px;text-align: center;"><!-- de esta forma le quitamos el puntito de li-->
-          <button class="btn btn-outline-light text2" type="button">
+          <button class="btn btn-outline-light text2" type="button"><!--con este boton nos regresamos a los informes de hoy-->
           <a class="navbar-brand" href="informe_de_incidencias_tecnologicas" style="font-size: 40px; color: rgb(0, 0, 0);">
             <i class="bi bi-arrow-90deg-left"></i>
           </a>
@@ -30,9 +30,9 @@
           </li>
         <a class="navbar-brand">INFORMES DE INCIDENCIAS TÉCOLOGICAS PASADAS</a>
         <div class=" d-flex">
-          <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar equipo afectado">
-          <button (click)="exportTable()" class="btn" type="button" style="font-size: 25px; margin: 10px;">
-            <i class="bi bi-download"></i>
+          <input class="form-control" type="text" name="search" [(ngModel)]="term" autocomplete="on" placeholder=" Buscar equipo afectado"><!--aqui es donde buscamos los datos por fecha, nombre, ect usando ngMODEL con la variable term-->
+          <button (click)="exportTable()" class="btn" type="button" style="font-size: 25px; margin: 10px;"><!--con este boton descargamos la tabla en excel-->
+            <i class="bi bi-download"></i><!--el incono del boton-->
           </button>
         </div>
       </div>
@@ -41,7 +41,7 @@
   
     <div class="container">
       <hr>
-      <div class="container text-center" id="content" #content>
+      <div class="container text-center" id="content" #content><!--con el #content es que le dammos -->
         <h4>SITMAH</h4>
       </div>
       <table role="table" class="table table-dark table-fixed" id="tableToExport">
@@ -59,7 +59,7 @@
             </tr>
           </thead>
           <tbody role="rowgroup">
-            <tr role="row" *ngFor="let Incidencia of InformeIncidenciasTec | filter:term">
+            <tr role="row" *ngFor="let Incidencia of InformeIncidenciasTec | filter:term"><!--de esta forma podemos mostrar los datos de nuestra based de datos y utilizamos la variable term para poder buscarlo por fecha, nombre, etc-->
               <td role="cell">{{Incidencia.Fecha_incidencia | date:'dd/MM/yyyy'}}</td>
               <td role="cell">{{Incidencia.Servicio }}</td>
               <td role="cell">{{Incidencia.VehiculoECO}}</td>

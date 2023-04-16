@@ -19,7 +19,7 @@ export class InicioComponent implements OnInit {
   Titulo_Pub!:string;
   Descripcion_Pub!:string;
   usuario:string="Titan 1";
-
+//creamos las variables que necesiatmos
 
   constructor(private http:HttpClient, private sant:DomSanitizer, private location: Location,){
   }
@@ -45,7 +45,7 @@ export class InicioComponent implements OnInit {
   }
 
   enviarMensaje(){
-
+//al dar clic en el boton es guardar los datos en unavariable
       const datos = {
         Titulo_Pub:this.Titulo_Pub, 
         Descripcion_Pub:this.Descripcion_Pub,
@@ -53,9 +53,9 @@ export class InicioComponent implements OnInit {
         //usuario:this.usuario,
       }
       
-      console.log(datos)
+      console.log(datos)//y luego lo agrega a la base de datos con esta funcion
 
-      let url="https://prueba252.somee.com/api/agregarPublicaciones"
+      let url="https://prueba252.somee.com/api/agregarPublicaciones"//aqui va e
       this.http.post(url,datos).toPromise().then((data:any)=>{
         console.log(data)
         location.reload();

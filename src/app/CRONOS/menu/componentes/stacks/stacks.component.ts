@@ -12,14 +12,14 @@ export class StacksComponent implements OnInit{
   constructor ( private http:HttpClient){
   };
 
-  getPublicacion(){
+  getPublicacion(){//lo que hace esta funcion es mandar a llamar a la api de ver pubicaciones atraves de una url
    this.http.get('https://prueba252.somee.com/api/Publicaciones').subscribe(response=>{
     this.publicaciones=response
     console.log(this.publicaciones)
    })
    }   
-  ngOnInit(): void {
-    setInterval(() => {
+  ngOnInit(): void {//y lo que hace esto es mostrarlo
+    setInterval(() => {//el setInterval lo que hace es recargar el sitio web cada segundo
       this.getPublicacion();
     }, 1000)
   }

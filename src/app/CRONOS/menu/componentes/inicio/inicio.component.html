@@ -1,7 +1,7 @@
-<header style="background-color: #9C223C;">
+<header style="background-color: #9C223C;"><
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid pading1">
-      <a class="navbar-brand text1" href="http://sitmah.hidalgo.gob.mx/">SITMAH</a>
+      <p>SITMAH</p><!--Titulo-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,12 +9,12 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
         <span class="navbar-text text1">
-          INICIO
+          INICIO<!--indica en donde esta ubicado-->
         </span>
       </div>
     </div>
   </nav>
-</header>
+</header><!-- aqui se encunetra el header que es el que muestra hasta arriba de la pantalla-->
 
 <body>
 
@@ -43,21 +43,21 @@
               </a>
             </li>
 
-          <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;">
+          <section class="offcanvas offcanvas-start" id="menuLateral" tabindex="-1" style="width: 280px;"><!--en esta parte es donde se encuentra el menu lateral-->
               <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
                   <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <span class="fs-4">MENU</span>
                   </a>
                   <hr>
                   <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="item-5 deeper parent" style="list-style-type: none;">
-                      <a href="Verificacion/Inicio" class="nav-link link-dark">
+                    <li class="item-5 deeper parent" style="list-style-type: none;"><!--de esta manera es como se redirecciona a la pagina-->
+                      <a href="Verificacion/Inicio" class="nav-link link-dark"><!--aqui va el link de la ruta a la que nos queremos redirigir-->
                         <button type="button" class="btn btn-outline-dark text2"><i class="bi bi-folder2-open"></i>
-                          DESPACHO</button>
+                          DESPACHO</button><!--nombre de a donde nos dirgimos-->
                       </a>
                     </li>
                     <hr>
-                    <li class="item-5 deeper parent" style="list-style-type: none;">
+                    <li class="item-5 deeper parent" style="list-style-type: none;"><!--aqui va la otra dirección-->
                       <a href="titanes" class="nav-link link-dark">
                         <button type="button" class="btn btn-outline-dark text2">
                           <i class="bi bi-file-earmark-person"></i>
@@ -65,7 +65,7 @@
                         </button>
                       </a>
                     </li>
-                    <li class="item-5 deeper parent" style="list-style-type: none;">
+                    <li class="item-5 deeper parent" style="list-style-type: none;"><!--aqui comienza otra-->
                       <a href="Verificadores/ConsultaServicio" class="nav-link link-dark">
                         <button type="button" class="btn btn-outline-dark text2">
                           <i class="bi bi-file-earmark-person"></i>
@@ -115,17 +115,17 @@
           </section>
       </div>
     </nav>
-    <div class="container back-c"   style="text-align: center;">
-      <app-stacks></app-stacks>
+    <div class="container back-c"   style="text-align: center;"><!--en esta parte es donde se muestran las publicaciones-->
+      <app-stacks></app-stacks><!--en esta parte mandamos a llamar los stacks que eon las publicaciones pero estan ubicados en otro componente para que sea mas limpio e codigo-->
 
     </div>
       <div class="container" >
           <div>
-            <button type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+            <button type="button" class="btn-flotante" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><!--en esta parte cree los boton para crear las publicaciones -->
               <i class="bi bi-chat-left-text"></i>
            </button>
           </div>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><!--al dar clic en el boton se redirecciona al modal-->
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -133,14 +133,14 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" style="background-color: rgb(255, 255, 255); margin-top: 30px;">
-                  <form (submit)="enviarMensaje()" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                  <form (submit)="enviarMensaje()" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"><!--en el moal se encunetra un form con que es tipo submit-->
                     <div class="mb-3">
                       <label for="titulo" class="col-form-label" required="required">Titulo:</label>
-                      <input type="text" class="form-control" id="titulo" name="Titulo_Pub" [(ngModel)]="Titulo_Pub" [required]="Titulo_Pub">
+                      <input type="text" class="form-control" id="titulo" name="Titulo_Pub" [(ngModel)]="Titulo_Pub" [required]="Titulo_Pub"><!--con el ng model registramos los datos agregados-->
                     </div>
                     <div class="mb-3">
                       <label for="Mensaje-text" class="col-form-label">Mensaje:</label>
-                      <textarea class="form-control"  id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea>
+                      <textarea class="form-control"  id="mensaje" name="Descripcion_Pub" [(ngModel)]="Descripcion_Pub"></textarea><!--con el ng model registramos los datos agregados-->
                     </div>
                     <!--<div class="mainPage">
                       <input type="file" (change)="onFileChanged($event)" >aqui se selecciona la imagen
@@ -148,7 +148,7 @@
                     </div>-->
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="submit" class="btn btn-outline-danger">ENVIAR</button>
+                  <button type="submit" class="btn btn-outline-danger">ENVIAR</button><!--como el form es submit el boton tiene que ser del mismo tipo asi al momento de eviarlo este guardara los datos-->
                 </div>
               </form>
             </div>

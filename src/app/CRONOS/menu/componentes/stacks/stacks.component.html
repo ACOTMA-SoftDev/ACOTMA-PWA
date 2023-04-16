@@ -1,11 +1,11 @@
 
   <div class="card" *ngFor="let publicacion of publicaciones" style="margin: 40px; border-radius: 20px;">
       <div class="card-header stack"  >
-        {{publicacion.Fecha_Pub | date:'dd/MM/yyyy'}} 
+        {{publicacion.Fecha_Pub | date:'dd/MM/yyyy'}} <!--hace que la fecha se vea por dia mes y año-->
       </div> 
       <div class="card-body">
-        <h5 class="card-title" style="font-size: x-large;">{{publicacion.Titulo_Pub}}</h5>
-        <p class="card-text">{{publicacion.Descripcion_Pub}}</p>
+        <h5 class="card-title" style="font-size: x-large;">{{publicacion.Titulo_Pub}}</h5><!--muestra el titulo de la publicacion-->
+        <p class="card-text">{{publicacion.Descripcion_Pub}}</p><!--muestra el mensaje de la publicacion-->
         <!--<img [src]="publicacion.ImagenP" style="width: 50%;">  aqui iba una imagen se puede agregar pero se tiene que camiar toda la api-->      
       </div>
     </div>

@@ -13,10 +13,10 @@ import { ExportAsService, ExportAsConfig } from 'ngx-export-as';
   styleUrls: ['./all-informes-tecnologicos.component.css']
 })
 export class AllInformesTecnologicosComponent {
-  term:any;
-  fechahoy:Date=new Date()
+  term:any;//esta variabel sirve para filtrar los datos por fecha, nombre, ect
+  fechahoy:Date=new Date()//y esta variable es ara que cuado se descargue el archivo lleve la fecha de hoy.
 
-  exportAsConfig: ExportAsConfig = {
+  exportAsConfig: ExportAsConfig = {//ceramos la funcion para exportar en excel
     type: 'xlsx', // Tipo de archivo a exportar (en este caso, Excel)
     elementIdOrContent: 'tableToExport',// ID de la tabla a exportar
   };
@@ -41,14 +41,14 @@ export class AllInformesTecnologicosComponent {
    //creamos un contrucutor
    title = 'Informeincidencias tecnologia';
 
-   getAllEstacionesToday(){
+   getAllEstacionesToday(){//funcion que manada a llamara a la api para mostrar todos los informes
     this.http.get('https://prueba252.somee.com/api/Informes_de_Todas_incidencias_tecnologicas').subscribe(data=>{
       console.log(data)
       this.InformeIncidenciasTec=data
     })
     }
 
-  ngOnInit(): void {
+  ngOnInit(): void {//muestra lso informes en la pagina
     setInterval(() => {
     this.getAllEstacionesToday();
   }, 1000)
