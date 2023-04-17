@@ -7,7 +7,6 @@ import { EditarServicioComponent } from "../OPERADORA/EditarServicio/Editar.Serv
 import {EditarHoraComponent} from "../OPERADORA/EditarHorarioServicio/Editar.Hora.Component";
 import { EditarVerificadorComponent } from "../OPERADORA/EditarVerificadores/Editar.Verificador.Component";
 import { AgregarVerificadores } from "../OPERADORA/AgregarVerificador/Agregar.Verificador.Component";
-import { AdministrarVerificadores } from "../OPERADORA/AdministrarVerificador/Administrar.Verificador.Component";
 import { AgregarSerevicioComponent } from "../OPERADORA/AgregarServicio/Agregar.Servicio.Component";
 import { InicioOperadoraComponent } from "../OPERADORA/Inicio/Inicio.Operadora.Component";
 const appOperadoraRouting:Routes=[
@@ -18,7 +17,6 @@ const appOperadoraRouting:Routes=[
   {path: 'Operadora/HorarioServicio',component:HorarioComponent},
   {path: 'Operadora/EditarServicio/:idAsignacion',component:EditarServicioComponent},
   {path: 'Operadora/EditarHoraServicio',component:EditarHoraComponent},
-  {path:'Operadora/AdminVerificadores',component:AdministrarVerificadores},
   {path:'Operadora/Agregar/Verificador',component:AgregarVerificadores},
   {path:'Operadora/Editar/Verificador',component:EditarVerificadorComponent}
 

@@ -50,14 +50,12 @@ import { AgregarSerevicioComponent } from './OPERADORA/AgregarServicio/Agregar.S
 import { ServiciosIniciadosComponent } from './OPERADORA/Servicios Iniciados/Servicios.Iniciados.Component';
 import { ConsultarServicioComponent } from './VERIFICADORES/ConsutlarServicio/Consultar.Servicio.Component';
 import { VerificarUnidadesComponent } from './VERIFICADORES/VerificarUnidad/Verificar.Unidad.Component';
-import { VerificacionComponent } from './CRONOS/Verificacion/Verificacion.Component';
 import { NgChartsModule } from 'ng2-charts';
 import { MapsModule } from './maps/maps.module';
 import { UbicacionComponent } from './CRONOS/ubicacion/ubicacion.component';
 import { PrestamoComponent } from './PrestamoVehicular/component/prestamo/prestamo.component';
 import { PublicacionesComponent } from './TITANES/publicaciones/publicaciones.component';
 import { InicioTitanesComponent } from './TITANES/inicio-titanes/inicio-titanes.component';
-import { CargarImagenUnidadComponent } from './CRONOS/CargarImagenUnidad/Cargar.Imagen.Unidad.Component';
 import { VerificacionDashboardComponent } from './CRONOS/VerificacionDashBoard/Verificacion.Dashboard.Component';
 import { AllAccidentesComponent } from './CRONOS/titanes/inf-incidencias/componentes/all-accidentes/all-accidentes.component';
 import { AllInformesTecnologicosComponent } from './CRONOS/titanes/componentes/all-informes-tecnologicos/all-informes-tecnologicos.component';
@@ -106,12 +104,10 @@ import { loginComponent } from './LOGIN/login.Component';
     ConsultarServicioComponent,
     HorarioComponent,
     VerificarUnidadesComponent,
-    VerificacionComponent,
     UbicacionComponent,
     PrestamoComponent,
     PublicacionesComponent,
     InicioTitanesComponent,
-    CargarImagenUnidadComponent,
     VerificacionDashboardComponent,
     AllAccidentesComponent,
     AllInformesTecnologicosComponent,

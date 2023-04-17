@@ -1,10 +1,20 @@
+// Importamos HttpClient desde el paquete "@angular/common/http"
 import { HttpClient } from "@angular/common/http";
+
+// Importamos Component y OnInit desde el paquete "@angular/core"
 import { Component, OnInit } from "@angular/core";
+
+// Importamos Router desde el paquete "@angular/router"
 import { Router } from "@angular/router";
+
+// Importamos Location desde el paquete "@angular/common"
 import { Location } from '@angular/common';
 
 @Component({
+  // La plantilla HTML que se usará para renderizar este componente
   templateUrl: 'consultar.servicio.Component.html',
+
+  // Los estilos CSS que se aplicarán a la plantilla HTML
   styleUrls: ['consultar.servicio.Component.scss']
 })
 export class ConsultarServicioComponent implements OnInit {
